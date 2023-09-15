@@ -1,8 +1,8 @@
 <main>
-  <h1>Button Page</h1>
+ 
   <div class="button-row">
     <div class="button-wrapper">
-      <h2>Portfolio</h2>
+      <h2>Generators</h2>
       <a href="/projects" class="btn btn-ghost btn-sm rounded-btn">Portfolio</a>
     </div>
     <div class="button-wrapper">
