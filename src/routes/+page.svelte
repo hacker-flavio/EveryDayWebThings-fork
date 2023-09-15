@@ -4,7 +4,7 @@
       <h2>Generators</h2>
       <!-- Container for vertical buttons with box-like styling -->
       <div class="vertical-buttons">
-        <a href="/projects" class="btn btn-ghost btn-sm rounded-btn">Portfolio</a>
+        <a href="/passwordgenerator" class="btn btn-ghost btn-sm rounded-btn">Password Generator</a>
         <a href="/button1" class="btn btn-ghost btn-sm rounded-btn">Button 1</a>
         <a href="/button2" class="btn btn-ghost btn-sm rounded-btn">Button 2</a>
       </div>
