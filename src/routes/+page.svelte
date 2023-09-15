@@ -12,6 +12,22 @@
   .menuItem {
     margin: 0 1.5inch; /* 1.5 inches of space between each menuItem */
   }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5inch; /* Half-inch space below Generators */
+  }
+
+  .button {
+    width: 230px;
+    height: 103px;
+    background-color: #007bff; /* Example background color */
+    color: #fff; /* Example text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>
 
 <div class="menu">
@@ -21,3 +37,11 @@
   <div class="menuItem">Minigames</div>
   <div class="menuItem">More</div>
 </div>
+
+<div class="buttonContainer">
+  <div class="button">Button 1</div>
+  <div class="button">Button 2</div>
+  <div class="button">Button 3</div>
+  <div class="button">Button 4</div>
+</div>
+
