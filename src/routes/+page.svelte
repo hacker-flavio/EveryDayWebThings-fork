@@ -1,14 +1,26 @@
 <script>
-  // Define an array of button labels
-  let buttonLabels = ["Button 1", "Button 2", "Button 3", "Button 4", "Button 5"];
+  // Define an array of arrays for button labels
+  let buttonLabels = [
+    ["Button 1", "Button 2", "Button 3"],
+    ["Button 4", "Button 5", "Button 6"],
+    ["Button 7", "Button 8", "Button 9"],
+    ["Button 10", "Button 11", "Button 12"],
+    ["Button 13", "Button 14", "Button 15"]
+  ];
 </script>
 
 <style>
-  /* Add styles for the button container */
+  /* Style for the button container */
   .button-container {
     display: flex;
     flex-direction: column;
     gap: 10px; /* Adjust the gap between rows */
+  }
+
+  /* Style for each row of buttons */
+  .button-row {
+    display: flex;
+    gap: 10px; /* Adjust the gap between buttons in a row */
   }
 
   /* Style for each button */
@@ -27,9 +39,11 @@
 </style>
 
 <div class="button-container">
-  {#each buttonLabels as label (label)}
-    <div class="button">{label}</div>
+  {#each buttonLabels as row (row)}
+    <div class="button-row">
+      {#each row as label (label)}
+        <div class="button">{label}</div>
+      {/each}
+    </div>
   {/each}
 </div>
-
- 
