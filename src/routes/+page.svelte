@@ -3,11 +3,9 @@
     <div class="button-wrapper">
       <h2>Generators</h2>
       <a href="/projects" class="btn btn-ghost btn-sm rounded-btn">Portfolio</a>
-      <!-- Nested div for additional buttons -->
-      <div class="additional-buttons">
-        <a href="/button1" class="btn btn-ghost btn-sm rounded-btn">Button 1</a>
-        <a href="/button2" class="btn btn-ghost btn-sm rounded-btn">Button 2</a>
-      </div>
+      <!-- Additional buttons with line breaks -->
+      <a href="/button1" class="btn btn-ghost btn-sm rounded-btn">Button 1</a><br>
+      <a href="/button2" class="btn btn-ghost btn-sm rounded-btn">Button 2</a>
     </div>
     <div class="button-wrapper">
       <h2>Weather</h2>
@@ -32,6 +30,7 @@
     </div>
   </div>
 </main>
+
 
 
 
