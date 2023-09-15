@@ -2,7 +2,7 @@
   <div class="button-row">
     <div class="button-wrapper">
       <h2>Generators</h2>
-      <!-- Container for vertical buttons -->
+      <!-- Container for vertical buttons with block display -->
       <div class="vertical-buttons">
         <a href="/projects" class="btn btn-ghost btn-sm rounded-btn">Portfolio</a>
         <a href="/button1" class="btn btn-ghost btn-sm rounded-btn">Button 1</a>
@@ -33,10 +33,13 @@
   </div>
 </main>
 
-
-
-
 <style>
+  .vertical-buttons a {
+    display: block;
+    margin-bottom: 10px; /* Adjust the spacing between the buttons */
+  }
+
+
   .button-row {
     display: flex;
     justify-content: space-between;
