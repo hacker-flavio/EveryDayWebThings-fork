@@ -1,6 +1,3 @@
-<script>
-  import { goto } from "@sveltejs/kit/router";
-</script>
 
 <main>
   <h1>Button Page</h1>
