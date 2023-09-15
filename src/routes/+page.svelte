@@ -15,7 +15,8 @@
 
   .buttonContainer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center;
     margin-top: 0.5inch; /* Half-inch space below Generators */
   }
 
@@ -27,6 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0.5inch; /* Half-inch space between buttons */
   }
 </style>
 
