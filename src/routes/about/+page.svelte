@@ -1,31 +1,66 @@
 
-
+<!-- FeatureUnavailable.svelte -->
 <script>
-    import { marked } from 'marked';
-    export let data
-    const {
-      name,
-      intro,
-      bio,
-      picture: { url },
-    } = data.authors[0]
-  </script>
-  
-  <svelte:head>
-    <title>My Portfolio project | About {name}</title>
-  </svelte:head>
-  
-  <h1 class="font-bold text-center mb-20 text-5xl">About Me</h1>
-  
-  <div class="flex mb-40 items-end">
-    <div class="mr-6">
-      <h2 class="text-3xl mb-4 font-bold tracking-wider">{name}</h2>
-      <p class="text-xl mb-4">{intro}</p>
-    </div>
-  
-    <img class="mask mask-squircle h-48" src={url} alt={name} />
+  // You can add any logic here if needed
+</script>
+
+<main>
+  <div class="container">
+    <h1>This Feature is Not Available Yet</h1>
+    <p>Check back later for updates or join our Discord server for more information:</p>
+    <a href="YOUR_DISCORD_INVITE_LINK" target="_blank" rel="noopener noreferrer">
+      <button class="discord-button">Join Our Discord</button>
+    </a>
   </div>
-  
-  <article div class="prose prose-lg">
-    {@html marked(bio)}
-  </article>
+</main>
+
+<style>
+  /* You can style the page as needed */
+  .container {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .discord-button {
+    background-color: #7289da;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .discord-button:hover {
+    background-color: #677bc4;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
