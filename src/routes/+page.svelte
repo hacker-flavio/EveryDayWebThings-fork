@@ -14,7 +14,7 @@
   .button-container {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Adjust the gap between columns */
+    gap: 10px; /* Adjust the gap between rows */
   }
 
   /* Style for each row of buttons */
@@ -39,16 +39,11 @@
 </style>
 
 <div class="button-container">
-  {#each [0, 1, 2] as columnIndex}
+  {#each [0, 1, 2, 3, 4] as rowIndex}
     <div class="button-row">
-      {#each buttonLabels as row, rowIndex (row)}
-        {#if rowIndex === columnIndex}
-          {#each row as label (label)}
-            <div class="button">{label}</div>
-          {/each}
-        {/if}
+      {#each [0, 1, 2] as columnIndex}
+        <div class="button">{buttonLabels[rowIndex][columnIndex]}</div>
       {/each}
     </div>
   {/each}
 </div>
-
