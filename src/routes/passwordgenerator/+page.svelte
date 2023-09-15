@@ -1,6 +1,6 @@
 
 <script>
-  import PasswordGenerator from 'src/routes/passwordgenerator/PasswordGenerator.svelte';
+  import PasswordGenerator from './components/PasswordGenerator.svelte';
 </script>
 
 
