@@ -11,8 +11,10 @@
     <div class="box">
       <button class="box-button">Box 3</button>
     </div>
+  </div>
 
-    <!-- Second Row -->
+  <!-- Second Row -->
+  <div class="box-container">
     <div class="box">
       <button class="box-button">Box 4</button>
     </div>
@@ -29,14 +31,13 @@
   /* You can style the page and boxes as needed */
   main {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Display boxes in two vertical columns */
     align-items: center;
     height: 100vh;
   }
 
   .box-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -63,3 +64,4 @@
     background-color: #3366cc;
   }
 </style>
+
