@@ -2,13 +2,12 @@
 
 <style>
   .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
     padding: 1inch 0;
   }
 
   .menuItem {
+    display: inline-block;
     margin: 0 1inch;
   }
 </style>
