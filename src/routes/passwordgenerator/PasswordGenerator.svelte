@@ -27,7 +27,7 @@
 </script>
 
 <main>
-  <h1>Password Generator</h1>
+  <h1>Raddom Password Generator</h1>
   <div>
     <label for="length">Password Length:</label>
     <input type="number" id="length" bind:value={length} min="1" />
