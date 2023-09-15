@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column; /* Display boxes in two vertical columns */
     align-items: center;
-    height: 100vh;
+    height: 50vh; /* Adjust the height as needed */
   }
 
   .box-container {
@@ -64,4 +64,5 @@
     background-color: #3366cc;
   }
 </style>
+
 
