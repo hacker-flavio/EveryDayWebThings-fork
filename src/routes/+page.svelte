@@ -6,19 +6,19 @@
       <a href="/projects" class="btn btn-ghost btn-sm rounded-btn">Portfolio</a>
     </div>
     <div class="button-wrapper">
-      <h2>Blog</h2>
+      <h2>Weather</h2>
       <a href="/posts" class="btn btn-ghost btn-sm rounded-btn">Blog</a>
     </div>
     <div class="button-wrapper">
-      <h2>About</h2>
+      <h2>Calculators</h2>
       <a href="/about" class="btn btn-ghost btn-sm rounded-btn">About</a>
     </div>
     <div class="button-wrapper">
-      <h2>(blank)</h2>
+      <h2>Mini Games</h2>
       <a href="/blank1" class="btn btn-ghost btn-sm rounded-btn">(blank)</a>
     </div>
     <div class="button-wrapper">
-      <h2>(blank)</h2>
+      <h2>others</h2>
       <a href="/blank2" class="btn btn-ghost btn-sm rounded-btn">(blank)</a>
     </div>
   </div>
