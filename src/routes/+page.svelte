@@ -40,10 +40,12 @@
   <div class="menuItem">More</div>
 </div>
 
-<div class="buttonContainer">
-  <div class="button">Button 1</div>
-  <div class="button">Button 2</div>
-  <div class="button">Button 3</div>
-  <div class="button">Button 4</div>
+<div class="menuItem">
+  <div class="buttonContainer">
+    <div class="button">Button 1</div>
+    <div class="button">Button 2</div>
+    <div class="button">Button 3</div>
+    <div class="button">Button 4</div>
+  </div>
 </div>
 
