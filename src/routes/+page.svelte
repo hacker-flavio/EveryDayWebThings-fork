@@ -12,59 +12,32 @@
       <h2>Calculators</h2>
       <a href="/about" class="btn btn-ghost btn-sm rounded-btn">About</a>
     </div>
+    <!-- Add 3 more buttons below -->
     <div class="button-wrapper">
-      <h2>Mini Games</h2>
-      <a href="/blank1" class="btn btn-ghost btn-sm rounded-btn">(blank)</a>
+      <h2>New Button 1</h2>
+      <a href="/new1" class="btn btn-ghost btn-sm rounded-btn">(blank)</a>
     </div>
     <div class="button-wrapper">
-      <h2>Others</h2>
-      <a href="/blank2" class="btn btn-ghost btn-sm rounded-btn">(blank)</a>
-    </div>
-  </div>
-
-  <!-- Additional rows of buttons -->
-  <div class="button-row">
-    <div class="button-wrapper">
-      <h2>Row 2 - Button 1</h2>
-      <a href="/row2-button1" class="btn btn-ghost btn-sm rounded-btn">Row 2 Button 1</a>
+      <h2>New Button 2</h2>
+      <a href="/new2" class="btn btn-ghost btn-sm rounded-btn">(blank)</a>
     </div>
     <div class="button-wrapper">
-      <h2>Row 2 - Button 2</h2>
-      <a href="/row2-button2" class="btn btn-ghost btn-sm rounded-btn">Row 2 Button 2</a>
-    </div>
-    <div class="button-wrapper">
-      <h2>Row 2 - Button 3</h2>
-      <a href="/row2-button3" class="btn btn-ghost btn-sm rounded-btn">Row 2 Button 3</a>
-    </div>
-  </div>
-
-  <div class="button-row">
-    <div class="button-wrapper">
-      <h2>Row 3 - Button 1</h2>
-      <a href="/row3-button1" class="btn btn-ghost btn-sm rounded-btn">Row 3 Button 1</a>
-    </div>
-    <div class="button-wrapper">
-      <h2>Row 3 - Button 2</h2>
-      <a href="/row3-button2" class="btn btn-ghost btn-sm rounded-btn">Row 3 Button 2</a>
-    </div>
-    <div class="button-wrapper">
-      <h2>Row 3 - Button 3</h2>
-      <a href="/row3-button3" class="btn btn-ghost btn-sm rounded-btn">Row 3 Button 3</a>
-    </div>
-  </div>
-
-  <div class="button-row">
-    <div class="button-wrapper">
-      <h2>Row 4 - Button 1</h2>
-      <a href="/row4-button1" class="btn btn-ghost btn-sm rounded-btn">Row 4 Button 1</a>
-    </div>
-    <div class="button-wrapper">
-      <h2>Row 4 - Button 2</h2>
-      <a href="/row4-button2" class="btn btn-ghost btn-sm rounded-btn">Row 4 Button 2</a>
-    </div>
-    <div class="button-wrapper">
-      <h2>Row 4 - Button 3</h2>
-      <a href="/row4-button3" class="btn btn-ghost btn-sm rounded-btn">Row 4 Button 3</a>
+      <h2>New Button 3</h2>
+      <a href="/new3" class="btn btn-ghost btn-sm rounded-btn">(blank)</a>
     </div>
   </div>
 </main>
+
+
+
+<style>
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 1inch;
+  }
+
+  .button-wrapper {
+    text-align: center;
+  }
+</style>
