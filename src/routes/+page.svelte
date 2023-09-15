@@ -10,7 +10,7 @@
   }
 
   .menuItem {
-    margin: 0 1inch;
+    margin: 0 1.5inch; /* 1.5 inches of space between each menuItem */
   }
 </style>
 
