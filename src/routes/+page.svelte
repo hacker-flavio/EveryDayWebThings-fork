@@ -5,8 +5,8 @@
       <!-- Container for vertical buttons with box-like styling -->
       <div class="vertical-buttons">
         <a href="/passwordgenerator" class="btn btn-ghost btn-sm rounded-btn">Password Generator</a>
-        <a href="/button1" class="btn btn-ghost btn-sm rounded-btn">Button 1</a>
-        <a href="/button2" class="btn btn-ghost btn-sm rounded-btn">Button 2</a>
+        <a href="/RandomWordGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Word Generator</a>
+        <a href="/RandomQuoteGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Quote Generator</a>
       </div>
     </div>
     <div class="button-wrapper">
