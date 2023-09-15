@@ -7,9 +7,6 @@
   "dev": "vite dev",
   "build": "vite build",
   "preview": "vite preview",
-  // ... other scripts
-}
-
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
