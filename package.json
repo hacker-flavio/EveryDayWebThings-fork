@@ -1,35 +1,35 @@
 {
-	"name": "bourqueblog",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"lint": "prettier --plugin-search-dir . --check .",
-		"format": "prettier --plugin-search-dir . --write ."
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^1.0.0-next.90",
-		"@sveltejs/kit": "^1.0.0-next.587",
-		"@tailwindcss/typography": "^0.5.9",
-		"autoprefixer": "^10.4.7",
-		"daisyui": "^2.47.0",
-		"graphql": "^16.6.0",
-		"graphql-request": "^5.1.0",
-		"marked": "^4.2.12",
-		"postcss": "^8.4.14",
-		"postcss-load-config": "^4.0.1",
-		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.8.1",
-		"svelte": "^3.54.0",
-		"svelte-preprocess": "^4.10.7",
-		"tailwindcss": "^3.1.5",
-		"theme-change": "^2.3.0",
-		"vite": "^4.0.0"
-	},
-	"type": "module",
-	"dependencies": {
-		"D": "^1.0.0"
-	}
+  "name": "bourqueblog",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "prettier --plugin-search-dir . --check .",
+    "format": "prettier --plugin-search-dir . --write ."
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-vercel": "^1.1.0", // Change to the appropriate version
+    "@sveltejs/kit": "^1.5.0", // Change to the appropriate version
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.7",
+    "daisyui": "^2.47.0",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
+    "marked": "^4.2.12",
+    "postcss": "^8.4.14",
+    "postcss-load-config": "^4.0.1",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.8.1",
+    "svelte": "^3.54.0",
+    "svelte-preprocess": "^4.10.7",
+    "tailwindcss": "^3.1.5",
+    "theme-change": "^2.3.0",
+    "vite": "^4.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "D": "^1.0.0"
+  }
 }
