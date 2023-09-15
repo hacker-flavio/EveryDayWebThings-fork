@@ -1,40 +1,65 @@
-<!-- Welcome.svelte -->
+<!-- SimplePage.svelte -->
 <main>
-  <div class="container">
-    <h1>Welcome to Our App</h1>
-    <p>Thank you for choosing everydaywebthings.com </p>
-    <ul>
-      <li>coming soon!</li>
-      <li>coming soon!</li>
-      <li>coming soon!</li>
-    </ul>
-    <p>Feel free to explore and enjoy!</p>
+  <div class="box-container">
+    <!-- First Row -->
+    <div class="box">
+      <button class="box-button">Box 1</button>
+    </div>
+    <div class="box">
+      <button class="box-button">Box 2</button>
+    </div>
+    <div class="box">
+      <button class="box-button">Box 3</button>
+    </div>
+
+    <!-- Second Row -->
+    <div class="box">
+      <button class="box-button">Box 4</button>
+    </div>
+    <div class="box">
+      <button class="box-button">Box 5</button>
+    </div>
+    <div class="box">
+      <button class="box-button">Box 6</button>
+    </div>
   </div>
 </main>
 
 <style>
-  /* You can style the page as needed */
-  .container {
-    text-align: center;
-    margin: 2rem;
+  /* You can style the page and boxes as needed */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
 
-  h1 {
-    font-size: 2rem;
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  p {
+  .box {
+    width: 312px;
+    height: 175px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-button {
+    background-color: #4287f5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
     font-size: 1.2rem;
-    margin-top: 1rem;
+    cursor: pointer;
   }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  li {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
+  .box-button:hover {
+    background-color: #3366cc;
   }
 </style>
