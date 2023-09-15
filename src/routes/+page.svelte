@@ -1,5 +1,7 @@
 <script>
-  // You can define any logic or data you need here
+  function handleClick(buttonIndex) {
+    console.log(`Button ${buttonIndex} clicked`);
+  }
 </script>
 
 <style>
@@ -29,12 +31,3 @@
     </div>
   {/each}
 </div>
-
-<script>
-  // You can add any logic or event handling functions here
-
-  function handleClick(buttonIndex) {
-    // Handle button click for the specified button (buttonIndex)
-    console.log(`Button ${buttonIndex} clicked`);
-  }
-</script>
