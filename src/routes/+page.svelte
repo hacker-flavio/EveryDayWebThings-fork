@@ -41,7 +41,8 @@
   }
 
   .box {
-    width: calc(33.33% - 20px); /* Adjust the width as needed */
+    width: 312px;
+    height: 175px;
     margin: 10px;
     background-color: #f0f0f0;
     display: flex;
