@@ -1,52 +1,28 @@
+<!-- ButtonPage.svelte -->
 <script>
-  // Define an array of arrays for button labels
-  let buttonLabels = [
-    ["Button 1", "Button 2", "Button 3"],
-    ["Sub-Button 1", "Sub-Button 2", "Sub-Button 3"],
-    ["Button 4", "Button 5", "Button 6"],
-    ["Button 7", "Button 8", "Button 9"],
-    ["Button 10", "Button 11", "Button 12"],
-    ["Button 13", "Button 14", "Button 15"]
-  ];
+  // Define a function to handle button clicks
+  function handleButtonClick(buttonNumber) {
+    alert(`Button ${buttonNumber} clicked!`);
+  }
 </script>
 
 <style>
-  /* Style for the button container */
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Adjust the gap between rows */
-  }
-
-  /* Style for each row of buttons */
-  .button-row {
-    display: flex;
-    gap: 10px; /* Adjust the gap between buttons in a row */
-  }
-
-  /* Style for each button */
+  /* Style for the buttons */
   .button {
     width: 230px;
     height: 103px;
     border-radius: 8px;
-    background-color: #007BFF; /* You can change the background color */
-    color: white; /* Text color */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    line-height: 103px;
     cursor: pointer;
-    font-size: 16px; /* Adjust the font size */
+    margin: 10px;
   }
 </style>
 
-<div class="button-container">
-  {#each [0, 1, 2] as columnIndex}
-    <div class="button-row">
-      {#each buttonLabels as row, rowIndex (row)}
-        {#if columnIndex === 0}
-          <div class="button">{row[columnIndex]}</div>
-        {/if}
-      {/each}
-    </div>
-  {/each}
-</div>
+<div class="button" on:click={() => handleButtonClick(1)}>Button 1</div>
+<div class="button" on:click={() => handleButtonClick(2)}>Button 2</div>
+<div class="button" on:click={() => handleButtonClick(3)}>Button 3</div>
+<div class="button" on:click={() => handleButtonClick(4)}>Button 4</div>
+<div class="button" on:click={() => handleButtonClick(5)}>Button 5</div>
