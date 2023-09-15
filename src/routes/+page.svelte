@@ -1,27 +1,15 @@
 <script>
   import { goto } from "@sveltejs/kit/router";
-
-  // Define the routes for the buttons
-  const routes = ["/about", "/about1", "/about2", "/about3", "/about4"];
-
-  // Function to navigate to a route
-  function navigateTo(route) {
-    goto(route);
-  }
 </script>
 
 <main>
   <h1>Button Page</h1>
   <div class="button-row">
-    {#each routes as route (route)}
-      <button
-        on:click={() => navigateTo(route)}
-        class="button"
-        style="width: 230px; height: 103px; border-radius: 8px; margin-right: 1rem;"
-      >
-        {route}
-      </button>
-    {/each}
+    <a href="/about" class="button-link">About</a>
+    <a href="/about1" class="button-link">About1</a>
+    <a href="/about2" class="button-link">About2</a>
+    <a href="/about3" class="button-link">About3</a>
+    <a href="/about4" class="button-link">About4</a>
   </div>
 </main>
 
@@ -32,10 +20,18 @@
     margin: 1inch;
   }
 
-  .button {
+  .button-link {
     background-color: #007bff; /* You can set your desired background color */
     color: #fff;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .button-link:hover {
+    background-color: #0056b3; /* Change the color on hover if desired */
   }
 </style>
+
