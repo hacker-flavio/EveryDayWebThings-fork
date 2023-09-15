@@ -1,32 +1,28 @@
 
-<script lang="ts">
-	import Hero from 'src/components/Hero.svelte';
-	import Password from 'src/components/Password.svelte';
-	import Options from 'src/components/Options.svelte';
-</script>
-
-<svelte:head>
-	<title>Key | Password Generator</title>
-</svelte:head>
-
-<Hero />
-
 <main>
-	<Password />
-
-	<Options />
+  <div class="container">
+    <h1>This Feature is Not Available Yet</h1>
+    <p>Check back later for updates.</p>
+    <p>Status: 503 Service Unavailable</p>
+  </div>
 </main>
 
 <style>
-  main {
-    margin: 0 auto;
-    padding: 0 1rem;
-    max-width: 36rem;
-
-    gap: 2rem;
-    display: flex;
-    flex-direction: column;
+  /* You can style the page as needed */
+  .container {
+    text-align: center;
+    margin: 2rem;
   }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+</style>
 
 
 
