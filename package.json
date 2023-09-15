@@ -2,7 +2,14 @@
   "name": "site",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
+ "scripts": {
+  "start": "npm run dev",
+  "dev": "vite dev",
+  "build": "vite build",
+  "preview": "vite preview",
+  // ... other scripts
+}
+
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
