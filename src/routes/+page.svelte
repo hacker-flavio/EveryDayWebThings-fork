@@ -1,68 +1,23 @@
-<!-- SimplePage.svelte -->
-<main>
-  <div class="box-container">
-    <!-- First Row -->
-    <div class="box">
-      <button class="box-button">Box 1</button>
-    </div>
-    <div class="box">
-      <button class="box-button">Box 2</button>
-    </div>
-    <div class="box">
-      <button class="box-button">Box 3</button>
-    </div>
-  </div>
-
-  <!-- Second Row -->
-  <div class="box-container">
-    <div class="box">
-      <button class="box-button">Box 4</button>
-    </div>
-    <div class="box">
-      <button class="box-button">Box 5</button>
-    </div>
-    <div class="box">
-      <button class="box-button">Box 6</button>
-    </div>
-  </div>
-</main>
+<!-- Page.svelte -->
 
 <style>
-  /* You can style the page and boxes as needed */
-  main {
+  .menu {
     display: flex;
-    flex-direction: column; /* Display boxes in two vertical columns */
+    justify-content: space-between;
     align-items: center;
-    height: 50vh; /* Adjust the height as needed */
+    padding: 1inch 0;
   }
 
-  .box-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .box {
-    width: 312px;
-    height: 175px;
-    margin: 10px;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .box-button {
-    background-color: #4287f5;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-
-  .box-button:hover {
-    background-color: #3366cc;
+  .menuItem {
+    margin: 0 1inch;
   }
 </style>
 
+<div class="menu">
+  <div class="menuItem">Generators</div>
+  <div class="menuItem">Weather</div>
+  <div class="menuItem">Calculators</div>
+  <div class="menuItem">Minigames</div>
+  <div class="menuItem">More</div>
+</div>
 
