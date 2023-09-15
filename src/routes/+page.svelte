@@ -2,12 +2,14 @@
 
 <style>
   .menu {
-    text-align: center;
+    display: flex;
+    flex-direction: row; /* Ensure items are in a horizontal line */
+    justify-content: space-between;
+    align-items: center;
     padding: 1inch 0;
   }
 
   .menuItem {
-    display: inline-block;
     margin: 0 1inch;
   }
 </style>
@@ -19,4 +21,3 @@
   <div class="menuItem">Minigames</div>
   <div class="menuItem">More</div>
 </div>
-
