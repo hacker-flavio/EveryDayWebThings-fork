@@ -1,27 +1,24 @@
-<script>
-    export let data;
-    import ProjectCard from '$lib/components/project-card.svelte';
+<main>
+  <div class="container">
+    <h1>This Feature is Not Available Yet</h1>
+    <p>Check back later for updates.</p>
+    <p>Status: 503 Service Unavailable</p>
+  </div>
+</main>
 
-</script>
+<style>
+  /* You can style the page as needed */
+  .container {
+    text-align: center;
+    margin: 2rem;
+  }
 
-<svelte:head>
-  <title>My Portfolio projects</title>
-</svelte:head>
+  h1 {
+    font-size: 2rem;
+  }
 
-<h1 class="font-bold mb-20 text-center text-5xl">
-  Recent Projects by Me
-</h1>
-
-<div
-  class="grid gap-10 md:grid-cols-4 md:px-10 lg:grid-cols-6 lg:-mx-52"
->
-  {#each data.projects as { name, slug, description, image }, index}
-    <ProjectCard
-      {name}
-      {description}
-      url={image[0].url}
-      {index}
-      {slug}
-    />
-  {/each}
-</div>
+  p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+</style>
