@@ -39,10 +39,12 @@
 </style>
 
 <div class="button-container">
-  {#each [0, 1, 2, 3, 4] as rowIndex}
+  {#each [0, 1, 2] as columnIndex}
     <div class="button-row">
-      {#each [0, 1, 2] as columnIndex}
-        <div class="button">{buttonLabels[rowIndex][columnIndex]}</div>
+      {#each buttonLabels as row, rowIndex (row)}
+        {#if columnIndex === 0}
+          <div class="button">{row[columnIndex]}</div>
+        {/if}
       {/each}
     </div>
   {/each}
