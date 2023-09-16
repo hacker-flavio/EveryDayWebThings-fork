@@ -18,7 +18,7 @@
             class="bg-neutral rounded-box shadow text-neutral-content p-2 w-52 menu dropdown-content "
         >
             <a class="btn btn-ghost btn-sm rounded-btn" href="/projects">
-                Portfolio
+                About us
             </a>
             <a class="btn btn-ghost btn-sm rounded-btn" href="/posts">
                 Blog
