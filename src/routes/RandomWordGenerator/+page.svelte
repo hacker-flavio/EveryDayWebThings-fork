@@ -1,7 +1,7 @@
 
 
 <script>
-  import RandomWordGenerator from './RandomWordGenerator.svelte';
+  import RandomWordGenerator from '../../components/RandomWordGenerator.svelte';
 </script>
 
 <RandomWordGenerator />
