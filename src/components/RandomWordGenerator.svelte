@@ -1,44 +1,19 @@
-<script>
+ <script>
   let randomWord = '';
-  let wordCount = 0;
-  const wordHistory = [];
-  let customWords = [];
 
   const generateRandomWord = () => {
-    const words = customWords.length > 0 ? customWords : ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+    // Replace this with your own method to generate random words
+    const words = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
     const randomIndex = Math.floor(Math.random() * words.length);
     randomWord = words[randomIndex];
-    wordCount++;
-    wordHistory.push(randomWord);
-  };
-
-  const clearHistory = () => {
-    wordHistory.length = 0;
-  };
-
-  const setCustomWords = () => {
-    const customWordsInput = document.getElementById('customWordsInput');
-    customWords = customWordsInput.value.split(',').map(word => word.trim());
   };
 </script>
 
 <div>
   <h2>Random Word Generator</h2>
-  <input type="text" id="customWordsInput" placeholder="Enter custom words separated by commas" />
-  <button on:click={setCustomWords}>Set Custom Words</button>
-  <button on:click={generateRandomWord}>Generate Random Word</button>
-  <p>Word Count: {wordCount}</p>
+  <button on:click="{generateRandomWord}">Generate Random Word</button>
   {#if randomWord}
     <p>The random word is: {randomWord}</p>
-  {/if}
-  {#if wordHistory.length > 0}
-    <h3>Word History:</h3>
-    <ul>
-      {#each wordHistory as word}
-        <li>{word}</li>
-      {/each}
-    </ul>
-    <button on:click={clearHistory}>Clear History</button>
   {/if}
 </div>
 
