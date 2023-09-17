@@ -16,16 +16,17 @@
     wordHistory.length = 0;
   };
 
-  const setCustomWords = (inputWords) => {
-    customWords = inputWords.split(',').map(word => word.trim());
+  const setCustomWords = () => {
+    const customWordsInput = document.getElementById('customWordsInput');
+    customWords = customWordsInput.value.split(',').map(word => word.trim());
   };
 </script>
 
 <div>
   <h2>Random Word Generator</h2>
   <input type="text" id="customWordsInput" placeholder="Enter custom words separated by commas" />
-  <button on:click="{() => setCustomWords($$('customWordsInput').value)}">Set Custom Words</button>
-  <button on:click="{generateRandomWord}">Generate Random Word</button>
+  <button on:click={setCustomWords}>Set Custom Words</button>
+  <button on:click={generateRandomWord}>Generate Random Word</button>
   <p>Word Count: {wordCount}</p>
   {#if randomWord}
     <p>The random word is: {randomWord}</p>
@@ -37,7 +38,7 @@
         <li>{word}</li>
       {/each}
     </ul>
-    <button on:click="{clearHistory}">Clear History</button>
+    <button on:click={clearHistory}>Clear History</button>
   {/if}
 </div>
 
