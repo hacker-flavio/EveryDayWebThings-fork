@@ -47,11 +47,13 @@
 
 <Style>
 .vertical-buttons a {
-    display: block;
-    text-align: center;
-    padding: 15px 30px;
+    display: flex; /* Use flex to center text vertically */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    width: 100%;
+    height: 60px; /* Adjust the height to accommodate the text */
+    padding: 0 20px; /* Adjust padding as needed */
     font-size: 20px;
-    line-height: 1.2; /* Added line-height property to ensure text stays within the button */
     margin: 5px 0;
     border: 2px solid #3498db;
     border-radius: 8px;
@@ -64,6 +66,7 @@
     background-color: #3498db;
     color: #fff;
 }
+
 
 
 .button-wrapper h2 {
