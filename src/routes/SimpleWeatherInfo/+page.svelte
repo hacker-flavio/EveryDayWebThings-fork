@@ -2,7 +2,7 @@
 
 <!-- App.svelte -->
 <script>
-  import Weather from '../../SimpleWeatherInfo.svelte';
+  import Weather from '../../components/SimpleWeatherInfo.svelte';
 </script>
 
 <main>
@@ -12,10 +12,6 @@
 <style>
   /* Add your CSS styles here */
 </style>
-
-
-
-
 
 
 
