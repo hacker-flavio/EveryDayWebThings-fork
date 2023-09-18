@@ -8,8 +8,8 @@
     class="p-10 footer bg-primary text-primary-content footer-center"
   >
     <div class="grid grid-flow-col gap-4">
-      <a class="link link-hover" href="/projects">About Us</a>
-      <a class="link link-hover" href="/posts">Terms</a>
+      <a class="link link-hover" href="/projects">Privacy Policy</a>
+      <a class="link link-hover" href="/posts">Bug Report</a>
     </div>
     <div>
       <div class="grid grid-flow-col gap-4">
@@ -23,7 +23,7 @@
     </div>
     <div>
       <p>
-        Copyright &copy; {`${new Date().getFullYear()}`} Shards Social Platforms Inc. - All rights reserved
+        Copyright &copy; {`${new Date().getFullYear()}`} EveryDayWebThings - All rights reserved
       </p>
     </div>
   </footer>
