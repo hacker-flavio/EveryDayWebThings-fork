@@ -8,33 +8,38 @@
         <a href="/RandomQuoteGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Quote Generator</a>
       </div>
     </div>
+
     <div class="button-wrapper">
       <h2>Weather</h2>
       <div class="vertical-buttons">
         <a href="/SimpleWeatherInfo" class="btn btn-ghost btn-sm rounded-btn">Simple Weather Info</a>
       </div>
     </div>
+
     <div class="button-wrapper">
       <h2>Calculators</h2>
       <div class="vertical-buttons">
         <a href="/BasicCalculator" class="btn btn-ghost btn-sm rounded-btn">Basic Calculator</a>
+<a href="/BasicCalculator" class="btn btn-ghost btn-sm rounded-btn">Budget Calculator</a>
       </div>
     </div>
-    <!-- Add 3 more buttons below -->
+
     <div class="button-wrapper">
-      <h2>New Button 1</h2>
+      <h2>Other tools</h2>
       <div class="vertical-buttons">
         <a href="/new1" class="btn btn-ghost btn-sm rounded-btn">Button</a>
       </div>
     </div>
+
     <div class="button-wrapper">
       <h2>New Button 2</h2>
       <div class="vertical-buttons">
         <a href="/new2" class="btn btn-ghost btn-sm rounded-btn">Button</a>
       </div>
     </div>
+
     <div class="button-wrapper">
-      <h2>New Button 3</h2>
+      <h2>Mini Games</h2>
       <div class="vertical-buttons">
         <a href="/new3" class="btn btn-ghost btn-sm rounded-btn">Button</a>
       </div>
