@@ -48,49 +48,47 @@
   </div>
 </main>
 
+
+
 <style>
-.vertical-buttons a {
-  display: block;
-  width: 150px; /* Increase the width for better readability */
-  height: 44px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  text-decoration: none; /* Remove underlines from links */
-  text-align: center; /* Center text horizontally */
-  line-height: 44px; /* Vertically center text */
-  background-color: #3498db; /* Background color for buttons */
-  color: #fff; /* Text color for buttons */
-  font-weight: bold;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
-}
-
-.vertical-buttons a:hover {
-  background-color: #2980b9; /* Background color on hover */
-}
-
-.button-row {
-  display: flex;
-  flex-wrap: wrap; /* Wrap button wrappers to the next line if needed */
-  justify-content: space-between;
-  margin: 1inch;
-}
-
-.button-wrapper {
-  text-align: center;
-  margin-bottom: 20px; /* Increase the spacing between button groups */
-}
-
-/* Optional: Add some space between button headings */
-.button-wrapper h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-/* Optional: Adjust the size of the buttons for small screens */
-@media (max-width: 768px) {
+  /* Common button styles */
   .vertical-buttons a {
-    width: 100%;
+    display: block;
+    width: 150px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 50px; /* Center the text vertically */
+    font-size: 16px; /* Adjust the font size as needed */
+    text-decoration: none;
+    color: #333; /* Adjust the text color as needed */
+    background-color: #f0f0f0; /* Adjust the background color as needed */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
   }
-}
 
+  /* Button hover effect */
+  .vertical-buttons a:hover {
+    background-color: #ddd; /* Adjust the hover background color as needed */
+  }
+
+  /* Main container for buttons */
+  .button-row {
+    display: flex;
+    flex-wrap: wrap; /* Wrap buttons to the next row if necessary */
+    justify-content: space-between;
+    margin: 1inch;
+  }
+
+  /* Individual button container */
+  .button-wrapper {
+    text-align: center;
+    width: 33%; /* Adjust the width for 3 columns */
+  }
+
+  /* Optional: Add some spacing around the buttons */
+  .button-wrapper h2 {
+    margin-bottom: 10px;
+  }
 </style>
+
