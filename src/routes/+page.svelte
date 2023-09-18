@@ -50,7 +50,7 @@
     display: block;
     text-align: center;
     padding: 10px 20px;
-    margin: 10px 0;
+    margin: 5px 0; /* Updated margin to add 5px top and bottom spacing */
     border: 2px solid #3498db;
     border-radius: 8px;
     text-decoration: none;
@@ -78,6 +78,8 @@
 .button-wrapper {
     text-align: center;
     flex-grow: 1;
+    margin: 0 5px; /* Updated margin to add 5px spacing on both sides */
 }
+
 </Style>
 
