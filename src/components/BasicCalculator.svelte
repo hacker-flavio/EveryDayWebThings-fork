@@ -40,3 +40,58 @@
     <button on:click={handleClick}>C</button>
   </div>
 </div>
+
+
+<style>
+  .calculator {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .display {
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Styling for the "=" and "C" buttons */
+  button[value="="] {
+    grid-column: span 2;
+    background-color: #28a745;
+  }
+
+  button[value="C"] {
+    background-color: #dc3545;
+  }
+</style>
+
