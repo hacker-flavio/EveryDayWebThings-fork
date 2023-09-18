@@ -13,7 +13,7 @@
       <h2>Weather</h2>
       <!-- Container for vertical buttons with box-like styling -->
       <div class="vertical-buttons">
-        <a href="/posts" class="btn btn-ghost btn-sm rounded-btn">Blog</a>
+        <a href="/SimpleWeatherInfo" class="btn btn-ghost btn-sm rounded-btn">Simple Weather Info</a>
       </div>
     </div>
     <div class="button-wrapper">
