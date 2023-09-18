@@ -22,7 +22,7 @@
     </div>
     <!-- Add 3 more buttons below -->
     <div class="button-wrapper">
-      <h2>Mini Games</h2>
+      <h2>New Button 1</h2>
       <div class="vertical-buttons">
         <a href="/new1" class="btn btn-ghost btn-sm rounded-btn">Button</a>
       </div>
@@ -45,15 +45,16 @@
 
 
 
+
 <Style>
-.vertical-buttons a {
+ .vertical-buttons a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60px;
-    padding: 0 20px;
-    font-size: 18px; /* Adjusted font size to be slightly smaller */
+    height: 40px; /* Reduced button height for mobile */
+    padding: 0 10px; /* Reduced padding for mobile */
+    font-size: 14px; /* Smaller font size for mobile */
     margin: 5px 0;
     border: 2px solid #3498db;
     border-radius: 8px;
@@ -67,26 +68,21 @@
     color: #fff;
 }
 
-
-
 .button-wrapper h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 14px; /* Smaller font size for mobile */
+    margin-bottom: 5px; /* Reduced margin for mobile */
     color: #333;
 }
 
 .button-row {
-    display: flex;
-    justify-content: space-between;
-    margin: 1inch;
+    flex-direction: column; /* Stack buttons vertically on mobile */
+    margin: 10px; /* Increased margin for better spacing on mobile */
 }
 
 .button-wrapper {
     text-align: center;
-    flex-grow: 1;
-    margin: 0 5px;
+    margin: 5px 0; /* Adjusted margin for mobile */
 }
-
 
 </Style>
 
