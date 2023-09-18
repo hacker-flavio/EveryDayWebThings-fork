@@ -22,7 +22,7 @@
     </div>
     <!-- Add 3 more buttons below -->
     <div class="button-wrapper">
-      <h2>New Button 1</h2>
+      <h2>Mini Games</h2>
       <div class="vertical-buttons">
         <a href="/new1" class="btn btn-ghost btn-sm rounded-btn">Button</a>
       </div>
