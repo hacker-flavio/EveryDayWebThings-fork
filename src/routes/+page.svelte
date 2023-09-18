@@ -24,19 +24,19 @@
     <div class="button-wrapper">
       <h2>New Button 1</h2>
       <div class="vertical-buttons">
-        <a href="/new1" class="btn btn-ghost btn-sm rounded-btn">New Button 1</a>
+        <a href="/new1" class="btn btn-ghost btn-sm rounded-btn">Button</a>
       </div>
     </div>
     <div class="button-wrapper">
       <h2>New Button 2</h2>
       <div class="vertical-buttons">
-        <a href="/new2" class="btn btn-ghost btn-sm rounded-btn">New Button 2</a>
+        <a href="/new2" class="btn btn-ghost btn-sm rounded-btn">Button</a>
       </div>
     </div>
     <div class="button-wrapper">
       <h2>New Button 3</h2>
       <div class="vertical-buttons">
-        <a href="/new3" class="btn btn-ghost btn-sm rounded-btn">New Button 3</a>
+        <a href="/new3" class="btn btn-ghost btn-sm rounded-btn">Button</a>
       </div>
     </div>
   </div>
