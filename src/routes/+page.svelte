@@ -47,13 +47,13 @@
 
 <Style>
 .vertical-buttons a {
-    display: flex; /* Use flex to center text vertically */
-    justify-content: center; /* Center text horizontally */
-    align-items: center; /* Center text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 60px; /* Adjust the height to accommodate the text */
-    padding: 0 20px; /* Adjust padding as needed */
-    font-size: 20px;
+    height: 60px;
+    padding: 0 20px;
+    font-size: 18px; /* Adjusted font size to be slightly smaller */
     margin: 5px 0;
     border: 2px solid #3498db;
     border-radius: 8px;
