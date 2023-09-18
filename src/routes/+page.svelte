@@ -20,7 +20,7 @@
       <h2>Calculators</h2>
       <!-- Container for vertical buttons with box-like styling -->
       <div class="vertical-buttons">
-        <a href="/about" class="btn btn-ghost btn-sm rounded-btn">About</a>
+        <a href="/BasicCalculator" class="btn btn-ghost btn-sm rounded-btn">Basic Calculator</a>
       </div>
     </div>
     <!-- Add 3 more buttons below -->
