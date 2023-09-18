@@ -47,14 +47,15 @@
 
 
 <Style>
- .vertical-buttons a {
+ /* Original CSS for desktop */
+.vertical-buttons a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 40px; /* Reduced button height for mobile */
-    padding: 0 10px; /* Reduced padding for mobile */
-    font-size: 14px; /* Smaller font size for mobile */
+    height: 60px;
+    padding: 0 20px;
+    font-size: 18px;
     margin: 5px 0;
     border: 2px solid #3498db;
     border-radius: 8px;
@@ -69,20 +70,47 @@
 }
 
 .button-wrapper h2 {
-    font-size: 14px; /* Smaller font size for mobile */
-    margin-bottom: 5px; /* Reduced margin for mobile */
+    font-size: 18px;
+    margin-bottom: 10px;
     color: #333;
 }
 
 .button-row {
-    flex-direction: column; /* Stack buttons vertically on mobile */
-    margin: 10px; /* Increased margin for better spacing on mobile */
+    display: flex;
+    justify-content: space-between;
+    margin: 1inch;
 }
 
 .button-wrapper {
     text-align: center;
-    margin: 5px 0; /* Adjusted margin for mobile */
+    flex-grow: 1;
+    margin: 0 5px;
 }
+
+/* Mobile optimization using media query */
+@media (max-width: 768px) {
+    .vertical-buttons a {
+        height: 40px;
+        padding: 0 10px;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .button-wrapper h2 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .button-row {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    .button-wrapper {
+        margin: 5px 0;
+    }
+}
+
 
 </Style>
 
