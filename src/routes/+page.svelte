@@ -49,8 +49,9 @@
 .vertical-buttons a {
     display: block;
     text-align: center;
-    padding: 10px 20px;
-    margin: 5px 0; /* Updated margin to add 5px top and bottom spacing */
+    padding: 15px 30px; /* Increased padding for larger buttons */
+    font-size: 20px; /* Increased font size for larger buttons */
+    margin: 5px 0;
     border: 2px solid #3498db;
     border-radius: 8px;
     text-decoration: none;
@@ -78,8 +79,9 @@
 .button-wrapper {
     text-align: center;
     flex-grow: 1;
-    margin: 0 5px; /* Updated margin to add 5px spacing on both sides */
+    margin: 0 5px;
 }
+
 
 </Style>
 
