@@ -20,7 +20,7 @@
       <h2>Calculators</h2>
       <div class="vertical-buttons">
         <a href="/BasicCalculator" class="btn btn-ghost btn-sm rounded-btn">Basic Calculator</a>
-<a href="/BasicCalculator" class="btn btn-ghost btn-sm rounded-btn">Budget Calculator</a>
+<a href="/BudgetCalculator" class="btn btn-ghost btn-sm rounded-btn">Budget Calculator</a>
       </div>
     </div>
 
