@@ -1,31 +1,56 @@
 <!-- Whiteboard.svelte -->
 <script>
+  import { onMount } from 'svelte';
+
+  let canvas;
+  let ctx;
   let drawing = false;
-  let lines = [];
+  let textMode = false;
+  let textX, textY;
+
+  onMount(() => {
+    canvas = document.getElementById('whiteboardCanvas');
+    ctx = canvas.getContext('2d');
+  });
 
   function startDrawing(event) {
+    if (textMode) return;
     drawing = true;
-    lines.push([{ x: event.clientX, y: event.clientY }]);
+    ctx.beginPath();
+    ctx.moveTo(event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top);
   }
 
   function draw(event) {
-    if (!drawing) return;
-
-    const line = lines[lines.length - 1];
-    line.push({ x: event.clientX, y: event.clientY });
-    lines = [...lines];
+    if (!drawing || textMode) return;
+    ctx.lineTo(event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top);
+    ctx.stroke();
   }
 
   function endDrawing() {
+    if (textMode) return;
     drawing = false;
   }
 
+  function toggleTextMode() {
+    textMode = !textMode;
+  }
+
+  function addText(event) {
+    if (!textMode) return;
+    textX = event.clientX - canvas.getBoundingClientRect().left;
+    textY = event.clientY - canvas.getBoundingClientRect().top;
+    const text = prompt('Enter text:');
+    if (text) {
+      ctx.font = '18px Arial';
+      ctx.fillText(text, textX, textY);
+    }
+  }
+
   function clearWhiteboard() {
-    lines = [];
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
 
   function saveAsImage() {
-    const canvas = document.getElementById('whiteboardCanvas');
     const image = canvas.toDataURL('image/png');
     
     const a = document.createElement('a');
@@ -35,19 +60,19 @@
   }
 </script>
 
-<div
-  on:mousedown="{startDrawing}"
-  on:mousemove="{draw}"
-  on:mouseup="{endDrawing}"
-  on:mouseleave="{endDrawing}"
-  style="position: relative; width: 800px; height: 600px; border: 1px solid #000;"
->
+<div style="position: relative;">
   <canvas
     id="whiteboardCanvas"
     width="800"
     height="600"
-    style="position: absolute; top: 0; left: 0;"
+    style="border: 1px solid #000;"
+    on:mousedown="{startDrawing}"
+    on:mousemove="{draw}"
+    on:mouseup="{endDrawing}"
+    on:mouseleave="{endDrawing}"
+    on:click="{addText}"
   ></canvas>
+  <button on:click="{toggleTextMode}" style="position: absolute; top: 10px; left: 10px;">Text Mode</button>
 </div>
 
 <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
