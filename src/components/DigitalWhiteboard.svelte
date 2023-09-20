@@ -8,11 +8,12 @@
   let textMode = false;
   let textX, textY;
   let backgroundColor = '#ffffff'; // Default background color
+  let textColor = '#000000'; // Default text color
 
   onMount(() => {
     canvas = document.getElementById('whiteboardCanvas');
     ctx = canvas.getContext('2d');
-    updateBackgroundColor();
+    updateBackgroundAndTextColor();
   });
 
   function startDrawing(event) {
@@ -44,18 +45,21 @@
     const text = prompt('Enter text:');
     if (text) {
       ctx.font = '18px Arial';
+      ctx.fillStyle = textColor;
       ctx.fillText(text, textX, textY);
+      ctx.fillStyle = backgroundColor;
     }
   }
 
   function clearWhiteboard() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    updateBackgroundColor();
+    updateBackgroundAndTextColor();
   }
 
-  function updateBackgroundColor() {
+  function updateBackgroundAndTextColor() {
     ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = textColor;
   }
 
   function saveAsImage() {
@@ -70,7 +74,11 @@
 
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
-  <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateBackgroundColor}" />
+  <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateBackgroundAndTextColor}" />
+  
+  <label for="textColorPicker">Text Color:</label>
+  <input type="color" id="textColorPicker" bind:value="{textColor}" on:change="{updateBackgroundAndTextColor}" />
+
   <canvas
     id="whiteboardCanvas"
     width="800"
