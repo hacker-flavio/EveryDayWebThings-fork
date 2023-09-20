@@ -39,8 +39,22 @@
     left: 60px;
   }
 
-  /* Style for the clear and save buttons */
+/* Style for the clear and save buttons */
   .control-button {
     margin: 10px;
+    background-color: #e74c3c; /* Red color for "Clear Whiteboard" button */
+  }
+
+  .control-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
+
+  .save-button {
+    margin: 10px;
+    background-color: #27ae60; /* Green color for "Save as Image" button */
+  }
+
+  .save-button:hover {
+    background-color: #219a52; /* Darker green on hover */
   }
 </style>
