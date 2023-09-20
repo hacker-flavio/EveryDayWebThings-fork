@@ -197,12 +197,17 @@
     width="800"
     height="600"
     style="border: 1px solid #000; margin-top: 10px;"
-    on:mousedown="{startDrawing}"
-    on:mousemove="{draw}"
-    on:mouseup="{endDrawing}"
-    on:mouseleave="{endDrawing}"
-    on:click="{addText}"
-    bind:this={canvasElement}
+    {#if isResizing}
+      on:mousedown="{startResize}"
+      on:mousemove="{resizeCanvas}"
+      on:mouseup="{endResize}"
+    {:else}
+      on:mousedown="{startDrawing}"
+      on:mousemove="{draw}"
+      on:mouseup="{endDrawing}"
+      on:mouseleave="{endDrawing}"
+      on:click="{addText}"
+    {/if}
   ></canvas>
 </div>
 
