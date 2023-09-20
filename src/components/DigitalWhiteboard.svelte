@@ -136,50 +136,19 @@
   /* Styles for the buttons */
   button {
     padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
 
-  .fullscreen-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #007bff;
-    color: #fff;
-  }
-
-  .text-mode-button {
-    position: absolute;
-    top: 10px;
-    left: 60px;
-    background-color: #007bff;
-    color: #fff;
-  }
-
-  .clear-button {
-    position: absolute;
-    top: 10px;
-    left: 120px;
-    background-color: #f44336;
-    color: #fff;
-    margin-right: 10px;
-  }
-
-  .save-button {
-    position: absolute;
-    top: 10px;
-    left: 240px;
-    background-color: #4caf50;
-    color: #fff;
-  }
-
   /* Styles for the canvas */
   #whiteboardCanvas {
     border: 1px solid #000;
-    position: absolute;
-    top: 40px;
-    left: 10px;
+    position: relative;
+    margin-top: 10px;
   }
 </style>
 
@@ -203,15 +172,12 @@
   on:click="{addText}"
 ></canvas>
 
-<div style="position: relative;">
-  <button on:click="{toggleFullScreen}" class="fullscreen-button">Toggle Fullscreen</button>
-  <button on:click="{toggleTextMode}" class="text-mode-button">Text Mode</button>
+<div>
+  <button on:click="{toggleFullScreen}">Toggle Fullscreen</button>
+  <button on:click="{toggleTextMode}">Text Mode</button>
+  <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
+  <button on:click="{saveAsImage}">Save as Image</button>
 </div>
-
-<button on:click="{clearWhiteboard}" class="clear-button">Clear Whiteboard</button>
-<button on:click="{saveAsImage}" class="save-button">Save as Image</button>
-
-
 
 
 
