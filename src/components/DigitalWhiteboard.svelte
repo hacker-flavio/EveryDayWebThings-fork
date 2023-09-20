@@ -138,11 +138,8 @@
   <label for="textColorPicker">Text Color:</label>
   <input type="color" id="textColorPicker" bind:value="{textColor}" on:change="{updateCanvas}" />
 
-<button on:click="{toggleFullScreen}" style="position: absolute; top: 10px; left: 10px; padding: 5px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Toggle Fullscreen</button>
-
-<button on:click="{toggleTextMode}" style="position: absolute; top: 10px; left: 60px; padding: 5px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Text Mode</button>
-
-
+  <button on:click="{toggleFullScreen}" style="position: absolute; top: 10px; left: 10px; padding: 5px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Toggle Fullscreen</button>
+  
   <canvas
     id="whiteboardCanvas"
     width="800"
@@ -154,12 +151,13 @@
     on:mouseleave="{endDrawing}"
     on:click="{addText}"
   ></canvas>
-  <button on:click="{toggleTextMode}" style="position: absolute; top: 10px; left: 60px;">Text Mode</button>
 </div>
 
-<button on:click="{clearWhiteboard}" style="padding: 10px 20px; background-color: #f44336; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;">Clear Whiteboard</button>
+<button on:click="{toggleTextMode}" style="position: absolute; top: 10px; left: 60px; padding: 5px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Text Mode</button>
 
-<button on:click="{saveAsImage}" style="padding: 10px 20px; background-color: #4caf50; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Save as Image</button>
+<button on:click="{clearWhiteboard}" style="position: absolute; top: 10px; left: 120px; padding: 10px 20px; background-color: #f44336; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;">Clear Whiteboard</button>
+
+<button on:click="{saveAsImage}" style="position: absolute; top: 10px; left: 240px; padding: 10px 20px; background-color: #4caf50; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Save as Image</button>
 
 
 
