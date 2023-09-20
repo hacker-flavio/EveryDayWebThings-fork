@@ -9,36 +9,38 @@
 </main>
 
 <style>
-  main {
-    text-align: center;
-    margin: 50px auto;
+  /* Style for regular buttons */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
-/* whiteboard.css */
 
-div {
-  text-align: center;
-}
+  .button:hover {
+    background-color: #2980b9;
+  }
 
-label {
-  margin-right: 10px;
-}
+  /* Style for the fullscreen button */
+  .fullscreen-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
 
-canvas {
-  border: 1px solid #000;
-  cursor: crosshair;
-}
+  /* Style for the text mode button */
+  .text-mode-button {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+  }
 
-button {
-  margin: 5px;
-  padding: 5px 10px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
+  /* Style for the clear and save buttons */
+  .control-button {
+    margin: 10px;
+  }
 </style>
