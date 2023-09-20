@@ -190,30 +190,26 @@
 
   <label for="textColorPicker">Text Color:</label>
   <input type="color" id="textColorPicker" bind:value="{textColor}" on:change="{updateCanvas}" />
+</div>
 
+<canvas
+  id="whiteboardCanvas"
+  width="800"
+  height="600"
+  on:mousedown="{startDrawing}"
+  on:mousemove="{draw}"
+  on:mouseup="{endDrawing}"
+  on:mouseleave="{endDrawing}"
+  on:click="{addText}"
+></canvas>
+
+<div style="position: relative;">
   <button on:click="{toggleFullScreen}" class="fullscreen-button">Toggle Fullscreen</button>
   <button on:click="{toggleTextMode}" class="text-mode-button">Text Mode</button>
-
-  <canvas
-    id="whiteboardCanvas"
-    width="800"
-    height="600"
-    on:mousedown="{startDrawing}"
-    on:mousemove="{draw}"
-    on:mouseup="{endDrawing}"
-    on:mouseleave="{endDrawing}"
-    on:click="{addText}"
-  ></canvas>
 </div>
 
 <button on:click="{clearWhiteboard}" class="clear-button">Clear Whiteboard</button>
 <button on:click="{saveAsImage}" class="save-button">Save as Image</button>
-
-
-
-
-
-
 
 
 
