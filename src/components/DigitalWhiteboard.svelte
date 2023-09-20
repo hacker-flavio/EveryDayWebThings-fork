@@ -179,6 +179,7 @@
 </style>
 
 
+
 <!-- Your Svelte component's HTML code -->
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
@@ -193,7 +194,7 @@
     id="whiteboardCanvas"
     width="800"
     height="600"
-    style="border: 1px solid #000; margin-top: 10px;"
+    style="border: 1px solid #000; margin-top: 10px; cursor: move;" <!-- Added cursor: move -->
     on:mousedown="{startDrawing}"
     on:mousemove="{draw}"
     on:mouseup="{endDrawing}"
@@ -206,11 +207,9 @@
   <button on:click="{toggleTextMode}">Text Mode</button>
   <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
   <button on:click="{saveAsImage}">Save as Image</button>
+  <!-- Button to adjust canvas size -->
+  <button on:mousedown="{startResize}" on:mousemove="{resizeCanvas}" on:mouseup="{endResize}">Adjust Canvas Size</button>
 </div>
-
-<!-- Button to adjust canvas size -->
-<button on:mousedown="{startResize}" on:mousemove="{resizeCanvas}" on:mouseup="{endResize}">Adjust Canvas Size</button>
-
 
 
 
