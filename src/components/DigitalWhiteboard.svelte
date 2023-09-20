@@ -157,6 +157,7 @@
     on:mousedown="{startDrawing}"
     on:mousemove="{draw}"
     on:mouseup="{endDrawing}"
+    on:click="{addText}"
   ></canvas>
 </div>
 
@@ -165,3 +166,4 @@
   <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
   <button on:click="{saveAsImage}">Save as Image</button>
 </div>
+
