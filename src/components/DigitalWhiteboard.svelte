@@ -17,13 +17,17 @@
     canvas = document.getElementById('whiteboardCanvas');
     ctx = canvas.getContext('2d');
     updateBackgroundAndTextColor();
+    redrawCanvas();
   });
 
   function startDrawing(event) {
     if (textMode) return;
     drawing = true;
+    const x = event.clientX - canvas.getBoundingClientRect().left;
+    const y = event.clientY - canvas.getBoundingClientRect().top;
     ctx.beginPath();
-    ctx.moveTo(event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top);
+    ctx.moveTo(x, y);
+    drawingItems.push({ type: 'start', x, y });
   }
 
   function draw(event) {
@@ -38,6 +42,7 @@
   function endDrawing() {
     if (textMode) return;
     drawing = false;
+    drawingItems.push({ type: 'end' });
   }
 
   function toggleTextMode() {
@@ -69,6 +74,27 @@
     ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = textColor;
+  }
+
+  function redrawCanvas() {
+    for (const item of drawingItems) {
+      if (item.type === 'start') {
+        ctx.beginPath();
+        ctx.moveTo(item.x, item.y);
+      } else if (item.type === 'line') {
+        ctx.lineTo(item.x, item.y);
+        ctx.stroke();
+      } else if (item.type === 'end') {
+        ctx.closePath();
+      }
+    }
+
+    for (const item of textItems) {
+      ctx.font = '18px Arial';
+      ctx.fillStyle = item.color;
+      ctx.fillText(item.text, item.x, item.y);
+      ctx.fillStyle = backgroundColor;
+    }
   }
 
   function toggleFullScreen() {
