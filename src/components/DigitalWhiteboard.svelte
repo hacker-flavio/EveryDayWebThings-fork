@@ -7,10 +7,12 @@
   let drawing = false;
   let textMode = false;
   let textX, textY;
+  let backgroundColor = '#ffffff'; // Default background color
 
   onMount(() => {
     canvas = document.getElementById('whiteboardCanvas');
     ctx = canvas.getContext('2d');
+    updateBackgroundColor();
   });
 
   function startDrawing(event) {
@@ -48,6 +50,12 @@
 
   function clearWhiteboard() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    updateBackgroundColor();
+  }
+
+  function updateBackgroundColor() {
+    ctx.fillStyle = backgroundColor;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
 
   function saveAsImage() {
@@ -61,6 +69,8 @@
 </script>
 
 <div style="position: relative;">
+  <label for="bgColorPicker">Background Color:</label>
+  <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateBackgroundColor}" />
   <canvas
     id="whiteboardCanvas"
     width="800"
