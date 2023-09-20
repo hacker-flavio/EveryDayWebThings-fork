@@ -1,7 +1,4 @@
-<!-- Whiteboard.svelte -->
-
-
-<!-- Whiteboard.svelte -->
+<!-- DigitalWhiteboard.svelte -->
 <script>
   import { onMount } from 'svelte';
 
@@ -16,8 +13,7 @@
   let drawingItems = []; // Store drawing items
   let isFullScreen = false;
   let isResizing = false;
-  let initialCanvasWidth = 800;
-  let initialCanvasHeight = 600;
+  let initialMouseX, initialMouseY, initialCanvasWidth, initialCanvasHeight;
 
   onMount(() => {
     canvas = document.getElementById('whiteboardCanvas');
@@ -137,52 +133,48 @@
   }
 
   function startResize(event) {
-    isResizing = true;
-    initialCanvasWidth = canvas.width;
-    initialCanvasHeight = canvas.height;
+    if (event.target === canvas) {
+      isResizing = true;
+      initialMouseX = event.clientX;
+      initialMouseY = event.clientY;
+      initialCanvasWidth = canvas.width;
+      initialCanvasHeight = canvas.height;
+    }
   }
 
   function resizeCanvas(event) {
-    if (!isResizing) return;
-
-    const newWidth = initialCanvasWidth + (event.clientX - canvas.getBoundingClientRect().left);
-    const newHeight = initialCanvasHeight + (event.clientY - canvas.getBoundingClientRect().top);
-
-    canvas.width = Math.max(100, newWidth); // Set minimum canvas width
-    canvas.height = Math.max(100, newHeight); // Set minimum canvas height
-    updateCanvas(); // Update canvas content
+    if (isResizing) {
+      const deltaX = event.clientX - initialMouseX;
+      const deltaY = event.clientY - initialMouseY;
+      canvas.width = Math.max(100, initialCanvasWidth + deltaX);
+      canvas.height = Math.max(100, initialCanvasHeight + deltaY);
+      updateCanvas();
+    }
   }
 
-  function endResize(event) {
+  function endResize() {
     isResizing = false;
   }
 </script>
 
-
-
 <style>
-  /* Styles for the buttons */
-  button {
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  /* Add your styles here */
+  label {
+    display: block;
+    margin-top: 10px;
   }
 
-  /* Styles for the canvas */
-  #whiteboardCanvas {
+  canvas {
     border: 1px solid #000;
-    position: relative;
+    margin-top: 10px;
+    cursor: crosshair;
+  }
+
+  button {
     margin-top: 10px;
   }
 </style>
 
-
-
-<!-- Your Svelte component's HTML code -->
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
   <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateCanvas}" />
@@ -196,18 +188,9 @@
     id="whiteboardCanvas"
     width="800"
     height="600"
-    style="border: 1px solid #000; margin-top: 10px;"
-    {#if isResizing}
-      on:mousedown="{startResize}"
-      on:mousemove="{resizeCanvas}"
-      on:mouseup="{endResize}"
-    {:else}
-      on:mousedown="{startDrawing}"
-      on:mousemove="{draw}"
-      on:mouseup="{endDrawing}"
-      on:mouseleave="{endDrawing}"
-      on:click="{addText}"
-    {/if}
+    on:mousedown="{startResize}"
+    on:mousemove="{resizeCanvas}"
+    on:mouseup="{endResize}"
   ></canvas>
 </div>
 
@@ -216,5 +199,6 @@
   <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
   <button on:click="{saveAsImage}">Save as Image</button>
 </div>
+
 
 
