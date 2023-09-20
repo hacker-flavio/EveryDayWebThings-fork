@@ -13,67 +13,32 @@
     text-align: center;
     margin: 50px auto;
   }
-  /* Styles for buttons */
-  .button-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
+/* whiteboard.css */
 
-  .button-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 5px;
-    width: 200px;
-  }
+div {
+  text-align: center;
+}
 
-  .button-wrapper h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
+label {
+  margin-right: 10px;
+}
 
-  .vertical-buttons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    padding: 0 10px;
-    font-size: 16px;
-    margin: 5px 0;
-    border: 2px solid #3498db;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #3498db;
-    transition: background-color 0.3s, color 0.3s;
-  }
+canvas {
+  border: 1px solid #000;
+  cursor: crosshair;
+}
 
-  .vertical-buttons a:hover {
-    background-color: #3498db;
-    color: #fff;
-  }
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  /* Other styles */
-  .whiteboard-container {
-    position: relative;
-  }
-
-  .controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  }
-
-  .color-pickers {
-    display: flex;
-    gap: 10px;
-  }
+button:hover {
+  background-color: #0056b3;
+}
 </style>
