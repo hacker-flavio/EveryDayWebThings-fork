@@ -202,6 +202,9 @@
     on:mouseup="{endDrawing}"
     on:mouseleave="{endDrawing}"
     on:click="{addText}"
+    on:mousedown="{startResize}" <!-- Add mousedown event for resizing -->
+    on:mousemove="{resizeCanvas}" <!-- Add mousemove event for resizing -->
+    on:mouseup="{endResize}" <!-- Add mouseup event for resizing -->
   ></canvas>
 </div>
 
@@ -209,7 +212,6 @@
   <button on:click="{toggleTextMode}">Text Mode</button>
   <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
   <button on:click="{saveAsImage}">Save as Image</button>
-  <button on:mousedown="{startResize}" on:mousemove="{resizeCanvas}" on:mouseup="{endResize}">Adjust Canvas Size</button>
 </div>
 
 
