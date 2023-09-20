@@ -6,6 +6,7 @@
         <a href="/passwordgenerator" class="btn btn-ghost btn-sm rounded-btn">Password Generator</a>
         <a href="/RandomWordGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Word Generator</a>
         <a href="/RandomQuoteGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Quote Generator</a>
+        <a href="/RandomParagraphGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Paragraph Generator</a>
       </div>
     </div>
 
