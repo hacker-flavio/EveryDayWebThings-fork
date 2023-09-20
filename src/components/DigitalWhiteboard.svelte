@@ -173,7 +173,27 @@
   button {
     margin-top: 10px;
   }
+
+  /* Styles for the buttons */
+  button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Styles for the canvas */
+  #whiteboardCanvas {
+    border: 1px solid #000;
+    position: relative;
+    margin-top: 10px;
+  }
 </style>
+
+
 
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
