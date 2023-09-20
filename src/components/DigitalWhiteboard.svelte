@@ -10,10 +10,7 @@
   let backgroundColor = '#ffffff'; // Default background color
   let textColor = '#000000'; // Default text color
   let textItems = []; // Store text items
-  let drawingItems = []; // Store drawing items
-  let isFullScreen = false;
-  let isResizing = false;
-  let initialMouseX, initialMouseY, initialCanvasWidth, initialCanvasHeight;
+  let drawingItems = [];
 
   onMount(() => {
     canvas = document.getElementById('whiteboardCanvas');
@@ -98,31 +95,6 @@
     }
   }
 
-  function toggleFullScreen() {
-    if (!isFullScreen) {
-      if (canvas.requestFullscreen) {
-        canvas.requestFullscreen();
-      } else if (canvas.mozRequestFullScreen) {
-        canvas.mozRequestFullScreen();
-      } else if (canvas.webkitRequestFullscreen) {
-        canvas.webkitRequestFullscreen();
-      } else if (canvas.msRequestFullscreen) {
-        canvas.msRequestFullscreen();
-      }
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      }
-    }
-    isFullScreen = !isFullScreen;
-  }
-
   function saveAsImage() {
     const image = canvas.toDataURL('image/png');
 
@@ -131,11 +103,7 @@
     a.download = 'whiteboard.png';
     a.click();
   }
-
 </script>
-
-<!-- DigitalWhiteboard.svelte -->
-<!-- ... (previous code) ... -->
 
 <style>
   /* Add your styles here */
@@ -147,7 +115,7 @@
   canvas {
     border: 1px solid #000;
     margin-top: 10px;
-    cursor: default; /* Remove the crosshair cursor */
+    cursor: crosshair;
   }
 
   button {
@@ -173,9 +141,6 @@
   }
 </style>
 
-<!-- ... (remaining code) ... -->
-
-
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
   <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateCanvas}" />
@@ -189,6 +154,9 @@
     id="whiteboardCanvas"
     width="800"
     height="600"
+    on:mousedown="{startDrawing}"
+    on:mousemove="{draw}"
+    on:mouseup="{endDrawing}"
   ></canvas>
 </div>
 
