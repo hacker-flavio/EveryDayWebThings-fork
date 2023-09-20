@@ -156,3 +156,40 @@
 
 <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
 <button on:click="{saveAsImage}">Save as Image</button>
+
+
+
+
+<!-- Whiteboard.svelte -->
+<style>
+  .action-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .clear-button {
+    background-color: #FF6347; /* Red color */
+    color: #fff;
+    border: none;
+  }
+
+  .save-button {
+    background-color: #32CD32; /* Green color */
+    color: #fff;
+    border: none;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
