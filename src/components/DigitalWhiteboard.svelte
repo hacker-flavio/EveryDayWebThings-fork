@@ -9,6 +9,9 @@
   let textX, textY;
   let backgroundColor = '#ffffff'; // Default background color
   let textColor = '#000000'; // Default text color
+  let textItems = []; // Store text items
+  let drawingItems = []; // Store drawing items
+  let isFullScreen = false;
 
   onMount(() => {
     canvas = document.getElementById('whiteboardCanvas');
@@ -25,8 +28,11 @@
 
   function draw(event) {
     if (!drawing || textMode) return;
-    ctx.lineTo(event.clientX - canvas.getBoundingClientRect().left, event.clientY - canvas.getBoundingClientRect().top);
+    const x = event.clientX - canvas.getBoundingClientRect().left;
+    const y = event.clientY - canvas.getBoundingClientRect().top;
+    ctx.lineTo(x, y);
     ctx.stroke();
+    drawingItems.push({ type: 'line', x, y });
   }
 
   function endDrawing() {
@@ -48,11 +54,14 @@
       ctx.fillStyle = textColor;
       ctx.fillText(text, textX, textY);
       ctx.fillStyle = backgroundColor;
+      textItems.push({ type: 'text', text, x: textX, y: textY, color: textColor });
     }
   }
 
   function clearWhiteboard() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    textItems = [];
+    drawingItems = [];
     updateBackgroundAndTextColor();
   }
 
@@ -60,6 +69,31 @@
     ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = textColor;
+  }
+
+  function toggleFullScreen() {
+    if (!isFullScreen) {
+      if (canvas.requestFullscreen) {
+        canvas.requestFullscreen();
+      } else if (canvas.mozRequestFullScreen) {
+        canvas.mozRequestFullScreen();
+      } else if (canvas.webkitRequestFullscreen) {
+        canvas.webkitRequestFullscreen();
+      } else if (canvas.msRequestFullscreen) {
+        canvas.msRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
+    isFullScreen = !isFullScreen;
   }
 
   function saveAsImage() {
@@ -79,6 +113,8 @@
   <label for="textColorPicker">Text Color:</label>
   <input type="color" id="textColorPicker" bind:value="{textColor}" on:change="{updateBackgroundAndTextColor}" />
 
+  <button on:click="{toggleFullScreen}" style="position: absolute; top: 10px; left: 10px;">Toggle Fullscreen</button>
+
   <canvas
     id="whiteboardCanvas"
     width="800"
@@ -90,7 +126,7 @@
     on:mouseleave="{endDrawing}"
     on:click="{addText}"
   ></canvas>
-  <button on:click="{toggleTextMode}" style="position: absolute; top: 10px; left: 10px;">Text Mode</button>
+  <button on:click="{toggleTextMode}" style="position: absolute; top: 10px; left: 60px;">Text Mode</button>
 </div>
 
 <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
