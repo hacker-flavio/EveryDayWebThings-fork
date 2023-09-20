@@ -202,11 +202,7 @@
     on:mouseup="{endDrawing}"
     on:mouseleave="{endDrawing}"
     on:click="{addText}"
-    {#if isResizing}
-      on:mousedown="{startResize}"
-      on:mousemove="{resizeCanvas}"
-      on:mouseup="{endResize}"
-    {/if}
+    bind:this={canvasElement}
   ></canvas>
 </div>
 
@@ -215,4 +211,5 @@
   <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
   <button on:click="{saveAsImage}">Save as Image</button>
 </div>
+
 
