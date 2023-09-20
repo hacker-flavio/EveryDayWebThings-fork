@@ -7,6 +7,7 @@
         <a href="/RandomWordGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Word Generator</a>
         <a href="/RandomQuoteGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Quote Generator</a>
         <a href="/RandomParagraphGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Paragraph Generator</a>
+        <a href="/RandomNumberGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Number Generator</a>
       </div>
     </div>
 
@@ -14,6 +15,7 @@
       <h2>Weather</h2>
       <div class="vertical-buttons">
         <a href="/SimpleWeatherInfo" class="btn btn-ghost btn-sm rounded-btn">Simple Weather Info</a>
+        <a href="/SimpleWeather" class="btn btn-ghost btn-sm rounded-btn">Weather Info</a>
       </div>
     </div>
 
@@ -21,7 +23,8 @@
       <h2>Calculators</h2>
       <div class="vertical-buttons">
         <a href="/BasicCalculator" class="btn btn-ghost btn-sm rounded-btn">Basic Calculator</a>
-<a href="/BudgetCalculator" class="btn btn-ghost btn-sm rounded-btn">Budget Calculator</a>
+        <a href="/BudgetCalculator" class="btn btn-ghost btn-sm rounded-btn">Budget Calculator</a>
+        <a href="/Scientific Calculator" class="btn btn-ghost btn-sm rounded-btn">Scientific Calculator</a>
       </div>
     </div>
 
@@ -42,7 +45,8 @@
     <div class="button-wrapper">
       <h2>Mini Games</h2>
       <div class="vertical-buttons">
-        <a href="/new3" class="btn btn-ghost btn-sm rounded-btn">Button</a>
+        <a href="/TikTacToe" class="btn btn-ghost btn-sm rounded-btn">Tik Tac Toe</a>
+        <a href="/Snake" class="btn btn-ghost btn-sm rounded-btn">Snake</a>
       </div>
     </div>
   </div>
