@@ -32,7 +32,7 @@
       <h2>Other tools</h2>
       <div class="vertical-buttons">
         <a href="/URLShortener" class="btn btn-ghost btn-sm rounded-btn">URL Shortener</a>
-        <a href="/DigitalWhiteboard" class="btn btn-ghost btn-sm rounded-btn">DigitalWhiteboard</a
+        <a href="/DigitalWhiteboard" class="btn btn-ghost btn-sm rounded-btn">DigitalWhiteboard</a>
         <a href="/Timer" class="btn btn-ghost btn-sm rounded-btn">Timer</a>
         <a href="/Stopwatch" class="btn btn-ghost btn-sm rounded-btn">Stopwatch</a>
       </div>
