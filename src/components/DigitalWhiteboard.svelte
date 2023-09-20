@@ -131,6 +131,59 @@
   }
 </script>
 
+
+<style>
+  /* Styles for the buttons */
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .fullscreen-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .text-mode-button {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .clear-button {
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    background-color: #f44336;
+    color: #fff;
+    margin-right: 10px;
+  }
+
+  .save-button {
+    position: absolute;
+    top: 10px;
+    left: 240px;
+    background-color: #4caf50;
+    color: #fff;
+  }
+
+  /* Styles for the canvas */
+  #whiteboardCanvas {
+    border: 1px solid #000;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+  }
+</style>
+
+<!-- Your Svelte component's HTML code -->
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
   <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateCanvas}" />
@@ -138,14 +191,13 @@
   <label for="textColorPicker">Text Color:</label>
   <input type="color" id="textColorPicker" bind:value="{textColor}" on:change="{updateCanvas}" />
 
-  <button on:click="{toggleFullScreen}" style="position: absolute; top: 10px; left: 10px; padding: 5px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Toggle Fullscreen</button>
-  <button on:click="{toggleTextMode}" style="position: absolute; top: 10px; left: 80px; padding: 5px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Text Mode</button>
+  <button on:click="{toggleFullScreen}" class="fullscreen-button">Toggle Fullscreen</button>
+  <button on:click="{toggleTextMode}" class="text-mode-button">Text Mode</button>
 
   <canvas
     id="whiteboardCanvas"
     width="800"
     height="600"
-    style="border: 1px solid #000; position: absolute; top: 40px; left: 10px;"
     on:mousedown="{startDrawing}"
     on:mousemove="{draw}"
     on:mouseup="{endDrawing}"
@@ -154,10 +206,8 @@
   ></canvas>
 </div>
 
-<button on:click="{clearWhiteboard}" style="position: absolute; top: 10px; left: 160px; padding: 10px 20px; background-color: #f44336; color: #fff; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;">Clear Whiteboard</button>
-
-<button on:click="{saveAsImage}" style="position: absolute; top: 10px; left: 300px; padding: 10px 20px; background-color: #4caf50; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Save as Image</button>
-
+<button on:click="{clearWhiteboard}" class="clear-button">Clear Whiteboard</button>
+<button on:click="{saveAsImage}" class="save-button">Save as Image</button>
 
 
 
