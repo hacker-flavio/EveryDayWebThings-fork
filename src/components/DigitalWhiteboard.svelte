@@ -16,8 +16,7 @@
   onMount(() => {
     canvas = document.getElementById('whiteboardCanvas');
     ctx = canvas.getContext('2d');
-    updateBackgroundAndTextColor();
-    redrawCanvas();
+    updateCanvas();
   });
 
   function startDrawing(event) {
@@ -67,16 +66,23 @@
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     textItems = [];
     drawingItems = [];
-    updateBackgroundAndTextColor();
+    updateCanvas();
   }
 
-  function updateBackgroundAndTextColor() {
+  function updateCanvas() {
     ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = textColor;
-  }
 
-  function redrawCanvas() {
+    // Redraw text items
+    for (const item of textItems) {
+      ctx.font = '18px Arial';
+      ctx.fillStyle = item.color;
+      ctx.fillText(item.text, item.x, item.y);
+      ctx.fillStyle = textColor;
+    }
+
+    // Redraw drawing items
     for (const item of drawingItems) {
       if (item.type === 'start') {
         ctx.beginPath();
@@ -87,13 +93,6 @@
       } else if (item.type === 'end') {
         ctx.closePath();
       }
-    }
-
-    for (const item of textItems) {
-      ctx.font = '18px Arial';
-      ctx.fillStyle = item.color;
-      ctx.fillText(item.text, item.x, item.y);
-      ctx.fillStyle = backgroundColor;
     }
   }
 
@@ -124,7 +123,7 @@
 
   function saveAsImage() {
     const image = canvas.toDataURL('image/png');
-    
+
     const a = document.createElement('a');
     a.href = image;
     a.download = 'whiteboard.png';
@@ -134,10 +133,10 @@
 
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
-  <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateBackgroundAndTextColor}" />
-  
+  <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateCanvas}" />
+
   <label for="textColorPicker">Text Color:</label>
-  <input type="color" id="textColorPicker" bind:value="{textColor}" on:change="{updateBackgroundAndTextColor}" />
+  <input type="color" id="textColorPicker" bind:value="{textColor}" on:change="{updateCanvas}" />
 
   <button on:click="{toggleFullScreen}" style="position: absolute; top: 10px; left: 10px;">Toggle Fullscreen</button>
 
