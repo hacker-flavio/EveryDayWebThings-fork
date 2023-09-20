@@ -1,6 +1,7 @@
 <!-- Whiteboard.svelte -->
 
 
+<!-- Whiteboard.svelte -->
 <script>
   import { onMount } from 'svelte';
 
@@ -158,6 +159,7 @@
 </script>
 
 
+
 <style>
   /* Styles for the buttons */
   button {
@@ -194,7 +196,7 @@
     id="whiteboardCanvas"
     width="800"
     height="600"
-    style="border: 1px solid #000; margin-top: 10px; cursor: move;" <!-- Added cursor: move -->
+    style="border: 1px solid #000; margin-top: 10px;"
     on:mousedown="{startDrawing}"
     on:mousemove="{draw}"
     on:mouseup="{endDrawing}"
@@ -207,7 +209,6 @@
   <button on:click="{toggleTextMode}">Text Mode</button>
   <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
   <button on:click="{saveAsImage}">Save as Image</button>
-  <!-- Button to adjust canvas size -->
   <button on:mousedown="{startResize}" on:mousemove="{resizeCanvas}" on:mouseup="{endResize}">Adjust Canvas Size</button>
 </div>
 
