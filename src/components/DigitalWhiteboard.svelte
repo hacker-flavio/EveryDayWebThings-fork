@@ -215,3 +215,4 @@
   <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
   <button on:click="{saveAsImage}">Save as Image</button>
 </div>
+
