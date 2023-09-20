@@ -182,7 +182,7 @@
 
 
 
- <!-- Your Svelte component's HTML code -->
+<!-- Your Svelte component's HTML code -->
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
   <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateCanvas}" />
@@ -202,9 +202,11 @@
     on:mouseup="{endDrawing}"
     on:mouseleave="{endDrawing}"
     on:click="{addText}"
-    {on:mousedown="{startResize}"} <!-- Add mousedown event for resizing -->
-    {on:mousemove="{resizeCanvas}"} <!-- Add mousemove event for resizing -->
-    {on:mouseup="{endResize}"} <!-- Add mouseup event for resizing -->
+    {#if isResizing}
+      on:mousedown="{startResize}" <!-- Add mousedown event for resizing -->
+      on:mousemove="{resizeCanvas}" <!-- Add mousemove event for resizing -->
+      on:mouseup="{endResize}" <!-- Add mouseup event for resizing -->
+    {/if}
   ></canvas>
 </div>
 
