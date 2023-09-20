@@ -1,4 +1,6 @@
 <!-- Whiteboard.svelte -->
+
+
 <script>
   import { onMount } from 'svelte';
 
@@ -12,6 +14,9 @@
   let textItems = []; // Store text items
   let drawingItems = []; // Store drawing items
   let isFullScreen = false;
+  let isResizing = false;
+  let initialCanvasWidth = 800;
+  let initialCanvasHeight = 600;
 
   onMount(() => {
     canvas = document.getElementById('whiteboardCanvas');
@@ -129,6 +134,27 @@
     a.download = 'whiteboard.png';
     a.click();
   }
+
+  function startResize(event) {
+    isResizing = true;
+    initialCanvasWidth = canvas.width;
+    initialCanvasHeight = canvas.height;
+  }
+
+  function resizeCanvas(event) {
+    if (!isResizing) return;
+
+    const newWidth = initialCanvasWidth + (event.clientX - canvas.getBoundingClientRect().left);
+    const newHeight = initialCanvasHeight + (event.clientY - canvas.getBoundingClientRect().top);
+
+    canvas.width = Math.max(100, newWidth); // Set minimum canvas width
+    canvas.height = Math.max(100, newHeight); // Set minimum canvas height
+    updateCanvas(); // Update canvas content
+  }
+
+  function endResize(event) {
+    isResizing = false;
+  }
 </script>
 
 
@@ -152,6 +178,7 @@
   }
 </style>
 
+
 <!-- Your Svelte component's HTML code -->
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
@@ -161,23 +188,28 @@
   <input type="color" id="textColorPicker" bind:value="{textColor}" on:change="{updateCanvas}" />
 </div>
 
-<canvas
-  id="whiteboardCanvas"
-  width="800"
-  height="600"
-  on:mousedown="{startDrawing}"
-  on:mousemove="{draw}"
-  on:mouseup="{endDrawing}"
-  on:mouseleave="{endDrawing}"
-  on:click="{addText}"
-></canvas>
+<div style="position: relative;">
+  <canvas
+    id="whiteboardCanvas"
+    width="800"
+    height="600"
+    style="border: 1px solid #000; margin-top: 10px;"
+    on:mousedown="{startDrawing}"
+    on:mousemove="{draw}"
+    on:mouseup="{endDrawing}"
+    on:mouseleave="{endDrawing}"
+    on:click="{addText}"
+  ></canvas>
+</div>
 
 <div>
-  <button on:click="{toggleFullScreen}">Toggle Fullscreen</button>
   <button on:click="{toggleTextMode}">Text Mode</button>
   <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
   <button on:click="{saveAsImage}">Save as Image</button>
 </div>
+
+<!-- Button to adjust canvas size -->
+<button on:mousedown="{startResize}" on:mousemove="{resizeCanvas}" on:mouseup="{endResize}">Adjust Canvas Size</button>
 
 
 
