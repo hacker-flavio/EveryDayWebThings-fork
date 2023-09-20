@@ -132,29 +132,6 @@
     a.click();
   }
 
-  function startResize(event) {
-    if (event.target === canvas) {
-      isResizing = true;
-      initialMouseX = event.clientX;
-      initialMouseY = event.clientY;
-      initialCanvasWidth = canvas.width;
-      initialCanvasHeight = canvas.height;
-    }
-  }
-
-  function resizeCanvas(event) {
-    if (isResizing) {
-      const deltaX = event.clientX - initialMouseX;
-      const deltaY = event.clientY - initialMouseY;
-      canvas.width = Math.max(100, initialCanvasWidth + deltaX);
-      canvas.height = Math.max(100, initialCanvasHeight + deltaY);
-      updateCanvas();
-    }
-  }
-
-  function endResize() {
-    isResizing = false;
-  }
 </script>
 
 <style>
@@ -193,8 +170,6 @@
   }
 </style>
 
-
-
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
   <input type="color" id="bgColorPicker" bind:value="{backgroundColor}" on:change="{updateCanvas}" />
@@ -208,9 +183,6 @@
     id="whiteboardCanvas"
     width="800"
     height="600"
-    on:mousedown="{startResize}"
-    on:mousemove="{resizeCanvas}"
-    on:mouseup="{endResize}"
   ></canvas>
 </div>
 
@@ -219,6 +191,3 @@
   <button on:click="{clearWhiteboard}">Clear Whiteboard</button>
   <button on:click="{saveAsImage}">Save as Image</button>
 </div>
-
-
-
