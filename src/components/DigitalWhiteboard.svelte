@@ -134,6 +134,9 @@
 
 </script>
 
+<!-- DigitalWhiteboard.svelte -->
+<!-- ... (previous code) ... -->
+
 <style>
   /* Add your styles here */
   label {
@@ -144,7 +147,7 @@
   canvas {
     border: 1px solid #000;
     margin-top: 10px;
-    cursor: crosshair;
+    cursor: default; /* Remove the crosshair cursor */
   }
 
   button {
@@ -169,6 +172,9 @@
     margin-top: 10px;
   }
 </style>
+
+<!-- ... (remaining code) ... -->
+
 
 <div style="position: relative;">
   <label for="bgColorPicker">Background Color:</label>
