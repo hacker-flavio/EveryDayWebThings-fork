@@ -92,15 +92,13 @@
     display: grid;
     grid-template-columns: repeat(${numCols}, ${gridSize}px);
     grid-template-rows: repeat(${numRows}, ${gridSize}px);
-    width: ${gridSize * numCols}px;
-    height: ${gridSize * numRows}px;
-    border: 1px solid #000;
   }
 
   .cell {
-    width: ${gridSize - 2}px;
-    height: ${gridSize - 2}px;
+    width: ${gridSize}px;
+    height: ${gridSize}px;
     background-color: #ccc;
+    border: 1px solid #fff;
   }
 
   .snake {
