@@ -66,8 +66,8 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(numCols, ${gridSize}px);
-    grid-template-rows: repeat(numRows, ${gridSize}px);
+    grid-template-columns: repeat(${numCols}, ${gridSize}px);
+    grid-template-rows: repeat(${numRows}, ${gridSize}px);
     width: ${gridSize * numCols}px;
     height: ${gridSize * numRows}px;
     border: 1px solid #000;
@@ -76,22 +76,24 @@
   .cell {
     width: ${gridSize - 2}px;
     height: ${gridSize - 2}px;
-    background-color: #ccc;
+    background-color: #cccccc;
   }
 
   .snake {
-    background-color: #00f;
+    background-color: #0000ff;
   }
 
   .food {
-    background-color: #f00;
+    background-color: #ff0000;
   }
 </style>
 
 <div class="grid">
-  {#each Array(numRows * numCols) as _, i}
-    <div
-      class="cell {snake.some(segment => segment.x === i % numCols && Math.floor(i / numCols) === segment.y) ? 'snake' : ''} {food.x === i % numCols && Math.floor(i / numCols) === food.y ? 'food' : ''}"
-    ></div>
+  {#each Array(numRows) as _, row}
+    {#each Array(numCols) as _, col}
+      <div
+        class="cell {snake.some(segment => segment.x === col && segment.y === row) ? 'snake' : ''} {food.x === col && food.y === row ? 'food' : ''}"
+      ></div>
+    {/each}
   {/each}
 </div>
