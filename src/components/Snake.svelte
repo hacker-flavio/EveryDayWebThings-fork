@@ -63,37 +63,11 @@
   setInterval(update, 200); // Update the game every 200 milliseconds
 </script>
 
-<style>
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(${numCols}, ${gridSize}px);
-    grid-template-rows: repeat(${numRows}, ${gridSize}px);
-    width: ${gridSize * numCols}px;
-    height: ${gridSize * numRows}px;
-    border: 1px solid #000;
-  }
-
-  .cell {
-    width: ${gridSize - 2}px;
-    height: ${gridSize - 2}px;
-    background-color: #cccccc;
-  }
-
-  .snake {
-    background-color: #0000ff;
-  }
-
-  .food {
-    background-color: #ff0000;
-  }
-</style>
-
-<div class="grid">
+<div class="grid" style="display: grid; grid-template-columns: repeat({numCols}, ${gridSize}px); grid-template-rows: repeat({numRows}, ${gridSize}px); width: {gridSize * numCols}px; height: {gridSize * numRows}px; border: 1px solid #000;">
   {#each Array(numRows) as _, row}
     {#each Array(numCols) as _, col}
-      <div
-        class="cell {snake.some(segment => segment.x === col && segment.y === row) ? 'snake' : ''} {food.x === col && food.y === row ? 'food' : ''}"
-      ></div>
+      <div style="width: {gridSize - 2}px; height: {gridSize - 2}px; background-color: #ccc;" class="{snake.some(segment => segment.x === col && segment.y === row) ? 'snake' : ''} {food.x === col && food.y === row ? 'food' : ''}"></div>
     {/each}
   {/each}
 </div>
+
