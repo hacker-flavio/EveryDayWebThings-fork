@@ -90,8 +90,8 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat({numCols}, 20px);
-    grid-template-rows: repeat({numRows}, 20px);
+    grid-template-columns: repeat(${numCols}, 20px);
+    grid-template-rows: repeat(${numRows}, 20px);
     width: 300px;
     height: 300px;
     border: 1px solid #000;
