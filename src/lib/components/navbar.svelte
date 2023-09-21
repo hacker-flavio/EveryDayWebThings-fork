@@ -15,7 +15,7 @@
 <div class="navbar mb-16 shadow-lg bg-neutral text-neutral-content sticky top-0 z-10">
     <div class="flex-1 px-2 mx-2">
         <!-- Use your logo URL as the src attribute and set a smaller width -->
-        <img src="https://raw.githubusercontent.com/EveryDayWebThings/Master/main/static/favicon.png" alt="Everyday Web Things Logo" class="logo" style="width: 100px;"> <!-- Adjust the width as needed -->
+        <img src="https://raw.githubusercontent.com/EveryDayWebThings/Master/main/static/favicon.png" alt="Everyday Web Things Logo" class="logo" style="width: 70px;"> <!-- Adjust -->
         <a class="text-lg font-bold" href="/"> everydaywebthings.com </a>
     </div>
 
