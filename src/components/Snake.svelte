@@ -1,109 +1,86 @@
 <script>
   let gridSize = 20; // Size of each grid cell
-  let width = 20;    // Number of grid cells horizontally
-  let height = 15;   // Number of grid cells vertically
+  let numRows = 15;  // Number of rows
+  let numCols = 15;  // Number of columns
 
-  let snake = [{ x: 5, y: 5 }]; // Initial position of the snake
-  let food = getRandomPosition(); // Initial position of the food
-  let direction = "right"; // Initial direction of the snake
-  let gameOver = false;
+  let snake = [{ x: 5, y: 5 }]; // Initial snake position
+  let food = { x: 10, y: 10 };  // Initial food position
 
-  function getRandomPosition() {
-    // Generate a random position for the food
-    return {
-      x: Math.floor(Math.random() * width),
-      y: Math.floor(Math.random() * height),
-    };
-  }
+  let direction = "right"; // Initial direction
 
-  function moveSnake() {
-    if (gameOver) return;
-
-    // Calculate the new head position based on the direction
+  // Function to update the game state
+  function update() {
+    // Move the snake based on the current direction
     let newHead = { ...snake[0] };
-    switch (direction) {
-      case "up":
-        newHead.y -= 1;
-        break;
-      case "down":
-        newHead.y += 1;
-        break;
-      case "left":
-        newHead.x -= 1;
-        break;
-      case "right":
-        newHead.x += 1;
-        break;
-    }
+    if (direction === "up") newHead.y -= 1;
+    if (direction === "down") newHead.y += 1;
+    if (direction === "left") newHead.x -= 1;
+    if (direction === "right") newHead.x += 1;
 
-    // Check for collisions with the walls or itself
+    // Check for collisions with walls or self
     if (
       newHead.x < 0 ||
-      newHead.x >= width ||
+      newHead.x >= numCols ||
       newHead.y < 0 ||
-      newHead.y >= height ||
-      snake.some((segment) => segment.x === newHead.x && segment.y === newHead.y)
+      newHead.y >= numRows ||
+      snake.some(segment => segment.x === newHead.x && segment.y === newHead.y)
     ) {
-      gameOver = true;
+      alert("Game Over!");
+      snake = [{ x: 5, y: 5 }];
       return;
     }
 
-    // Check if the snake eats the food
+    // Check for collision with food
     if (newHead.x === food.x && newHead.y === food.y) {
-      // Increase the length of the snake
-      snake = [newHead, ...snake];
-      // Generate a new food position
-      food = getRandomPosition();
+      // Increase snake length and respawn food
+      snake.unshift(food);
+      generateFood();
     } else {
-      // Move the snake by adding the new head and removing the tail
-      snake = [newHead, ...snake.slice(0, -1)];
+      // Move the snake by adding a new head and removing the tail
+      snake.unshift(newHead);
+      snake.pop();
     }
   }
 
-  function handleKeydown(event) {
-    // Update the direction based on the arrow keys
-    switch (event.key) {
-      case "ArrowUp":
-        if (direction !== "down") direction = "up";
-        break;
-      case "ArrowDown":
-        if (direction !== "up") direction = "down";
-        break;
-      case "ArrowLeft":
-        if (direction !== "right") direction = "left";
-        break;
-      case "ArrowRight":
-        if (direction !== "left") direction = "right";
-        break;
-    }
+  // Function to generate random food position
+  function generateFood() {
+    food = {
+      x: Math.floor(Math.random() * numCols),
+      y: Math.floor(Math.random() * numRows),
+    };
   }
 
-  let gameInterval = setInterval(moveSnake, 200);
+  // Event listener for keyboard input to change direction
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowUp" && direction !== "down") direction = "up";
+    if (event.key === "ArrowDown" && direction !== "up") direction = "down";
+    if (event.key === "ArrowLeft" && direction !== "right") direction = "left";
+    if (event.key === "ArrowRight" && direction !== "left") direction = "right";
+  });
 
-  $: {
-    if (gameOver) clearInterval(gameInterval);
-  }
+  // Initialize the game
+  generateFood();
+  setInterval(update, 200); // Update the game every 200 milliseconds
 </script>
 
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(${width}, ${gridSize}px);
-    grid-template-rows: repeat(${height}, ${gridSize}px);
-    width: ${width * gridSize}px;
-    height: ${height * gridSize}px;
-    border: 1px solid #ccc;
+    grid-template-columns: repeat(numCols, ${gridSize}px);
+    grid-template-rows: repeat(numRows, ${gridSize}px);
+    width: ${gridSize * numCols}px;
+    height: ${gridSize * numRows}px;
+    border: 1px solid #000;
   }
 
   .cell {
-    width: ${gridSize}px;
-    height: ${gridSize}px;
-    background-color: #eee;
-    border: 1px solid #fff;
+    width: ${gridSize - 2}px;
+    height: ${gridSize - 2}px;
+    background-color: #ccc;
   }
 
   .snake {
-    background-color: #333;
+    background-color: #00f;
   }
 
   .food {
@@ -111,17 +88,10 @@
   }
 </style>
 
-<div>
-  {#if !gameOver}
-    <div class="grid" tabindex="0" on:keydown={handleKeydown}>
-      {#each Array.from({ length: height * width }) as _, i}
-        <div
-          class="cell {snake.find(s => s.x === i % ${width} && s.y === Math.floor(i / ${width})) ? 'snake' : ''} {food.x === i % ${width} && food.y === Math.floor(i / ${width}) ? 'food' : ''}"
-        ></div>
-      {/each}
-    </div>
-  {:else}
-    <p>Game Over!</p>
-  {/if}
+<div class="grid">
+  {#each Array(numRows * numCols) as _, i}
+    <div
+      class="cell {snake.some(segment => segment.x === i % numCols && Math.floor(i / numCols) === segment.y) ? 'snake' : ''} {food.x === i % numCols && Math.floor(i / numCols) === food.y ? 'food' : ''}"
+    ></div>
+  {/each}
 </div>
-
