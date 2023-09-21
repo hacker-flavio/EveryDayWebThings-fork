@@ -1,14 +1,3 @@
-<!-- URLShortenerPage.svelte -->
-
-<script>
-  import URLShortener from '../../components/URLShortener.svelte';
-</script>
-
-<main>
-  <URLShortener />
-</main>
-
-
 
 <script>
   let isMaintenance = true; // Set this to false when maintenance is completed
