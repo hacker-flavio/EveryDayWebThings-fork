@@ -1,5 +1,9 @@
 
 <script>
+ <!-- Normal content currently disabled  -->
+ // import URLShortener from '../../components/URLShortener.svelte';
+
+
   let isMaintenance = true; // Set this to false when maintenance is completed
 
   // Function to toggle maintenance status
@@ -43,10 +47,6 @@
 
 
  <!-- Normal content currently disabled  -->
-
-<script>
-  // import URLShortener from '../../components/URLShortener.svelte';
-</script>
 
 <main>
   <URLShortener />
