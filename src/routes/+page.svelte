@@ -116,14 +116,22 @@
         /* Mobile optimization using media query */
         @media (max-width: 768px) {
             .vertical-buttons a {
-                height: 40px;
-                font-size: 14px;
+                height: 50px;
+                font-size: 16px;
                 margin: 5px 0;
             }
 
             .button-wrapper h2 {
-                font-size: 14px;
+                font-size: 16px;
                 margin-bottom: 5px;
+            }
+
+            .button-row {
+                flex-direction: column;
+            }
+
+            .button-wrapper {
+                flex-basis: calc(100% - 20px);
             }
         }
     </style>
