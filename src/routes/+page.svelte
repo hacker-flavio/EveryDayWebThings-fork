@@ -59,71 +59,72 @@
 
 
 
-<Style>
- /* Original CSS for desktop */
-.vertical-buttons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    padding: 0 20px;
-    font-size: 18px;
-    margin: 5px 0;
-    border: 2px solid #3498db;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #3498db;
-    transition: background-color 0.3s, color 0.3s;
-}
+<style>
+        /* Center the entire main content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-.vertical-buttons a:hover {
-    background-color: #3498db;
-    color: #fff;
-}
+        main {
+            text-align: center;
+        }
 
-.button-wrapper h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333;
-}
+        /* Updated CSS for desktop */
+        .vertical-buttons a {
+            display: block;
+            width: 100%;
+            height: 60px;
+            padding: 10px 0;
+            font-size: 18px;
+            margin: 5px 0;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #3498db;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-.button-row {
-    display: flex;
-    justify-content: space-between;
-    margin: 1inch;
-}
+        .vertical-buttons a:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
 
-.button-wrapper {
-    text-align: center;
-    flex-grow: 1;
-    margin: 0 5px;
-}
+        .button-wrapper h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
 
-/* Mobile optimization using media query */
-@media (max-width: 768px) {
-    .vertical-buttons a {
-        height: 40px;
-        padding: 0 10px;
-        font-size: 14px;
-        margin: 5px 0;
-    }
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -10px;
+        }
 
-    .button-wrapper h2 {
-        font-size: 14px;
-        margin-bottom: 5px;
-    }
+        .button-wrapper {
+            text-align: center;
+            flex-grow: 1;
+            margin: 10px;
+            flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
+        }
 
-    .button-row {
-        flex-direction: column;
-        margin: 10px;
-    }
+        /* Mobile optimization using media query */
+        @media (max-width: 768px) {
+            .vertical-buttons a {
+                height: 40px;
+                font-size: 14px;
+                margin: 5px 0;
+            }
 
-    .button-wrapper {
-        margin: 5px 0;
-    }
-}
-
-
-</Style>
+            .button-wrapper h2 {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
 
