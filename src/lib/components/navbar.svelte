@@ -15,9 +15,10 @@
 <div class="navbar mb-16 shadow-lg bg-neutral text-neutral-content sticky top-0 z-10">
     <div class="flex-1 px-2 mx-2">
         <!-- Use your logo URL as the src attribute and set a smaller width -->
-        <img src="https://raw.githubusercontent.com/EveryDayWebThings/Master/main/static/favicon.png" alt="Everyday Web Things Logo" class="logo" style="width: 40px;"> <!-- Adjust -->
+        <img src="https://raw.githubusercontent.com/EveryDayWebThings/Master/main/static/favicon.png" alt="Everyday Web Things Logo" class="logo" style="width: 80px; margin-right: 10px;"> <!-- Adjust the width and margin as needed -->
         <a class="text-lg font-bold" href="/"> everydaywebthings.com </a>
     </div>
+
 
     <div class="dropdown dropdown-left lg:hidden">
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
