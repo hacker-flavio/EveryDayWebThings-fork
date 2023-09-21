@@ -90,15 +90,17 @@
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(${numCols}, ${gridSize}px);
-    grid-template-rows: repeat(${numRows}, ${gridSize}px);
+    grid-template-columns: repeat({numCols}, 20px);
+    grid-template-rows: repeat({numRows}, 20px);
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
   }
 
   .cell {
-    width: ${gridSize}px;
-    height: ${gridSize}px;
+    width: 18px;
+    height: 18px;
     background-color: #ccc;
-    border: 1px solid #fff;
   }
 
   .snake {
