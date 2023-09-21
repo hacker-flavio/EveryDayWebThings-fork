@@ -42,18 +42,15 @@
 
 
 
-// Acctual Page code
+ <!-- Normal content currently disabled  -->
 
-{/*
 <script>
-  import URLShortener from '../../components/URLShortener.svelte';
+  // import URLShortener from '../../components/URLShortener.svelte';
 </script>
 
 <main>
   <URLShortener />
 </main>
-*/}
-
 
 
 
