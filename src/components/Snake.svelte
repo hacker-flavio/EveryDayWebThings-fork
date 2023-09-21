@@ -81,16 +81,16 @@
 <style>
   .grid {
     display: grid;
-    grid-template-columns: repeat(${numCols}, ${gridSize}px);
-    grid-template-rows: repeat(${numRows}, ${gridSize}px);
-    width: ${gridSize * numCols}px;
-    height: ${gridSize * numRows}px;
+    grid-template-columns: repeat(15, 20px);
+    grid-template-rows: repeat(15, 20px);
+    width: 300px;
+    height: 300px;
     border: 1px solid #000;
   }
 
   .cell {
-    width: ${gridSize - 2}px;
-    height: ${gridSize - 2}px;
+    width: 18px;
+    height: 18px;
     background-color: #ccc;
   }
 
@@ -102,3 +102,4 @@
     background-color: #f00;
   }
 </style>
+
