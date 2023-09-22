@@ -76,6 +76,69 @@
   {/if}
 </main>
 
+
+
+
 <style>
-  /* Add your CSS styling here */
+  /* Add your CSS styles here */
+  div {
+    text-align: center;
+    margin: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px;
+  }
+
+  select, input {
+    font-size: 18px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #555;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    font-size: 20px;
+    color: #555;
+    margin: 5px 0;
+  }
 </style>
