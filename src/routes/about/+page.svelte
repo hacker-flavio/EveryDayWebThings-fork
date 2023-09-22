@@ -1,51 +1,46 @@
-<main>
-  <div class="container">
-    <h1>Sorry! This Feature is Not Available</h1>
-    <p>Please check back later for updates.</p>
-    <p>Status: <span class="status">503 Service Unavailable</span></p>
-  </div>
+<!-- AboutUs.svelte -->
+<script>
+  // You can define any dynamic data or logic for your About Us page here
+</script>
+
+<main class="about-us">
+  <section>
+    <h1>About Us</h1>
+    <p>
+      Welcome to our About Us page. Here, we'll introduce you to our team and provide some background information about our company.
+    </p>
+  </section>
+
+  <section>
+    <h2>Our Team</h2>
+    <ul>
+      <li>
+        <h3>John Doe</h3>
+        <p>Founder and CEO</p>
+        <p>John is a visionary leader with a passion for innovation...</p>
+      </li>
+      <!-- Add more team members as needed -->
+    </ul>
+  </section>
+
+  <section>
+    <h2>Our History</h2>
+    <p>
+      Our company was founded in 20XX with a mission to...
+    </p>
+  </section>
 </main>
 
 <style>
-  /* You can style the page as needed */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
+  /* You can add your custom CSS styles here to style the page */
+  .about-us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
-  .container {
-    text-align: center;
-    margin: 2rem auto;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-  }
-
-  h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-    color: #666;
-  }
-
-  .status {
-    font-weight: bold;
-    color: #e74c3c; /* Red color for status */
-  }
+  /* Add more styles as needed */
 </style>
-
-
-
-
 
 
 
