@@ -11,13 +11,50 @@
     'Animals',
     'Fruits',
     'Colors',
+    'Countries',
+    'Cities',
+    'Vegetables',
+    'Sports',
+    'Professions',
+    'Transportation',
+    'Weather',
+    'Hobbies',
+    'Music',
+    'Movies',
+    'Food',
+    'Body Parts',
+    'Emotions',
+    'Clothing',
+    'Technology' // Added 'Technology' category
     // Add more categories as needed
   ];
 
   let words = {
     'Animals': ['Dog', 'Cat', 'Elephant', 'Lion', 'Monkey'],
     'Fruits': ['Apple', 'Banana', 'Orange', 'Grapes', 'Strawberry'],
-    'Colors': ['Red', 'Blue', 'Green', 'Yellow', 'Purple']
+    'Colors': ['Red', 'Blue', 'Green', 'Yellow', 'Purple'],
+    'Countries': ['USA', 'Canada', 'France', 'Germany', 'Australia'],
+    'Cities': ['New York', 'London', 'Tokyo', 'Paris', 'Sydney'],
+    'Vegetables': ['Carrot', 'Broccoli', 'Tomato', 'Spinach', 'Potato'],
+    'Sports': ['Soccer', 'Basketball', 'Tennis', 'Swimming', 'Golf'],
+    'Professions': ['Doctor', 'Teacher', 'Engineer', 'Artist', 'Chef'],
+    'Transportation': ['Car', 'Bicycle', 'Train', 'Bus', 'Boat'],
+    'Weather': ['Sunny', 'Rainy', 'Snowy', 'Cloudy', 'Windy'],
+    'Hobbies': ['Reading', 'Painting', 'Cooking', 'Gardening', 'Singing'],
+    'Music': ['Rock', 'Pop', 'Hip-hop', 'Classical', 'Jazz'],
+    'Movies': ['Action', 'Comedy', 'Drama', 'Horror', 'Science Fiction'],
+    'Food': ['Pizza', 'Burger', 'Sushi', 'Pasta', 'Ice Cream'],
+    'Body Parts': ['Head', 'Heart', 'Arm', 'Leg', 'Eye'],
+    'Emotions': ['Happy', 'Sad', 'Angry', 'Excited', 'Surprised'],
+    'Clothing': ['Shirt', 'Dress', 'Jeans', 'Shoes', 'Hat'],
+    'Technology': [
+      'Computer', 'Smartphone', 'Tablet', 'Internet', 'Robot',
+      'Programming', 'Software', 'Hardware', 'Algorithm', 'Database',
+      'Cybersecurity', 'Artificial Intelligence', 'Virtual Reality',
+      'Blockchain', 'Machine Learning', 'Cloud Computing', 'Network',
+      'Server', 'Code', 'Website', 'Mobile App', 'User Interface',
+      'Operating System', 'Browser', 'IoT', 'Encryption', 'API', 'Debugging'
+    ] // Added 30 words for 'Technology' category
     // Add more words for each category as needed
   };
 
@@ -75,9 +112,6 @@
     <p>No words generated yet.</p>
   {/if}
 </main>
-
-
-
 
 <style>
   /* Add your CSS styles here */
@@ -142,3 +176,4 @@
     margin: 5px 0;
   }
 </style>
+
