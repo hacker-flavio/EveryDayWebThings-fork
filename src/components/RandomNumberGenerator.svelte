@@ -1,15 +1,45 @@
-<!-- RandomNumberGenerator.svelte -->
-
+<!-- src/RandomNumberGenerator.svelte -->
 <script>
-  let randomNumber = null;
+  import { onMount } from 'svelte';
 
-  const generateRandomNumber = () => {
-    randomNumber = Math.floor(Math.random() * 100); // Change the range as needed
-  };
+  let randomNumber = '';
+  let minNumber = 1; // Default minimum number
+  let maxNumber = 100; // Default maximum number
+
+  function generateRandomNumber() {
+    const min = Math.min(minNumber, maxNumber);
+    const max = Math.max(minNumber, maxNumber);
+    randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  onMount(() => {
+    generateRandomNumber();
+  });
 </script>
 
+<main>
+  <div>
+    <h1>Random Number Generator</h1>
+
+    <label for="minNumber">Minimum Number:</label>
+    <input type="number" id="minNumber" bind:value="{minNumber}" min="-1000000" max="1000000">
+
+    <label for="maxNumber">Maximum Number:</label>
+    <input type="number" id="maxNumber" bind:value="{maxNumber}" min="-1000000" max="1000000">
+
+    <button on:click="{generateRandomNumber}">Generate Random Number</button>
+
+    {#if randomNumber !== ''}
+      <p>Random Number:</p>
+      <p>{randomNumber}</p>
+    {:else}
+      <p>No number generated yet.</p>
+    {/if}
+  </div>
+</main>
+
 <style>
-  /* Add your CSS styles here */
+  /* Add your CSS styles here (same styles as before) */
   div {
     text-align: center;
     margin: 20px;
@@ -25,6 +55,19 @@
     margin-bottom: 10px;
   }
 
+  label {
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px;
+  }
+
+  input {
+    font-size: 18px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
   button {
     background-color: #3498db;
     color: #fff;
@@ -34,6 +77,7 @@
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
+    margin-top: 10px;
   }
 
   button:hover {
@@ -46,11 +90,3 @@
     color: #555;
   }
 </style>
-
-<div>
-  <h1>Random Number Generator</h1>
-  <button on:click={generateRandomNumber}>Generate Random Number</button>
-  {#if randomNumber !== null}
-    <p>Random Number: {randomNumber}</p>
-  {/if}
-</div>
