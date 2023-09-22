@@ -65,12 +65,13 @@
 
     {#if randomParagraph}
       <p>Random Paragraphs:</p>
-      <p>{randomParagraph}</p>
+      {@html randomParagraph} <!-- Use {@html} to render HTML tags -->
     {:else}
       <p>No paragraphs generated yet.</p>
     {/if}
   </div>
 </main>
+
 
 <style>
   /* Add your CSS styles here (same styles as before) */
