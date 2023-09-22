@@ -13,6 +13,45 @@
       ['sunglasses', 'hat', 'scarf', 'gloves', 'umbrella'],
       ['guitar', 'piano', 'drums', 'violin', 'flute'],
       ['sunflower', 'rose', 'tulip', 'daisy', 'lily'],
+      ['coffee', 'tea', 'juice', 'water', 'soda'],
+      ['beach', 'mountain', 'city', 'countryside', 'island'],
+      ['camera', 'binoculars', 'telescope', 'microscope', 'magnifier'],
+      ['football', 'basketball', 'soccer', 'tennis', 'volleyball'],
+      ['sweater', 'jacket', 'shirt', 'dress', 'jeans'],
+      ['fireplace', 'candles', 'lantern', 'flashlight', 'torch'],
+      ['tiger', 'elephant', 'lion', 'giraffe', 'rhinoceros'],
+      ['planet', 'star', 'moon', 'comet', 'asteroid'],
+      ['keyboard', 'mouse', 'monitor', 'printer', 'speakers'],
+      ['broccoli', 'carrot', 'spinach', 'potato', 'pepper'],
+      ['boat', 'kayak', 'canoe', 'yacht', 'submarine'],
+      ['globe', 'map', 'compass', 'GPS', 'atlas'],
+      ['glasses', 'contacts', 'sunglasses', 'goggles', 'monocle'],
+      ['eagle', 'hawk', 'falcon', 'vulture', 'owl'],
+      ['clock', 'watch', 'hourglass', 'sundial', 'calendar'],
+      ['swimming', 'hiking', 'cycling', 'running', 'yoga'],
+      ['couch', 'chair', 'table', 'bookshelf', 'lamp'],
+      ['diamond', 'emerald', 'sapphire', 'ruby', 'amethyst'],
+      ['paintbrush', 'canvas', 'easel', 'palette', 'watercolors'],
+      ['soccer', 'basketball', 'tennis', 'golf', 'baseball'],
+      ['suitcase', 'backpack', 'duffel bag', 'briefcase', 'tote'],
+      ['kite', 'frisbee', 'yo-yo', 'hula hoop', 'juggling balls'],
+      ['ballet', 'hip-hop', 'salsa', 'tango', 'breakdancing'],
+      ['sunscreen', 'umbrella', 'hat', 'sunglasses', 'beach towel'],
+      ['seashell', 'coral', 'seaweed', 'starfish', 'crab'],
+      ['microphone', 'guitar', 'drums', 'keyboard', 'saxophone'],
+      ['pencil', 'pen', 'marker', 'eraser', 'highlighter'],
+      ['telescope', 'microscope', 'binoculars', 'magnifying glass', 'camera'],
+      ['teapot', 'coffee maker', 'kettle', 'French press', 'espresso machine'],
+      ['camera', 'binoculars', 'telescope', 'microscope', 'magnifier'],
+      ['strawberry', 'blueberry', 'raspberry', 'blackberry', 'cranberry'],
+      ['television', 'radio', 'smartphone', 'tablet', 'laptop'],
+      ['moonlight', 'starlight', 'candlelight', 'lamplight', 'firelight'],
+      ['skateboard', 'rollerblades', 'scooter', 'hoverboard', 'bike'],
+      ['penguin', 'seal', 'walrus', 'narwhal', 'orca'],
+      ['mountain', 'canyon', 'plateau', 'valley', 'hill'],
+      ['flowerpot', 'vase', 'planter', 'urn', 'terrarium'],
+      ['banana', 'grape', 'watermelon', 'kiwi', 'pineapple'],
+      ['helicopter', 'hot air balloon', 'glider', 'paraglider', 'biplane'],
       // Add more categories with unique words as needed.
     ];
 
@@ -23,6 +62,7 @@
     randomWord = randomCategory[randomIndex];
   };
 </script>
+
 
 
 
