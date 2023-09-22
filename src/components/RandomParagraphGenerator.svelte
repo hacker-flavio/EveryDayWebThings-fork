@@ -7,11 +7,37 @@
 
   // Sample paragraphs
   let paragraphs = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis gravida eros. Vestibulum laoreet sem in nunc vestibulum, vel efficitur risus venenatis. Sed et dui et turpis tempor ultricies. Proin euismod venenatis sem, non fringilla eros dictum in. Nullam a ante velit. Curabitur consectetur arcu vel sollicitudin euismod. Nullam interdum auctor malesuada.",
-    "Suspendisse potenti. Vestibulum facilisis volutpat congue. Praesent posuere vel elit ut volutpat. Suspendisse viverra enim nec elit posuere, a feugiat nisi interdum. Quisque non dolor ut dolor tincidunt vulputate. Vivamus hendrerit, justo ut tincidunt vehicula, tortor elit ullamcorper neque, id ultricies arcu neque sit amet eros.",
-    "Fusce nec bibendum est. Etiam nec tincidunt mi, at aliquet dolor. Morbi eu dapibus purus. Maecenas interdum tortor eu dolor aliquet, eget malesuada sapien volutpat. Sed in massa in odio interdum pharetra in sit amet libero. Aenean fringilla odio eu mi consequat, in lacinia elit blandit.",
-    // Add more paragraphs as needed
-  ];
+  "The sun dipped below the horizon, casting a warm, golden glow across the tranquil lake.",
+  "In the heart of the bustling city, a street musician played a haunting melody on his violin.",
+  "As the leaves rustled in the gentle breeze, a feeling of peace settled over the forest.",
+  "The old bookstore was filled with the musty scent of ancient books, each one holding a story waiting to be discovered.",
+  "A child's laughter echoed through the park, bringing smiles to the faces of those nearby.",
+  "The chef meticulously prepared a gourmet meal, each ingredient chosen with care and precision.",
+  "High above the city, a red-tailed hawk soared gracefully through the clear blue sky.",
+  "The waves crashed against the rocky shore, creating a soothing lullaby for beachgoers.",
+  "Deep in the heart of the desert, a solitary cactus stood resilient against the scorching sun.",
+  "The aroma of freshly baked bread wafted through the air, drawing hungry customers into the bakery.",
+  "A group of friends gathered around a campfire, sharing stories and roasting marshmallows under the starry night sky.",
+  "The neon lights of the city illuminated the streets, creating a vibrant and electric atmosphere.",
+  "A gentle rain began to fall, bringing relief to the parched earth and a sense of renewal to all who felt it.",
+  "The mountaineer reached the summit, taking in the breathtaking view of the world below.",
+  "A street artist painted a mural on a brick wall, transforming the urban landscape into a work of art.",
+  "In a quiet garden, a butterfly flitted from flower to flower, sipping nectar in the afternoon sun.",
+  "The antique clock on the mantle ticked away the hours, a reminder of the passage of time.",
+  "A father and son played catch in the park, the sound of laughter carrying on the wind.",
+  "The city skyline glowed with the lights of a thousand windows, each one a glimpse into a different life.",
+  "A sudden gust of wind sent colorful leaves swirling through the air, announcing the arrival of autumn.",
+  "A pianist sat at the grand piano, filling the concert hall with the rich and emotive notes of a classical masterpiece.",
+  "A street vendor sold fragrant spices and exotic fruits, creating a sensory explosion for passersby.",
+  "The scent of freshly bloomed roses permeated the garden, a testament to the beauty of nature.",
+  "A group of children chased fireflies in the warm summer evening, their laughter echoing through the night.",
+  "The scientist peered through the microscope, discovering a new and mysterious microorganism.",
+  "In a crowded subway, strangers stood shoulder to shoulder, each lost in their own thoughts and journeys.",
+  "A gentle stream meandered through the meadow, providing a peaceful haven for wildlife.",
+  "The actor stepped onto the stage, the spotlight illuminating their every move as they delivered their lines with passion.",
+  "A gentle snowfall blanketed the town, turning it into a winter wonderland of glistening white.",
+  "As the sun set over the ocean, a sailboat glided gracefully on the horizon, a symbol of freedom and adventure."
+];
 
   function generateRandomParagraphs() {
     const randomParagraphs = [];
