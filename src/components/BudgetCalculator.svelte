@@ -11,17 +11,17 @@
 <main>
   <h1>Budget Calculator</h1>
   
-  <label>
+  <label class="input-label">
     Income:
-    <input type="number" bind:value="{income}" on:input="{calculateTotal}" />
+    <input class="input-field" type="number" bind:value="{income}" on:input="{calculateTotal}" />
   </label>
 
-  <label>
+  <label class="input-label">
     Expenses:
-    <input type="number" bind:value="{expenses}" on:input="{calculateTotal}" />
+    <input class="input-field" type="number" bind:value="{expenses}" on:input="{calculateTotal}" />
   </label>
 
-  <p>Total: {total}</p>
+  <p class="total">Total: {total}</p>
 </main>
 
 <style>
@@ -32,17 +32,21 @@
     margin: auto;
   }
 
-  label {
+  .input-label {
     display: block;
     margin: 10px 0;
   }
 
-  input {
+  .input-field {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
 
-  p {
+  .total {
     font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
   }
 </style>
