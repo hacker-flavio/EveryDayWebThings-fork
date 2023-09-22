@@ -30,32 +30,97 @@
   ];
 
   let words = {
-    'Animals': ['Dog', 'Cat', 'Elephant', 'Lion', 'Monkey'],
-    'Fruits': ['Apple', 'Banana', 'Orange', 'Grapes', 'Strawberry'],
-    'Colors': ['Red', 'Blue', 'Green', 'Yellow', 'Purple'],
-    'Countries': ['USA', 'Canada', 'France', 'Germany', 'Australia'],
-    'Cities': ['New York', 'London', 'Tokyo', 'Paris', 'Sydney'],
-    'Vegetables': ['Carrot', 'Broccoli', 'Tomato', 'Spinach', 'Potato'],
-    'Sports': ['Soccer', 'Basketball', 'Tennis', 'Swimming', 'Golf'],
-    'Professions': ['Doctor', 'Teacher', 'Engineer', 'Artist', 'Chef'],
-    'Transportation': ['Car', 'Bicycle', 'Train', 'Bus', 'Boat'],
-    'Weather': ['Sunny', 'Rainy', 'Snowy', 'Cloudy', 'Windy'],
-    'Hobbies': ['Reading', 'Painting', 'Cooking', 'Gardening', 'Singing'],
-    'Music': ['Rock', 'Pop', 'Hip-hop', 'Classical', 'Jazz'],
-    'Movies': ['Action', 'Comedy', 'Drama', 'Horror', 'Science Fiction'],
-    'Food': ['Pizza', 'Burger', 'Sushi', 'Pasta', 'Ice Cream'],
-    'Body Parts': ['Head', 'Heart', 'Arm', 'Leg', 'Eye'],
-    'Emotions': ['Happy', 'Sad', 'Angry', 'Excited', 'Surprised'],
-    'Clothing': ['Shirt', 'Dress', 'Jeans', 'Shoes', 'Hat'],
+    'Animals': [
+      'Dog', 'Cat', 'Elephant', 'Lion', 'Monkey', 'Tiger', 'Giraffe', 'Horse', 'Kangaroo',
+      'Penguin', 'Zebra', 'Dolphin', 'Koala', 'Panda', 'Raccoon', 'Sloth', 'Gorilla', 'Hippopotamus', 'Polar Bear',
+      'Camel', 'Ostrich', 'Chimpanzee', 'Owl', 'Gazelle', 'Lemur', 'Puma', 'Koala', 'Cheetah', 'Alpaca'
+    ],
+    'Fruits': [
+      'Apple', 'Banana', 'Orange', 'Grapes', 'Strawberry', 'Watermelon', 'Pineapple', 'Mango', 'Kiwi', 'Pomegranate',
+      'Cherry', 'Blueberry', 'Pear', 'Raspberry', 'Coconut', 'Peach', 'Lemon', 'Apricot', 'Fig', 'Grapefruit',
+      'Cantaloupe', 'Plum', 'Cranberry', 'Blackberry', 'Guava', 'Passion Fruit', 'Dragon Fruit', 'Lime', 'Tangerine', 'Currant'
+    ],
+    'Colors': [
+      'Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Pink', 'Orange', 'Brown', 'Gray', 'Black',
+      'Teal', 'Magenta', 'Turquoise', 'Lavender', 'Cyan', 'Beige', 'Indigo', 'Maroon', 'Navy', 'Olive',
+      'Silver', 'Gold', 'Violet', 'Salmon', 'Peach', 'Tan', 'Aqua', 'Crimson', 'Lime', 'Ivory'
+    ],
+    'Countries': [
+      'USA', 'Canada', 'France', 'Germany', 'Australia', 'Japan', 'Italy', 'Spain', 'Brazil', 'China',
+      'India', 'Mexico', 'Argentina', 'South Africa', 'Russia', 'Sweden', 'Norway', 'Netherlands', 'South Korea', 'Egypt',
+      'Greece', 'Turkey', 'Chile', 'New Zealand', 'Singapore', 'Malaysia', 'Thailand', 'Vietnam', 'Philippines', 'Israel'
+    ],
+    'Cities': [
+      'New York', 'London', 'Tokyo', 'Paris', 'Sydney', 'Los Angeles', 'Chicago', 'Berlin', 'Madrid', 'Rome',
+      'Beijing', 'Mumbai', 'Mexico City', 'Toronto', 'Cairo', 'Bangkok', 'Dubai', 'Singapore', 'Hong Kong', 'Seoul',
+      'Istanbul', 'Moscow', 'Rio de Janeiro', 'Buenos Aires', 'Amsterdam', 'Stockholm', 'Oslo', 'Copenhagen', 'Wellington', 'Manila'
+    ],
+    'Vegetables': [
+      'Carrot', 'Broccoli', 'Tomato', 'Spinach', 'Potato', 'Cucumber', 'Lettuce', 'Onion', 'Bell Pepper', 'Zucchini',
+      'Cabbage', 'Celery', 'Asparagus', 'Kale', 'Mushroom', 'Radish', 'Eggplant', 'Peas', 'Artichoke', 'Cauliflower',
+      'Sweet Potato', 'Pumpkin', 'Green Beans', 'Turnip', 'Corn', 'Brussels Sprouts', 'Beets', 'Parsnip', 'Okra', 'Leek'
+    ],
+    'Sports': [
+      'Soccer', 'Basketball', 'Tennis', 'Swimming', 'Golf', 'Baseball', 'Volleyball', 'Hockey', 'Cricket', 'Rugby',
+      'Table Tennis', 'Badminton', 'Boxing', 'Martial Arts', 'Cycling', 'Skiing', 'Snowboarding', 'Wrestling', 'Fencing', 'Diving',
+      'Gymnastics', 'Track and Field', 'Archery', 'Surfing', 'Rowing', 'Weightlifting', 'Climbing', 'Skateboarding', 'Sailing', 'Triathlon'
+    ],
+    'Professions': [
+      'Doctor', 'Teacher', 'Engineer', 'Artist', 'Chef', 'Nurse', 'Scientist', 'Firefighter', 'Police Officer', 'Lawyer',
+      'Dentist', 'Pilot', 'Journalist', 'Actor', 'Architect', 'Photographer', 'Psychologist', 'Astronaut', 'Farmer', 'Electrician',
+      'Plumber', 'Barista', 'Librarian', 'Accountant', 'Designer', 'Veterinarian', 'Social Worker', 'Pharmacist', 'Mechanic', 'Hairdresser'
+    ],
+    'Transportation': [
+      'Car', 'Bicycle', 'Train', 'Bus', 'Boat', 'Motorcycle', 'Subway', 'Truck', 'Helicopter', 'Airplane',
+      'Scooter', 'Rickshaw', 'Hot Air Balloon', 'Tram', 'Ferry', 'Segway', 'Jet Ski', 'Spaceship', 'Camper Van', 'Cruise Ship',
+      'Electric Scooter', 'Gondola', 'Trolleybus', 'Canoe', 'Hang Glider', 'Monorail', 'Yacht', 'Zeppelin', 'Horse and Carriage', 'Dirt Bike'
+    ],
+    'Weather': [
+      'Sunny', 'Rainy', 'Snowy', 'Cloudy', 'Windy', 'Foggy', 'Thunderstorm', 'Tornado', 'Hurricane', 'Hail',
+      'Drought', 'Heatwave', 'Blizzard', 'Mist', 'Sleet', 'Tropical Storm', 'Cyclone', 'Avalanche', 'Drizzle', 'Rainbow',
+      'Sahara Desert', 'Polar Vortex', 'Monsoon', 'Tsunami', 'El Niño', 'La Niña', 'Haboob', 'Dust Devil', 'Frost'
+    ],
+    'Hobbies': [
+      'Reading', 'Painting', 'Cooking', 'Gardening', 'Singing', 'Dancing', 'Hiking', 'Photography', 'Fishing', 'Yoga',
+      'Swimming', 'Traveling', 'Playing Chess', 'Cycling', 'Collecting Stamps', 'Sculpting', 'Knitting', 'Woodworking', 'Gaming', 'Writing',
+      'Bird Watching', 'Pottery', 'Skydiving', 'Rock Climbing', 'Meditation', 'Baking', 'Camping', 'Puzzle Solving', 'Volunteering', 'Skiing'
+    ],
+    'Music': [
+      'Rock', 'Pop', 'Hip-hop', 'Classical', 'Jazz', 'Country', 'Rap', 'Electronic', 'Reggae', 'Blues',
+      'Folk', 'R&B', 'Metal', 'Punk', 'Salsa', 'Funk', 'Disco', 'Techno', 'Gospel', 'Opera',
+      'Indie', 'Soul', 'Alternative', 'K-pop', 'EDM', 'House', 'Trap', 'Ska', 'Ambient', 'Dubstep'
+    ],
+    'Movies': [
+      'Action', 'Comedy', 'Drama', 'Horror', 'Science Fiction', 'Romance', 'Thriller', 'Adventure', 'Fantasy', 'Animation',
+      'Musical', 'Mystery', 'Crime', 'Documentary', 'War', 'Western', 'Superhero', 'Family', 'Biography', 'Historical',
+      'Film Noir', 'Sports', 'Spy', 'Alien', 'Zombie', 'Vampire', 'Werewolf', 'Time Travel', 'Post-Apocalyptic', 'Coming-of-Age'
+    ],
+    'Food': [
+      'Pizza', 'Burger', 'Sushi', 'Pasta', 'Ice Cream', 'Chocolate', 'Steak', 'Tacos', 'Pancakes', 'Sandwich',
+      'Salad', 'Curry', 'Soup', 'Rice', 'Donuts', 'Cupcakes', 'BBQ', 'Lasagna', 'Noodles', 'Cheese',
+      'Bread', 'Omelette', 'Smoothie', 'Waffles', 'Fried Chicken', 'Shrimp', 'Hamburger', 'Hot Dog', 'Tofu', 'Caviar'
+    ],
+    'Body Parts': [
+      'Head', 'Heart', 'Arm', 'Leg', 'Eye', 'Ear', 'Nose', 'Mouth', 'Hand', 'Foot',
+      'Finger', 'Toe', 'Knee', 'Elbow', 'Shoulder', 'Wrist', 'Ankle', 'Neck', 'Back', 'Belly',
+      'Thigh', 'Chest', 'Hip', 'Jaw', 'Chin', 'Forehead', 'Cheek', 'Tongue', 'Teeth', 'Lips'
+    ],
+    'Emotions': [
+      'Happy', 'Sad', 'Angry', 'Excited', 'Surprised', 'Fearful', 'Calm', 'Bored', 'Confused', 'Disgusted',
+      'Envious', 'Grateful', 'Hopeful', 'Jealous', 'Lonely', 'Nervous', 'Proud', 'Relieved', 'Shocked', 'Tired',
+      'Content', 'Annoyed', 'Optimistic', 'Indifferent', 'Eager', 'Frustrated', 'Satisfied', 'Amused', 'Ecstatic', 'Regretful'
+    ],
+    'Clothing': [
+      'Shirt', 'Dress', 'Jeans', 'Shoes', 'Hat', 'Socks', 'Jacket', 'Skirt', 'Pants', 'T-shirt',
+      'Sweater', 'Boots', 'Tie', 'Scarf', 'Gloves', 'Hoodie', 'Bikini', 'Shorts', 'Sandals', 'Suit',
+      'Raincoat', 'Blouse', 'Cardigan', 'Vest', 'Overalls', 'Tunic', 'Pajamas', 'Polo Shirt', 'Tights', 'Flip Flops'
+    ],
     'Technology': [
-      'Computer', 'Smartphone', 'Tablet', 'Internet', 'Robot',
-      'Programming', 'Software', 'Hardware', 'Algorithm', 'Database',
-      'Cybersecurity', 'Artificial Intelligence', 'Virtual Reality',
-      'Blockchain', 'Machine Learning', 'Cloud Computing', 'Network',
-      'Server', 'Code', 'Website', 'Mobile App', 'User Interface',
-      'Operating System', 'Browser', 'IoT', 'Encryption', 'API', 'Debugging'
-    ] // Added 30 words for 'Technology' category
-    // Add more words for each category as needed
+      'Computer', 'Smartphone', 'Tablet', 'Internet', 'Robot', 'Programming', 'Software', 'Hardware', 'Algorithm', 'Database',
+      'Cybersecurity', 'Artificial Intelligence', 'Virtual Reality', 'Blockchain', 'Machine Learning', 'Cloud Computing', 'Network', 'Server', 'Code', 'Website',
+      'Mobile App', 'User Interface', 'Operating System', 'Browser', 'IoT', 'Encryption', 'API', 'Debugging', 'AI Chatbot', 'Social Media',
+      'Augmented Reality', 'Big Data', 'DevOps', 'Firmware', 'IoT Devices', 'Responsive Design', 'Deep Learning', 'Open Source', 'SEO'
+    ] 
   };
 
   function generateRandomWords() {
