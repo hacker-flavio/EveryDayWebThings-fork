@@ -24,7 +24,7 @@
       <div class="vertical-buttons">
         <a href="/BasicCalculator" class="btn btn-ghost btn-sm rounded-btn">Basic Calculator</a>
         <a href="/BudgetCalculator" class="btn btn-ghost btn-sm rounded-btn">Budget Calculator</a>
-        <a href="/Scientific Calculator" class="btn btn-ghost btn-sm rounded-btn">Scientific Calculator</a>
+        <a href="/ScientificCalculator" class="btn btn-ghost btn-sm rounded-btn">Scientific Calculator</a>
       </div>
     </div>
 
