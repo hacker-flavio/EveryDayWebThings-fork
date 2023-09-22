@@ -55,6 +55,10 @@
   main {
     text-align: center;
     font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   div {
@@ -71,5 +75,32 @@
 
   .result {
     margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  input[type="text"] {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #555;
   }
 </style>
