@@ -1,9 +1,39 @@
- <script>
+<script>
   let randomWord = '';
 
   const generateRandomWord = () => {
-    // Replace this with your own method to generate random words
-    const words = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
+    // You can replace this array with your own set of words.
+    const words = [
+      'apple', 'banana', 'cherry', 'date', 'elderberry',
+      'fig', 'grape', 'honeydew', 'kiwi', 'lemon',
+      'mango', 'nectarine', 'orange', 'papaya', 'quince',
+      'raspberry', 'strawberry', 'tangerine', 'watermelon', 'blueberry',
+      'apricot', 'blackberry', 'cantaloupe', 'cranberry', 'dragonfruit',
+      'guava', 'pineapple', 'plum', 'pomegranate', 'rhubarb',
+      'boysenberry', 'kiwifruit', 'mulberry', 'passionfruit', 'starfruit',
+      'acai', 'currant', 'elderflower', 'lychee', 'persimmon',
+      'avocado', 'grapefruit', 'lime', 'coconut', 'peach',
+      'pear', 'grape', 'tamarind', 'jackfruit', 'pawpaw',
+      'cucumber', 'tomato', 'zucchini', 'potato', 'carrot',
+      'broccoli', 'cauliflower', 'asparagus', 'lettuce', 'spinach',
+      'celery', 'eggplant', 'pepper', 'onion', 'garlic',
+      'cabbage', 'brussels', 'squash', 'radish', 'beet',
+      'artichoke', 'kale', 'turnip', 'parsnip', 'rutabaga',
+      'corn', 'peas', 'beans', 'lentils', 'chickpeas',
+      'quinoa', 'barley', 'oats', 'rice', 'wheat',
+      'oatmeal', 'bread', 'pasta', 'bagel', 'croissant',
+      'muffin', 'pancake', 'waffle', 'doughnut', 'pretzel',
+      'croissant', 'pizza', 'hamburger', 'sandwich', 'burrito',
+      'sushi', 'taco', 'spaghetti', 'lasagna', 'noodle',
+      'cheese', 'yogurt', 'milk', 'butter', 'cream',
+      'honey', 'sugar', 'salt', 'pepper', 'cinnamon',
+      'vanilla', 'chocolate', 'coffee', 'tea', 'juice',
+      'water', 'wine', 'beer', 'cocktail', 'whiskey',
+      'vodka', 'rum', 'gin', 'tequila', 'soda',
+      'lemonade', 'smoothie', 'cider', 'chai', 'espresso',
+      'latte', 'cappuccino', 'macchiato', 'frappuccino', 'mocha',
+    ];
+
     const randomIndex = Math.floor(Math.random() * words.length);
     randomWord = words[randomIndex];
   };
