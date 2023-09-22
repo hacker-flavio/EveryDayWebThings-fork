@@ -4,12 +4,9 @@
 
   let randomNumber = '';
   let minNumber = 1; // Default minimum number
-  let maxNumber = 100; // Default maximum number
 
   function generateRandomNumber() {
-    const min = Math.min(minNumber, maxNumber);
-    const max = Math.max(minNumber, maxNumber);
-    randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    randomNumber = Math.floor(Math.random() * (minNumber + 1));
   }
 
   onMount(() => {
@@ -23,9 +20,6 @@
 
     <label for="minNumber">Minimum Number:</label>
     <input type="number" id="minNumber" bind:value="{minNumber}" min="-1000000" max="1000000">
-
-    <label for="maxNumber">Maximum Number:</label>
-    <input type="number" id="maxNumber" bind:value="{maxNumber}" min="-1000000" max="1000000">
 
     <button on:click="{generateRandomNumber}">Generate Random Number</button>
 
