@@ -2,7 +2,7 @@
 <script>
   import { onMount } from 'svelte';
 
-  let selectedCategory = '';
+  let selectedCategory = 'All'; // Set the default category to 'All'
   let randomWord = '';
 
   let categories = [
@@ -56,8 +56,3 @@
 <style>
   /* Add your CSS styling here */
 </style>
-
-
-
-
-
