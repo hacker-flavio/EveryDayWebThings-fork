@@ -6,6 +6,7 @@
   let authorFilter = 'All'; // Default filter option
   let numberOfQuotes = 1; // Default number of quotes to generate
 
+ 
   let quotes = [
     { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
     { text: "Innovation distinguishes between a leader and a follower.", author: "Steve Jobs" },
@@ -17,7 +18,58 @@
     { text: "Success is not final, failure is not fatal: It is the courage to continue that counts.", author: "Winston Churchill" },
     { text: "The only limit to our realization of tomorrow will be our doubts of today.", author: "Franklin D. Roosevelt" },
     { text: "The only thing we have to fear is fear itself.", author: "Franklin D. Roosevelt" },
+    { text: "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.", author: "Ralph Waldo Emerson" },
+    { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+    { text: "The best way to predict the future is to create it.", author: "Peter Drucker" },
+    { text: "The only thing standing between you and your goal is the story you keep telling yourself as to why you can't achieve it.", author: "Jordan Belfort" },
+    { text: "The harder the conflict, the more glorious the triumph.", author: "Thomas Paine" },
+    { text: "Life is really simple, but we insist on making it complicated.", author: "Confucius" },
+    { text: "Success is not in what you have, but who you are.", author: "Bo Bennett" },
+    { text: "If you want to achieve greatness stop asking for permission.", author: "Anonymous" },
+    { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+    { text: "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.", author: "Albert Schweitzer" },
+    { text: "If you can't explain it simply, you don't understand it well enough.", author: "Albert Einstein" },
+    { text: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.", author: "Buddha" },
+    { text: "The only thing necessary for the triumph of evil is for good men to do nothing.", author: "Edmund Burke" },
+    { text: "Simplicity is the ultimate sophistication.", author: "Leonardo da Vinci" },
+    { text: "The only thing necessary for the triumph of evil is for good men to do nothing.", author: "Edmund Burke" },
+    { text: "Simplicity is the ultimate sophistication.", author: "Leonardo da Vinci" },
+    { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb" },
+    { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+    { text: "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.", author: "Albert Schweitzer" },
+    { text: "If you can't explain it simply, you don't understand it well enough.", author: "Albert Einstein" },
+    { text: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.", author: "Buddha" },
+    { text: "The only thing necessary for the triumph of evil is for good men to do nothing.", author: "Edmund Burke" },
+    { text: "Simplicity is the ultimate sophistication.", author: "Leonardo da Vinci" },
+    { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb" },
+    { text: "The best way to predict the future is to create it.", author: "Peter Drucker" },
+    { text: "The only thing standing between you and your goal is the story you keep telling yourself as to why you can't achieve it.", author: "Jordan Belfort" },
+    { text: "The harder the conflict, the more glorious the triumph.", author: "Thomas Paine" },
+    { text: "Life is really simple, but we insist on making it complicated.", author: "Confucius" },
+    { text: "Success is not in what you have, but who you are.", author: "Bo Bennett" },
+    { text: "If you want to achieve greatness stop asking for permission.", author: "Anonymous" },
+    { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+    { text: "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.", author: "Albert Schweitzer" },
+    { text: "If you can't explain it simply, you don't understand it well enough.", author: "Albert Einstein" },
+    { text: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.", author: "Buddha" },
+    { text: "The only thing necessary for the triumph of evil is for good men to do nothing.", author: "Edmund Burke" },
+    { text: "Simplicity is the ultimate sophistication.", author: "Leonardo da Vinci" },
+    { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb" },
+    { text: "Life is what happens when you're busy making other plans.", author: "John Lennon" },
+    { text: "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.", author: "Albert Schweitzer" },
+    { text: "If you can't explain it simply, you don't understand it well enough.", author: "Albert Einstein" },
+    { text: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.", author: "Buddha" },
+    { text: "The only thing necessary for the triumph of evil is for good men to do nothing.", author: "Edmund Burke" },
+    { text: "Simplicity is the ultimate sophistication.", author: "Leonardo da Vinci" },
+    { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb" },
   ];
+
+  // Extract all unique authors from the quotes array
+  let uniqueAuthors = [...new Set(quotes.map(quote => quote.author))];
+
+  onMount(() => {
+    generateRandomQuotes();
+  });
 
   function generateRandomQuotes() {
     let filteredQuotes = quotes;
@@ -33,10 +85,6 @@
 
     randomQuote = randomQuotes.join('\n\n');
   }
-
-  onMount(() => {
-    generateRandomQuotes();
-  });
 </script>
 
 <main>
@@ -46,12 +94,9 @@
     <label for="authorFilter">Filter by Author:</label>
     <select id="authorFilter" bind:value="{authorFilter}">
       <option value="All">All</option>
-      <option value="Steve Jobs">Steve Jobs</option>
-      <option value="Nelson Mandela">Nelson Mandela</option>
-      <option value="Walt Disney">Walt Disney</option>
-      <option value="Sam Levenson">Sam Levenson</option>
-      <option value="Winston Churchill">Winston Churchill</option>
-      <option value="Franklin D. Roosevelt">Franklin D. Roosevelt</option>
+      {#each uniqueAuthors as author (author)}
+        <option value="{author}">{author}</option>
+      {/each}
     </select>
 
     <label for="numberOfQuotes">Number of Quotes:</label>
@@ -120,4 +165,3 @@
     color: #555;
   }
 </style>
-
