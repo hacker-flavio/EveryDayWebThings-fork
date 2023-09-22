@@ -8,7 +8,7 @@
     class="p-10 footer bg-primary text-primary-content footer-center"
   >
     <div class="grid grid-flow-col gap-4">
-      <a class="link link-hover" href="/projects">Privacy Policy</a>
+      <a class="link link-hover" href="/privacy">Privacy Policy</a>
       <a class="link link-hover" href="/posts">Bug Report</a>
     </div>
     <div>
