@@ -1,6 +1,6 @@
 <main>
   <div class="container">
-    <h1>Oops! This Feature is Not Available Yet</h1>
+    <h1>Sorry! This Feature is Not Available</h1>
     <p>Please check back later for updates.</p>
     <p>Status: <span class="status">503 Service Unavailable</span></p>
   </div>
