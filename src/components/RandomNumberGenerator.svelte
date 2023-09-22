@@ -3,10 +3,9 @@
   import { onMount } from 'svelte';
 
   let randomNumber = '';
-  let minNumber = 1; // Default minimum number
 
   function generateRandomNumber() {
-    randomNumber = Math.floor(Math.random() * (minNumber + 1));
+    randomNumber = Math.floor(Math.random() * 1000); // Generate a random number between 0 and 999
   }
 
   onMount(() => {
@@ -17,9 +16,6 @@
 <main>
   <div>
     <h1>Random Number Generator</h1>
-
-    <label for="minNumber">Minimum Number:</label>
-    <input type="number" id="minNumber" bind:value="{minNumber}" min="-1000000" max="1000000">
 
     <button on:click="{generateRandomNumber}">Generate Random Number</button>
 
@@ -47,19 +43,6 @@
     font-size: 28px;
     color: #333;
     margin-bottom: 10px;
-  }
-
-  label {
-    font-size: 20px;
-    color: #333;
-    margin-right: 10px;
-  }
-
-  input {
-    font-size: 18px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
   }
 
   button {
