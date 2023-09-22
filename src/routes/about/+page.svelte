@@ -11,10 +11,10 @@
     </p>
   </section>
 
-  <section>
+  <section class="team">
     <h2>Our Team</h2>
     <ul>
-      <li>
+      <li class="team-member">
         <h3>John Doe</h3>
         <p>Founder and CEO</p>
         <p>John is a visionary leader with a passion for innovation...</p>
@@ -23,7 +23,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class="history">
     <h2>Our History</h2>
     <p>
       Our company was founded in 20XX with a mission to...
@@ -37,9 +37,53 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-  /* Add more styles as needed */
+  h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .team-member {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .team-member h3 {
+    font-size: 18px;
+    color: #333;
+  }
+
+  p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+  }
 </style>
 
 
