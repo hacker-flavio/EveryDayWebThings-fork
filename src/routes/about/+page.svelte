@@ -23,11 +23,13 @@
     </ul>
   </section>
 
-  <section class="history">
-    <h2>Our History</h2>
-    <p>
-      Our company was founded in 20XX with a mission to...
-    </p>
+  <section class="buttons">
+    <h2>Explore</h2>
+    <div class="button-container">
+      <a href="/contact" class="button contact-button">Contact Us</a>
+      <a href="/privacy" class="button privacy-button">Privacy</a>
+      <a href="/join" class="button join-button">Join Us</a>
+    </div>
   </section>
 </main>
 
@@ -83,6 +85,45 @@
     font-size: 16px;
     color: #666;
     margin-bottom: 5px;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  .contact-button {
+    background-color: #28a745;
+  }
+
+  .privacy-button {
+    background-color: #6c757d;
+  }
+
+  .join-button {
+    background-color: #ffc107;
   }
 </style>
 
