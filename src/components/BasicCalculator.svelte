@@ -1,4 +1,5 @@
 <!-- Calculator.svelte -->
+
 <script>
   let displayValue = "";
 
@@ -36,11 +37,10 @@
     <button on:click={handleClick}>-</button>
     <button on:click={handleClick}>*</button>
     <button on:click={handleClick}>/</button>
-    <button on:click={handleClick}>=</button>
-    <button on:click={handleClick}>C</button>
+    <button on:click={handleClick} class="equals">=</button>
+    <button on:click={handleClick} class="clear">C</button>
   </div>
 </div>
-
 
 <style>
   .calculator {
@@ -85,13 +85,12 @@
   }
 
   /* Styling for the "=" and "C" buttons */
-  button[value="="] {
+  .equals {
     grid-column: span 2;
     background-color: #28a745;
   }
 
-  button[value="C"] {
+  .clear {
     background-color: #dc3545;
   }
 </style>
-
