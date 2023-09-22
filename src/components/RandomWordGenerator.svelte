@@ -236,6 +236,10 @@
       ['bicycle', 'tricycle', 'unicycle', 'tandem', 'mountain bike'],
       ['butterfly', 'dragonfly', 'firefly', 'ladybug', 'caterpillar'],
       ['submarine', 'cruise ship', 'yacht', 'sailboat', 'speedboat'],
+
+ ]; // closing bracket 
+
+
     const randomIndex = Math.floor(Math.random() * words.length);
     randomWord = words[randomIndex];
   };
