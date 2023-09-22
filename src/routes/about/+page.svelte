@@ -7,7 +7,7 @@
   <section>
     <h1>About Us</h1>
     <p>
-      Welcome to our About Us page. Here, we'll introduce you to our team and provide some background information about our company.
+      Welcome to everydaywebthings.com! We are a One-stop shop for simple and useful web tools and web apps.
     </p>
   </section>
 
@@ -15,11 +15,13 @@
     <h2>Our Team</h2>
     <ul>
       <li class="team-member">
-        <h3>John Doe</h3>
+        <h3>Sam Thibault</h3>
         <p>Founder and CEO</p>
-        <p>John is a visionary leader with a passion for innovation...</p>
       </li>
-      <!-- Add more team members as needed -->
+      <li class="team-member">
+        <h3>Jacob Macflee</h3>
+        <p>Webmaster and Pr</p>
+      </li>
     </ul>
   </section>
 
