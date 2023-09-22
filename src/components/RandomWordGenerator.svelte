@@ -1,7 +1,11 @@
 <script>
-  let randomWord = '';
+let randomWords = [];
 
-  const generateRandomWord = () => {
+const generateRandomWords = () => {
+  const wordCount = document.getElementById('wordCount').value;
+  randomWords = [];
+  
+  for (let i = 0; i < wordCount; i++) {
     const categories = [
       ['apple', 'banana', 'cherry', 'date', 'elderberry'],
       ['dog', 'cat', 'rabbit', 'hamster', 'parrot'],
@@ -55,12 +59,15 @@
       // Add more categories with unique words as needed.
     ];
 
-    const randomCategoryIndex = Math.floor(Math.random() * categories.length);
+     const randomCategoryIndex = Math.floor(Math.random() * categories.length);
     const randomCategory = categories[randomCategoryIndex];
 
     const randomIndex = Math.floor(Math.random() * randomCategory.length);
-    randomWord = randomCategory[randomIndex];
-  };
+    const word = randomCategory[randomIndex];
+
+    randomWords.push(word);
+  }
+};
 </script>
 
 
@@ -109,11 +116,14 @@
 
 <div>
   <h2>Random Word Generator</h2>
-  <button on:click="{generateRandomWord}">Generate Random Word</button>
-  {#if randomWord}
-    <p>The random word is: {randomWord}</p>
+  <label for="wordCount">Number of Words (1-10):</label>
+  <input type="number" id="wordCount" min="1" max="10" value="1">
+  <button on:click="{generateRandomWords}">Generate Random Words</button>
+  {#if randomWords && randomWords.length > 0}
+    <p>The random words are: {randomWords.join(', ')}</p>
   {/if}
 </div>
+
 
 
 
