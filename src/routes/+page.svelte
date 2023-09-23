@@ -83,37 +83,25 @@
 
 
 <style>
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Style for the main container */
 main {
   background-color: #f5f5f5;
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* To create horizontal spacing */
 }
 
 /* Style for button rows */
 .button-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-/* Style for button wrappers */
-.button-wrapper {
+  flex-basis: calc(20% - 20px); /* Adjust the width as needed */
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  min-width: 200px; /* Adjust the minimum width as needed */
+  margin-right: 20px; /* Add horizontal spacing between button rows */
+  margin-bottom: 20px; /* Add vertical spacing between button rows */
 }
 
 /* Style for headings */
@@ -126,13 +114,13 @@ h2 {
 .vertical-buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px; /* Adjust the vertical spacing between buttons */
 }
 
 /* Style for buttons */
 .btn {
   display: inline-block;
-  padding: 15px 30px; /* Increase padding for larger buttons */
+  padding: 20px 40px; /* Increase padding for wider buttons */
   text-align: center;
   text-decoration: none;
   border: 2px solid #007bff;
@@ -151,11 +139,8 @@ h2 {
 /* Media query for mobile optimization */
 @media (max-width: 768px) {
   .button-row {
-    flex-direction: column;
-  }
-
-  .button-wrapper {
-    margin-bottom: 20px;
+    flex-basis: calc(50% - 20px); /* Adjust the width for mobile */
+    margin-right: 0; /* Remove horizontal spacing on mobile */
   }
 }
 
