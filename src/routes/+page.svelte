@@ -89,103 +89,105 @@
 
 
 <style>
-        /* Center the entire main content */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+    /* Center the entire main content */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
 
-        main {
-            text-align: center;
-        }
+    main {
+        text-align: center;
+    }
 
-        /* Updated CSS for desktop */
+    /* Updated CSS for desktop */
+    .vertical-buttons a {
+        display: block;
+        width: 100%;
+        height: 60px;
+        padding: 10px 0;
+        font-size: 18px;
+        margin: 5px 0;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #3498db;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .vertical-buttons a:hover {
+        background-color: #3498db;
+        color: #fff;
+    }
+
+    .button-wrapper h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -10px;
+    }
+
+    .button-wrapper {
+        text-align: center;
+        flex-grow: 1;
+        margin: 10px;
+        flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
+    }
+
+    /* Mobile optimization using media query */
+    @media (max-width: 768px) {
         .vertical-buttons a {
-            display: block;
-            width: 100%;
-            height: 60px;
-            padding: 10px 0;
-            font-size: 18px;
+            height: 50px;
+            font-size: 16px;
             margin: 5px 0;
-            border: 2px solid #3498db;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #3498db;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .vertical-buttons a:hover {
-            background-color: #3498db;
-            color: #fff;
         }
 
         .button-wrapper h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
         }
 
         .button-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 0 -10px;
+            flex-direction: column;
         }
 
         .button-wrapper {
-            text-align: center;
-            flex-grow: 1;
-            margin: 10px;
-            flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
+            flex-basis: calc(100% - 20px);
         }
+    }
 
-        /* Mobile optimization using media query */
-        @media (max-width: 768px) {
-            .vertical-buttons a {
-                height: 50px;
-                font-size: 16px;
-                margin: 5px 0;
-            }
+    /* Center the search bar */
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px; /* Adjust as needed */
+    }
 
-            .button-wrapper h2 {
-                font-size: 16px;
-                margin-bottom: 5px;
-            }
+    .search-input {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        width: 300px; /* Adjust as needed */
+    }
 
-            .button-row {
-                flex-direction: column;
-            }
+    .search-button {
+        font-size: 16px;
+        margin-left: 10px;
+        padding: 10px 20px;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        background-color: #3498db;
+        color: #fff;
+        cursor: pointer;
+    }
+</style>
 
-            .button-wrapper {
-                flex-basis: calc(100% - 20px);
-            }
-
- /* Center the search bar */
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px; /* Adjust as needed */
-        }
-
-        .search-input {
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #3498db;
-            border-radius: 8px;
-            width: 300px; /* Adjust as needed */
-        }
-
-        .search-button {
-            font-size: 16px;
-            margin-left: 10px;
-            padding: 10px 20px;
-            border: 2px solid #3498db;
-            border-radius: 8px;
-            background-color: #3498db;
-            color: #fff;
-            cursor: pointer;
-        }
-    </style>
