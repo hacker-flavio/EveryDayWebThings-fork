@@ -83,25 +83,41 @@
 
 
 <style>
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Style for the main container */
 main {
   background-color: #f5f5f5;
   padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* To create horizontal spacing */
+  flex-direction: row; /* Horizontal layout */
+  justify-content: space-between; /* Distribute space evenly */
+  align-items: flex-start; /* Align items to the top */
+  overflow-x: auto; /* Add horizontal scrolling if needed */
 }
 
 /* Style for button rows */
 .button-row {
-  flex-basis: calc(20% - 20px); /* Adjust the width as needed */
+  display: flex;
+  flex-direction: column; /* Vertical layout */
+  gap: 20px;
+  align-items: flex-start; /* Align items to the top */
+}
+
+/* Style for button wrappers */
+.button-wrapper {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-right: 20px; /* Add horizontal spacing between button rows */
-  margin-bottom: 20px; /* Add vertical spacing between button rows */
+  flex: 1;
+  min-width: 200px; /* Adjust the minimum width as needed */
 }
 
 /* Style for headings */
@@ -114,13 +130,13 @@ h2 {
 .vertical-buttons {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Adjust the vertical spacing between buttons */
+  gap: 15px; /* Increase vertical gap */
 }
 
 /* Style for buttons */
 .btn {
   display: inline-block;
-  padding: 20px 40px; /* Increase padding for wider buttons */
+  padding: 20px 30px; /* Increase vertical padding */
   text-align: center;
   text-decoration: none;
   border: 2px solid #007bff;
@@ -139,8 +155,13 @@ h2 {
 /* Media query for mobile optimization */
 @media (max-width: 768px) {
   .button-row {
-    flex-basis: calc(50% - 20px); /* Adjust the width for mobile */
-    margin-right: 0; /* Remove horizontal spacing on mobile */
+    flex-direction: row; /* Horizontal layout for mobile */
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    gap: 20px;
+  }
+
+  .button-wrapper {
+    margin-right: 20px; /* Add margin between button sections */
   }
 }
 
