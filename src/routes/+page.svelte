@@ -80,6 +80,12 @@
 
 
 
+<body>
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search for a button...">
+        <button class="search-button">Search</button>
+    </div>
+</body>
 
 
 <style>
@@ -156,6 +162,30 @@
             .button-wrapper {
                 flex-basis: calc(100% - 20px);
             }
+
+ /* Center the search bar */
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px; /* Adjust as needed */
+        }
+
+        .search-input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            width: 300px; /* Adjust as needed */
+        }
+
+        .search-button {
+            font-size: 16px;
+            margin-left: 10px;
+            padding: 10px 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
         }
     </style>
-
