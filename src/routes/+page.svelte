@@ -84,77 +84,84 @@
 
 <style>
         /* Center the entire main content */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Add a background color */
+}
 
-        main {
-            text-align: center;
-        }
+main {
+    text-align: center;
+}
 
-        /* Updated CSS for desktop */
-        .vertical-buttons a {
-            display: block;
-            width: 100%;
-            height: 60px;
-            padding: 10px 0;
-            font-size: 18px;
-            margin: 5px 0;
-            border: 2px solid #3498db;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #3498db;
-            transition: background-color 0.3s, color 0.3s;
-        }
+/* Buttons styling */
+.vertical-buttons a {
+    display: inline-block;
+    width: auto; /* Adjust as needed */
+    min-width: 180px; /* Set a minimum width */
+    padding: 12px 20px; /* Improved padding for better spacing */
+    font-size: 18px;
+    margin: 10px; /* Increased margin for better spacing */
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #3498db;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #fff; /* Initial background color */
+}
 
-        .vertical-buttons a:hover {
-            background-color: #3498db;
-            color: #fff;
-        }
+.vertical-buttons a:hover {
+    background-color: #3498db;
+    color: #fff;
+}
 
-        .button-wrapper h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
-        }
+/* Button wrapper */
+.button-wrapper h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
 
-        .button-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 0 -10px;
-        }
+/* Flex container for buttons */
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px; /* Improved spacing */
+}
 
-        .button-wrapper {
-            text-align: center;
-            flex-grow: 1;
-            margin: 10px;
-            flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
-        }
+/* Individual button container */
+.button-wrapper {
+    text-align: center;
+    flex-grow: 1;
+    margin: 10px;
+    /* Adjust the flex-basis if needed for different button widths */
+}
 
-        /* Mobile optimization using media query */
-        @media (max-width: 768px) {
-            .vertical-buttons a {
-                height: 50px;
-                font-size: 16px;
-                margin: 5px 0;
-            }
+/* Mobile optimization using media query */
+@media (max-width: 768px) {
+    .vertical-buttons a {
+        min-width: 140px; /* Adjust for smaller screens */
+        padding: 10px 16px; /* Adjusted padding */
+        font-size: 16px;
+        margin: 8px; /* Adjusted margin */
+    }
 
-            .button-wrapper h2 {
-                font-size: 16px;
-                margin-bottom: 5px;
-            }
+    .button-wrapper h2 {
+        font-size: 16px;
+        margin-bottom: 8px; /* Adjusted margin */
+    }
 
-            .button-row {
-                flex-direction: column;
-            }
+    .button-row {
+        flex-direction: column;
+    }
 
-            .button-wrapper {
-                flex-basis: calc(100% - 20px);
-            }
-        }
+    .button-wrapper {
+        flex-basis: calc(100% - 20px);
+    }
+}
+
     </style>
