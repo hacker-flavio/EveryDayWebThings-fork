@@ -96,7 +96,7 @@ main {
   padding: 20px;
   display: flex;
   flex-direction: row; /* Horizontal layout */
-  justify-content: space-between; /* Distribute space evenly */
+  justify-content: flex-start; /* Align items to the left */
   align-items: flex-start; /* Align items to the top */
   overflow-x: auto; /* Add horizontal scrolling if needed */
 }
@@ -104,7 +104,7 @@ main {
 /* Style for button rows */
 .button-row {
   display: flex;
-  flex-direction: column; /* Vertical layout */
+  flex-direction: row; /* Horizontal layout */
   gap: 20px;
   align-items: flex-start; /* Align items to the top */
 }
@@ -116,7 +116,6 @@ main {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
   min-width: 200px; /* Adjust the minimum width as needed */
 }
 
@@ -136,7 +135,7 @@ h2 {
 /* Style for buttons */
 .btn {
   display: inline-block;
-  padding: 20px 30px; /* Increase vertical padding */
+  padding: 30px 20px; /* Increase vertical padding */
   text-align: center;
   text-decoration: none;
   border: 2px solid #007bff;
@@ -155,13 +154,12 @@ h2 {
 /* Media query for mobile optimization */
 @media (max-width: 768px) {
   .button-row {
-    flex-direction: row; /* Horizontal layout for mobile */
-    flex-wrap: wrap; /* Allow buttons to wrap */
+    flex-direction: column; /* Vertical layout for mobile */
     gap: 20px;
   }
 
   .button-wrapper {
-    margin-right: 20px; /* Add margin between button sections */
+    margin-bottom: 20px; /* Add margin between button sections */
   }
 }
 
