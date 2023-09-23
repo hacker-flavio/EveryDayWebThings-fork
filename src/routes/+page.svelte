@@ -115,11 +115,12 @@ main {
     transition: background-color 0.3s, color 0.3s;
 }
 
-
 /* Hover styles for buttons */
 .button:hover {
     background-color: #266687; /* Darker background color on hover */
+    border: 2px solid #000; /* Add black border on hover */
 }
+
 
 /* Header style for button sections */
 .button-header {
