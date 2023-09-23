@@ -83,7 +83,7 @@
 
 
 <style>
-     /* Center the entire main content */
+    /* Center the entire main content */
 body {
     display: flex;
     justify-content: center;
@@ -100,8 +100,8 @@ main {
 /* Buttons styling */
 .vertical-buttons a {
     display: inline-block;
-    width: auto; /* Adjust as needed */
-    min-width: 200px; /* Set a minimum width */
+    width: 100%; /* Make buttons full width */
+    height: 80px; /* Increase button height */
     padding: 14px 24px; /* Improved padding for better spacing */
     font-size: 18px;
     margin: 10px; /* Increased margin for better spacing */
@@ -145,8 +145,7 @@ main {
 /* Mobile optimization using media query */
 @media (max-width: 768px) {
     .vertical-buttons a {
-        min-width: 160px; /* Adjust for smaller screens */
-        padding: 12px 20px; /* Adjusted padding */
+        height: 60px; /* Adjust height for smaller screens */
         font-size: 16px;
         margin: 8px; /* Adjusted margin */
     }
