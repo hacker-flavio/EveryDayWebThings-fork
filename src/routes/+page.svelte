@@ -82,50 +82,82 @@
 
 
 
+
 <style>
-/* Make the button row a flex container */
-.button-row {
-  display: flex;
-  flex-direction: row;
-  /* Justify the buttons evenly across the row */
-  justify-content: space-between;
-}
+        /* Center the entire main content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-/* Make the button wrappers flex items */
-.button-wrapper {
-  flex: 1;
-  /* Center the buttons vertically within their wrappers */
-  align-items: center;
-  /* Add a small amount of padding to the buttons */
-  padding: 5px;
-}
+        main {
+            text-align: center;
+        }
 
-/* Make the buttons look good */
-.btn {
-  /* Add a border radius to make the buttons look rounded */
-  border-radius: 5px;
-  /* Add a small amount of padding to the buttons */
-  padding: 5px 10px;
-  /* Add a transition so that the buttons change color when hovered over */
-  transition: all 0.2s ease-in-out;
-}
+        /* Updated CSS for desktop */
+        .vertical-buttons a {
+            display: block;
+            width: 100%;
+            height: 60px;
+            padding: 10px 0;
+            font-size: 18px;
+            margin: 5px 0;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #3498db;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-/* Change the button color when hovered over */
-.btn:hover {
-  background-color: #f2f2f2;
-}
+        .vertical-buttons a:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
 
-/* Add a background color to the main element */
-main {
-  background-color: #f5f5f5;
-}
+        .button-wrapper h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
 
-/* Add some borders to the button wrappers */
-.button-wrapper {
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -10px;
+        }
 
+        .button-wrapper {
+            text-align: center;
+            flex-grow: 1;
+            margin: 10px;
+            flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
+        }
 
+        /* Mobile optimization using media query */
+        @media (max-width: 768px) {
+            .vertical-buttons a {
+                height: 50px;
+                font-size: 16px;
+                margin: 5px 0;
+            }
+
+            .button-wrapper h2 {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            .button-row {
+                flex-direction: column;
+            }
+
+            .button-wrapper {
+                flex-basis: calc(100% - 20px);
+            }
+        }
+  
 </style>
 
