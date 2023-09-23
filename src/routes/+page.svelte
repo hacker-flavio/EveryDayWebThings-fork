@@ -103,9 +103,9 @@ main {
 /* Style for button rows */
 .button-row {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
 }
 
 /* Style for button wrappers */
@@ -160,7 +160,6 @@ h2 {
     max-width: 100%;
   }
 }
-
 
 </style>
 
