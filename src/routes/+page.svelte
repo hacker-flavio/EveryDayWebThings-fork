@@ -86,25 +86,22 @@
 /* Style for the main container */
 main {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+  align-items: flex-start;
   padding: 20px;
-}
-
-/* Style for button rows */
-.button-row {
-  display: flex;
-  gap: 20px;
+  background-color: #f5f5f5;
 }
 
 /* Style for button wrappers */
 .button-wrapper {
+  flex: 1;
+  max-width: 200px;
+  margin: 10px;
+  padding: 20px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
-  padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -123,7 +120,7 @@ h2 {
 
 /* Style for buttons */
 .btn {
-  display: inline-block;
+  display: block;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
@@ -132,11 +129,22 @@ h2 {
   color: #007bff;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn:hover {
   background-color: #007bff;
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  /* Responsive design for small screens */
+  .button-wrapper {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
 }
 
 </style>
