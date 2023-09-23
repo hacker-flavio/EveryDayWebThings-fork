@@ -107,14 +107,14 @@ main {
     padding: 15px 0; /* Increase padding for a more spacious feel */
     font-size: 20px; /* Slightly larger font size */
     margin: 10px 0; /* Wider margin between buttons */
-    border: 2px solid #3498db;
+    border: 2px solid #000; /* Add black border to the buttons by default */
     border-radius: 10px; /* Slightly rounder corners */
     text-decoration: none;
     color: #fff; /* White text color */
     background-color: #3498db; /* Background color */
     transition: background-color 0.3s, color 0.3s;
-    border: 2px solid #000; /* Add black border to the buttons */
 }
+
 
 /* Hover styles for buttons */
 .button:hover {
