@@ -105,14 +105,15 @@ main {
     display: block;
     width: 100%;
     padding: 15px 0; /* Increase padding for a more spacious feel */
-    font-size: 22px; /* Larger font size */
-    margin: 15px 0; /* Wider margin between buttons */
+    font-size: 20px; /* Slightly larger font size */
+    margin: 10px 0; /* Wider margin between buttons */
     border: 2px solid #3498db;
     border-radius: 10px; /* Slightly rounder corners */
     text-decoration: none;
     color: #fff; /* White text color */
     background-color: #3498db; /* Background color */
     transition: background-color 0.3s, color 0.3s;
+    border: 2px solid #000; /* Add black border to the buttons */
 }
 
 /* Hover styles for buttons */
@@ -127,6 +128,7 @@ main {
     color: #333;
     text-transform: uppercase; /* Uppercase text */
     letter-spacing: 2px; /* Add letter spacing for headings */
+    font-weight: bold; /* Make h2 headings bold */
 }
 
 /* Button container styles */
@@ -159,13 +161,14 @@ main {
     .button {
         height: 60px; /* Slightly taller buttons for mobile */
         font-size: 18px; /* Slightly smaller font size for mobile */
-        margin: 15px 0; /* Wider margin between buttons for mobile */
+        margin: 10px 0; /* Wider margin between buttons for mobile */
     }
 
     /* Adjust header font size and margin for mobile */
     .button-header {
         font-size: 24px; /* Slightly larger font size for mobile headers */
         margin-bottom: 15px; /* Wider margin for mobile headers */
+        font-weight: bold; /* Make h2 headings bold on mobile */
     }
 
     /* Change button container direction to column for mobile */
@@ -177,10 +180,9 @@ main {
     /* Adjust button width for mobile */
     .button-wrapper {
         flex-basis: calc(100% - 40px); /* Full-width buttons for mobile with wider spacing */
-        margin: 15px 0; /* Wider margin for mobile buttons */
+        margin: 10px 0; /* Wider margin for mobile buttons */
     }
 }
-
 
 </style>
 
