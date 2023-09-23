@@ -118,6 +118,10 @@ main {
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* Style for headings */
@@ -129,7 +133,7 @@ h2 {
 /* Style for buttons */
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 30px; /* Increase button padding */
   text-align: center;
   text-decoration: none;
   border: 2px solid #007bff;
@@ -137,6 +141,7 @@ h2 {
   color: #007bff;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
+  width: 100%; /* Button width to 100% */
 }
 
 .btn:hover {
@@ -146,10 +151,16 @@ h2 {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 600px) {
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
   .button-wrapper {
     max-width: 100%;
   }
 }
+
 
 </style>
 
