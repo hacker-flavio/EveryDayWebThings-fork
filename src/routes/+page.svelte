@@ -126,6 +126,7 @@ main {
     margin-bottom: 20px; /* Wider margin for headers */
     color: #333;
     text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Add letter spacing for headings */
 }
 
 /* Button container styles */
