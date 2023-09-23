@@ -83,7 +83,7 @@
 
 
 <style>
-        /* Center the entire main content */
+     /* Center the entire main content */
 body {
     display: flex;
     justify-content: center;
@@ -101,8 +101,8 @@ main {
 .vertical-buttons a {
     display: inline-block;
     width: auto; /* Adjust as needed */
-    min-width: 180px; /* Set a minimum width */
-    padding: 12px 20px; /* Improved padding for better spacing */
+    min-width: 200px; /* Set a minimum width */
+    padding: 14px 24px; /* Improved padding for better spacing */
     font-size: 18px;
     margin: 10px; /* Increased margin for better spacing */
     border: 2px solid #3498db;
@@ -120,9 +120,10 @@ main {
 
 /* Button wrapper */
 .button-wrapper h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px; /* Increase the font size */
+    margin-bottom: 12px; /* Enhanced margin */
     color: #333;
+    font-weight: bold; /* Add bold font weight */
 }
 
 /* Flex container for buttons */
@@ -144,15 +145,15 @@ main {
 /* Mobile optimization using media query */
 @media (max-width: 768px) {
     .vertical-buttons a {
-        min-width: 140px; /* Adjust for smaller screens */
-        padding: 10px 16px; /* Adjusted padding */
+        min-width: 160px; /* Adjust for smaller screens */
+        padding: 12px 20px; /* Adjusted padding */
         font-size: 16px;
         margin: 8px; /* Adjusted margin */
     }
 
     .button-wrapper h2 {
-        font-size: 16px;
-        margin-bottom: 8px; /* Adjusted margin */
+        font-size: 18px; /* Adjusted font size */
+        margin-bottom: 10px; /* Adjusted margin */
     }
 
     .button-row {
