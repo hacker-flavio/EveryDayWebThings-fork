@@ -83,78 +83,78 @@
 
 
 <style>
-        /* Center the entire main content */
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+    /* Center the entire main content */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
 
-        main {
-            text-align: center;
-        }
+    main {
+        text-align: center;
+    }
 
-        /* Updated CSS for desktop */
-        .vertical-buttons a {
-            display: block;
-            width: 100%;
-            height: 60px;
-            padding: 10px 0;
-            font-size: 18px;
+    /* Common button styles */
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        margin: 5px;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #3498db;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #3498db;
+        color: #fff;
+    }
+
+    /* Button container */
+    .button-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Button wrapper */
+    .button-wrapper {
+        text-align: center;
+        flex-grow: 1;
+        flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
+    }
+
+    /* Button heading */
+    .button-heading {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    /* Mobile optimization using media query */
+    @media (max-width: 768px) {
+        .button {
+            padding: 8px 16px;
+            font-size: 16px;
             margin: 5px 0;
-            border: 2px solid #3498db;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #3498db;
-            transition: background-color 0.3s, color 0.3s;
         }
 
-        .vertical-buttons a:hover {
-            background-color: #3498db;
-            color: #fff;
+        .button-heading {
+            font-size: 16px;
+            margin-bottom: 5px;
         }
 
-        .button-wrapper h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .button-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 0 -10px;
+        .button-container {
+            flex-direction: column;
         }
 
         .button-wrapper {
-            text-align: center;
-            flex-grow: 1;
-            margin: 10px;
-            flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
+            flex-basis: calc(100% - 20px);
         }
+    }
+</style>
 
-        /* Mobile optimization using media query */
-        @media (max-width: 768px) {
-            .vertical-buttons a {
-                height: 50px;
-                font-size: 16px;
-                margin: 5px 0;
-            }
-
-            .button-wrapper h2 {
-                font-size: 16px;
-                margin-bottom: 5px;
-            }
-
-            .button-row {
-                flex-direction: column;
-            }
-
-            .button-wrapper {
-                flex-basis: calc(100% - 20px);
-            }
-        }
-    </style>
