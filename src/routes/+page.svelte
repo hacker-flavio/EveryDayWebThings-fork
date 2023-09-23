@@ -110,20 +110,19 @@ main {
     border: 2px solid #3498db;
     border-radius: 10px; /* Slightly rounder corners */
     text-decoration: none;
-    color: #3498db;
+    color: #fff; /* White text color */
+    background-color: #3498db; /* Background color */
     transition: background-color 0.3s, color 0.3s;
-    background-color: transparent; /* Transparent background by default */
 }
 
 /* Hover styles for buttons */
 .button:hover {
-    background-color: #3498db;
-    color: #fff;
+    background-color: #266687; /* Darker background color on hover */
 }
 
 /* Header style for button sections */
 .button-header {
-    font-size: 24px; /* Larger font size for headers */
+    font-size: 28px; /* Larger font size for headers */
     margin-bottom: 20px; /* Wider margin for headers */
     color: #333;
     text-transform: uppercase; /* Uppercase text */
@@ -144,7 +143,7 @@ main {
     margin: 20px; /* Wider margin for buttons */
     flex-basis: calc(33.33% - 40px); /* Adjust to control button width with wider spacing */
     background-color: #fff; /* White background for buttons */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
     transition: transform 0.2s ease-in-out; /* Add a slight transform effect on hover */
 }
 
@@ -164,7 +163,7 @@ main {
 
     /* Adjust header font size and margin for mobile */
     .button-header {
-        font-size: 20px; /* Slightly larger font size for mobile headers */
+        font-size: 24px; /* Slightly larger font size for mobile headers */
         margin-bottom: 15px; /* Wider margin for mobile headers */
     }
 
