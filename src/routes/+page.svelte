@@ -83,12 +83,15 @@
 
 
 <style>
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Style for the main container */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background-color: #f5f5f5;
   padding: 20px;
 }
@@ -96,7 +99,10 @@ main {
 /* Style for button rows */
 .button-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* Style for button wrappers */
@@ -106,6 +112,8 @@ main {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 200px; /* Adjust the minimum width as needed */
 }
 
 /* Style for headings */
@@ -124,7 +132,7 @@ h2 {
 /* Style for buttons */
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 30px; /* Increase padding for larger buttons */
   text-align: center;
   text-decoration: none;
   border: 2px solid #007bff;
@@ -132,11 +140,23 @@ h2 {
   color: #007bff;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
+  width: 100%; /* Ensure buttons take up the full width */
 }
 
 .btn:hover {
   background-color: #007bff;
   color: #fff;
+}
+
+/* Media query for mobile optimization */
+@media (max-width: 768px) {
+  .button-row {
+    flex-direction: column;
+  }
+
+  .button-wrapper {
+    margin-bottom: 20px;
+  }
 }
 
 </style>
