@@ -105,8 +105,8 @@ main {
     display: block;
     width: 100%;
     padding: 15px 0; /* Increase padding for a more spacious feel */
-    font-size: 20px; /* Slightly larger font size */
-    margin: 10px 0; /* Wider margin between buttons */
+    font-size: 22px; /* Larger font size */
+    margin: 15px 0; /* Wider margin between buttons */
     border: 2px solid #3498db;
     border-radius: 10px; /* Slightly rounder corners */
     text-decoration: none;
@@ -159,7 +159,7 @@ main {
     .button {
         height: 60px; /* Slightly taller buttons for mobile */
         font-size: 18px; /* Slightly smaller font size for mobile */
-        margin: 10px 0; /* Wider margin between buttons for mobile */
+        margin: 15px 0; /* Wider margin between buttons for mobile */
     }
 
     /* Adjust header font size and margin for mobile */
@@ -177,9 +177,10 @@ main {
     /* Adjust button width for mobile */
     .button-wrapper {
         flex-basis: calc(100% - 40px); /* Full-width buttons for mobile with wider spacing */
-        margin: 10px 0; /* Wider margin for mobile buttons */
+        margin: 15px 0; /* Wider margin for mobile buttons */
     }
 }
+
 
 </style>
 
