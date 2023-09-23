@@ -83,78 +83,90 @@
 
 
 <style>
-    /* Center the entire main content */
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
+/* Center the main content vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-    main {
-        text-align: center;
-    }
+/* Center-align the content within the main element */
+main {
+    text-align: center;
+}
 
-    /* Common button styles */
+/* Button styles for both desktop and mobile */
+
+/* Shared button styles */
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 18px;
+    margin: 5px 0;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #3498db;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover styles for buttons */
+.button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+/* Header style for button sections */
+.button-header {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Button container styles */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
+}
+
+/* Individual button wrapper styles */
+.button-wrapper {
+    text-align: center;
+    flex-grow: 1;
+    margin: 10px;
+    flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
+}
+
+/* Mobile optimization using media query */
+@media (max-width: 768px) {
+    /* Adjust button height and font size for mobile */
     .button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 18px;
-        margin: 5px;
-        border: 2px solid #3498db;
-        border-radius: 8px;
-        text-decoration: none;
-        color: #3498db;
-        transition: background-color 0.3s, color 0.3s;
+        height: 50px;
+        font-size: 16px;
+        margin: 5px 0;
     }
 
-    .button:hover {
-        background-color: #3498db;
-        color: #fff;
+    /* Adjust header font size and margin for mobile */
+    .button-header {
+        font-size: 16px;
+        margin-bottom: 5px;
     }
 
-    /* Button container */
+    /* Change button container direction to column for mobile */
     .button-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
     }
 
-    /* Button wrapper */
+    /* Adjust button width for mobile */
     .button-wrapper {
-        text-align: center;
-        flex-grow: 1;
-        flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
+        flex-basis: calc(100% - 20px);
     }
+}
 
-    /* Button heading */
-    .button-heading {
-        font-size: 18px;
-        margin-bottom: 10px;
-        color: #333;
-    }
-
-    /* Mobile optimization using media query */
-    @media (max-width: 768px) {
-        .button {
-            padding: 8px 16px;
-            font-size: 16px;
-            margin: 5px 0;
-        }
-
-        .button-heading {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        .button-container {
-            flex-direction: column;
-        }
-
-        .button-wrapper {
-            flex-basis: calc(100% - 20px);
-        }
-    }
 </style>
 
