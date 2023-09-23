@@ -100,7 +100,7 @@ main {
 /* Buttons styling */
 .vertical-buttons a {
     display: inline-block;
-    width: 100%; /* Make buttons full width */
+    width: calc(33.33% - 20px); /* Distribute buttons in rows of three per row */
     height: 80px; /* Increase button height */
     padding: 14px 24px; /* Improved padding for better spacing */
     font-size: 18px;
@@ -139,12 +139,12 @@ main {
     text-align: center;
     flex-grow: 1;
     margin: 10px;
-    /* Adjust the flex-basis if needed for different button widths */
 }
 
 /* Mobile optimization using media query */
 @media (max-width: 768px) {
     .vertical-buttons a {
+        width: 100%; /* Full width for mobile */
         height: 60px; /* Adjust height for smaller screens */
         font-size: 16px;
         margin: 8px; /* Adjusted margin */
