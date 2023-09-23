@@ -83,106 +83,60 @@
 
 
 <style>
-/* Center the main content vertically and horizontally */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f4f4f4; /* Set background color */
-}
-
-/* Center-align the content within the main element */
+/* Style for the main container */
 main {
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
 }
 
-/* Button styles for both desktop and mobile */
-
-/* Shared button styles */
-.button {
-    display: block;
-    width: 100%;
-    padding: 15px 0; /* Increase padding for a more spacious feel */
-    font-size: 20px; /* Slightly larger font size */
-    margin: 10px 0; /* Wider margin between buttons */
-    border: 2px solid #000; /* Add black border to the buttons by default */
-    border-radius: 10px; /* Slightly rounder corners */
-    text-decoration: none;
-    color: #fff; /* White text color */
-    background-color: #3498db; /* Background color */
-    transition: background-color 0.3s, color 0.3s;
+/* Style for button rows */
+.button-row {
+  display: flex;
+  gap: 20px;
 }
 
-/* Hover styles for buttons */
-.button:hover {
-    background-color: #266687; /* Darker background color on hover */
-    border: 2px solid #000; /* Add black border on hover */
-}
-
-
-/* Header style for button sections */
-.button-header {
-    font-size: 28px; /* Larger font size for headers */
-    margin-bottom: 20px; /* Wider margin for headers */
-    color: #333;
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 2px; /* Add letter spacing for headings */
-    font-weight: bold; /* Make h2 headings bold */
-}
-
-/* Button container styles */
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 -20px; /* Wider negative margin for button containers */
-}
-
-/* Individual button wrapper styles */
+/* Style for button wrappers */
 .button-wrapper {
-    text-align: center;
-    flex-grow: 1;
-    margin: 20px; /* Wider margin for buttons */
-    flex-basis: calc(33.33% - 40px); /* Adjust to control button width with wider spacing */
-    background-color: #fff; /* White background for buttons */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-    transition: transform 0.2s ease-in-out; /* Add a slight transform effect on hover */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover effect for button containers */
-.button-wrapper:hover {
-    transform: translateY(-5px); /* Move buttons up slightly on hover */
+/* Style for headings */
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
-/* Mobile optimization using media query */
-@media (max-width: 768px) {
-    /* Adjust button height and font size for mobile */
-    .button {
-        height: 60px; /* Slightly taller buttons for mobile */
-        font-size: 18px; /* Slightly smaller font size for mobile */
-        margin: 10px 0; /* Wider margin between buttons for mobile */
-    }
+/* Style for vertical buttons */
+.vertical-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    /* Adjust header font size and margin for mobile */
-    .button-header {
-        font-size: 24px; /* Slightly larger font size for mobile headers */
-        margin-bottom: 15px; /* Wider margin for mobile headers */
-        font-weight: bold; /* Make h2 headings bold on mobile */
-    }
+/* Style for buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  color: #007bff;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    /* Change button container direction to column for mobile */
-    .button-container {
-        flex-direction: column;
-        margin: 0; /* Reset margin for mobile containers */
-    }
-
-    /* Adjust button width for mobile */
-    .button-wrapper {
-        flex-basis: calc(100% - 40px); /* Full-width buttons for mobile with wider spacing */
-        margin: 10px 0; /* Wider margin for mobile buttons */
-    }
+.btn:hover {
+  background-color: #007bff;
+  color: #fff;
 }
 
 </style>
