@@ -90,6 +90,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #f4f4f4; /* Set background color */
 }
 
 /* Center-align the content within the main element */
@@ -103,14 +104,15 @@ main {
 .button {
     display: block;
     width: 100%;
-    padding: 10px 0;
-    font-size: 18px;
-    margin: 5px 0;
+    padding: 15px 0; /* Increase padding for a more spacious feel */
+    font-size: 20px; /* Slightly larger font size */
+    margin: 10px 0; /* Wider margin between buttons */
     border: 2px solid #3498db;
-    border-radius: 8px;
+    border-radius: 10px; /* Slightly rounder corners */
     text-decoration: none;
     color: #3498db;
     transition: background-color 0.3s, color 0.3s;
+    background-color: transparent; /* Transparent background by default */
 }
 
 /* Hover styles for buttons */
@@ -121,9 +123,10 @@ main {
 
 /* Header style for button sections */
 .button-header {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 24px; /* Larger font size for headers */
+    margin-bottom: 20px; /* Wider margin for headers */
     color: #333;
+    text-transform: uppercase; /* Uppercase text */
 }
 
 /* Button container styles */
@@ -131,40 +134,50 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 -10px;
+    margin: 0 -20px; /* Wider negative margin for button containers */
 }
 
 /* Individual button wrapper styles */
 .button-wrapper {
     text-align: center;
     flex-grow: 1;
-    margin: 10px;
-    flex-basis: calc(33.33% - 20px); /* Adjust to control button width */
+    margin: 20px; /* Wider margin for buttons */
+    flex-basis: calc(33.33% - 40px); /* Adjust to control button width with wider spacing */
+    background-color: #fff; /* White background for buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: transform 0.2s ease-in-out; /* Add a slight transform effect on hover */
+}
+
+/* Hover effect for button containers */
+.button-wrapper:hover {
+    transform: translateY(-5px); /* Move buttons up slightly on hover */
 }
 
 /* Mobile optimization using media query */
 @media (max-width: 768px) {
     /* Adjust button height and font size for mobile */
     .button {
-        height: 50px;
-        font-size: 16px;
-        margin: 5px 0;
+        height: 60px; /* Slightly taller buttons for mobile */
+        font-size: 18px; /* Slightly smaller font size for mobile */
+        margin: 10px 0; /* Wider margin between buttons for mobile */
     }
 
     /* Adjust header font size and margin for mobile */
     .button-header {
-        font-size: 16px;
-        margin-bottom: 5px;
+        font-size: 20px; /* Slightly larger font size for mobile headers */
+        margin-bottom: 15px; /* Wider margin for mobile headers */
     }
 
     /* Change button container direction to column for mobile */
     .button-container {
         flex-direction: column;
+        margin: 0; /* Reset margin for mobile containers */
     }
 
     /* Adjust button width for mobile */
     .button-wrapper {
-        flex-basis: calc(100% - 20px);
+        flex-basis: calc(100% - 40px); /* Full-width buttons for mobile with wider spacing */
+        margin: 10px 0; /* Wider margin for mobile buttons */
     }
 }
 
