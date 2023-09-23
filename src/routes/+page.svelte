@@ -83,83 +83,49 @@
 
 
 <style>
-/* Reset default margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Style for the main container */
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f5f5f5;
-  padding: 20px;
-}
-
-/* Style for button rows */
+/* Make the button row a flex container */
 .button-row {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  justify-content: center;
+  flex-direction: row;
+  /* Justify the buttons evenly across the row */
+  justify-content: space-between;
 }
 
-/* Style for button wrappers */
+/* Make the button wrappers flex items */
 .button-wrapper {
   flex: 1;
-  max-width: 300px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
+  /* Center the buttons vertically within their wrappers */
   align-items: center;
-  text-align: center;
+  /* Add a small amount of padding to the buttons */
+  padding: 5px;
 }
 
-/* Style for headings */
-h2 {
-  font-size: 18px;
+/* Make the buttons look good */
+.btn {
+  /* Add a border radius to make the buttons look rounded */
+  border-radius: 5px;
+  /* Add a small amount of padding to the buttons */
+  padding: 5px 10px;
+  /* Add a transition so that the buttons change color when hovered over */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Change the button color when hovered over */
+.btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* Add a background color to the main element */
+main {
+  background-color: #f5f5f5;
+}
+
+/* Add some borders to the button wrappers */
+.button-wrapper {
+  border: 1px solid #ccc;
   margin-bottom: 10px;
 }
 
-/* Style for buttons */
-.btn {
-  display: inline-block;
-  padding: 15px 30px; /* Increase button padding */
-  text-align: center;
-  text-decoration: none;
-  border: 2px solid #007bff;
-  border-radius: 4px;
-  color: #007bff;
-  font-weight: bold;
-  transition: background-color 0.3s, color 0.3s;
-  width: 100%; /* Button width to 100% */
-}
-
-.btn:hover {
-  background-color: #007bff;
-  color: #fff;
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 600px) {
-  .button-row {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .button-wrapper {
-    max-width: 100%;
-  }
-}
 
 </style>
 
