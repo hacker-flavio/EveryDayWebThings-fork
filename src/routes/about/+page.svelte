@@ -16,17 +16,17 @@
     <ul>
       <li class="team-member">
         <h3>Sam Thibault</h3>
-        <p>Founder and CEO</p>
+        <p>Founder & CEO</p>
       </li>
 
       <li class="team-member">
         <h3>Flavio Herrera</h3>
-        <p>Co-Founder and Developer </p>
+        <p>Co-Founder & Developer </p>
       </li>
 
       <li class="team-member">
         <h3>Jacob Macflee</h3>
-        <p>Webmaster and Pr</p>
+        <p>Co-Founder & PR</p>
       </li>
     </ul>
   </section>
