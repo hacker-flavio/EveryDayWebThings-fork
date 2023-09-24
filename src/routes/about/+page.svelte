@@ -21,7 +21,7 @@
 
       <li class="team-member">
         <h3>Flavio Herrera</h3>
-        <p>Founder and Developer </p>
+        <p>Co-Founder and Developer </p>
       </li>
 
       <li class="team-member">
