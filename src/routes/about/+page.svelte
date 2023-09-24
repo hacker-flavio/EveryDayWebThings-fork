@@ -18,6 +18,12 @@
         <h3>Sam Thibault</h3>
         <p>Founder and CEO</p>
       </li>
+
+      <li class="team-member">
+        <h3>Flavio Herrera</h3>
+        <p>Founder and Developer </p>
+      </li>
+
       <li class="team-member">
         <h3>Jacob Macflee</h3>
         <p>Webmaster and Pr</p>
