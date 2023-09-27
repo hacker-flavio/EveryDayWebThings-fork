@@ -16,7 +16,60 @@
 </script>
 
 <style>
-  /* Add your CSS styles here */
+  div {
+    text-align: center;
+    margin: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  input[type="color"] {
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #2980b9;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .color-box {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
 </style>
 
 <div>
