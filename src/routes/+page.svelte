@@ -7,8 +7,7 @@
         <a href="/RandomQuoteGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Quote Generator</a>
         <a href="/RandomParagraphGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Paragraph Generator</a>
         <a href="/RandomNumberGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Number Generator</a>
-        <a href="/DummyImageGgenerator" class="btn btn-ghost btn-sm rounded-btn">Dummy Image Ggenerator</a>
-        <a href="/PlaceholderImageGenerator" class="btn btn-ghost btn-sm rounded-btn">Placeholder Image Generator</a>
+        <a href="/DummyImageGenerator" class="btn btn-ghost btn-sm rounded-btn">Dummy Image Generator</a>
         <a href="/RandomColorGenerator" class="btn btn-ghost btn-sm rounded-btn">Random Color Generator</a>
         <a href="/QrCodeGenerator" class="btn btn-ghost btn-sm rounded-btn">Qr Code Generator</a>
         <a href="/ColorPaletteGenerator" class="btn btn-ghost btn-sm rounded-btn">Color Palette Generator</a>
