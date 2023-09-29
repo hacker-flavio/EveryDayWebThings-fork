@@ -126,3 +126,20 @@
 
 
 
+<script>
+  import { onMount } from 'svelte';
+
+  let page = '/'; // Set the page path to '/' for the home page
+
+  // Function to track page view
+  function trackPageView() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-H2EFXSCDHN', { 'page_path': page });
+  }
+
+  onMount(trackPageView);
+</script>
