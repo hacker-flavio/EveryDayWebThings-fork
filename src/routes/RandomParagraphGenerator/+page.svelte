@@ -1,4 +1,13 @@
 <!-- src/RandomParagraphGenerator.svelte -->
+
+<head>
+  <title>Random Paragraph Generator - Everyday Web Things</title>
+  <meta name="description" content="Generate random paragraphs for your writing projects with our online paragraph generator. Enhance your creativity and generate text instantly." />
+  <meta name="keywords" content="random paragraph generator, generate text, creative writing, writing tool, text generation" />
+</head>
+
+
+
 <script>
   import { onMount } from 'svelte';
 

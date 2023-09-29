@@ -1,4 +1,13 @@
 <!-- src/RandomWordGenerator.svelte -->
+
+<head>
+  <title>Random Word Generator - Everyday Web Things</title>
+  <meta name="description" content="Generate random words and phrases with our online word generator. Create unique content, brainstorm ideas, and more." />
+  <meta name="keywords" content="random word generator, generate words, random phrases, unique content, creative writing" />
+  <!-- Add other meta tags as needed -->
+</head>
+
+
 <script>
   import { onMount } from 'svelte';
 

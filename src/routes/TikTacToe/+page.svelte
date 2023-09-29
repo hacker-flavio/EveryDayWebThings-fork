@@ -1,4 +1,14 @@
 <!-- src/TicTacToe.svelte -->
+
+
+<head>
+  <title>Tic-Tac-Toe Game - Everyday Web Things</title>
+  <meta name="description" content="Enjoy the classic game of Tic-Tac-Toe online. Play against friends or challenge the computer to a game of strategy and wits." />
+  <meta name="keywords" content="Tic-Tac-Toe game, online Tic-Tac-Toe, strategy game, two-player game, classic board game" />
+</head>
+
+
+
 <script>
   let board = Array(9).fill('');
   let xIsNext = true;

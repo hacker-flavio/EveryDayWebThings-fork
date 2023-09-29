@@ -1,4 +1,13 @@
 <!-- src/Timer.svelte -->
+
+<head>
+  <title>Timer - Everyday Web Things</title>
+  <meta name="description" content="Set countdown timers for various tasks and activities with our online timer. Stay organized and be alerted when your time is up." />
+  <meta name="keywords" content="timer, countdown timer, online timer, time management, task timer" />
+</head>
+
+
+
 <script>
   let seconds = 0;
   let isRunning = false;

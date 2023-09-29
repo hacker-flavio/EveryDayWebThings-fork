@@ -1,4 +1,13 @@
 <!-- src/RandomNumberGenerator.svelte -->
+
+<head>
+  <title>Random Number Generator - Everyday Web Things</title>
+  <meta name="description" content="Generate random numbers for various applications with our online number generator. Customize the range and generate random data quickly." />
+  <meta name="keywords" content="random number generator, generate numbers, random data, number generation, random values" />
+</head>
+
+
+
 <script>
   import { onMount } from 'svelte';
 

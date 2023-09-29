@@ -1,3 +1,12 @@
+
+<head>
+  <title>Budget Calculator - Everyday Web Things</title>
+  <meta name="description" content="Take control of your finances with our online budget calculator. Plan, track, and manage your expenses to achieve your financial goals." />
+  <meta name="keywords" content="budget calculator, financial planning, expense tracking, budget management, personal finance" />
+</head>
+
+
+
 <script>
   let income = 0;
   let expenses = 0;

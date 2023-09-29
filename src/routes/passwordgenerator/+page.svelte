@@ -1,5 +1,13 @@
 <!-- routes/passwordgenerator/+page.svelte -->
 
+
+<head>
+  <title>Password Generator - Everyday Web Things</title>
+  <meta name="description" content="Generate secure passwords with our online Random password generator " />
+  <meta name="keywords" content="password generator, secure password, online password, random password" />
+</head>
+
+
 <script>
   import { onMount } from 'svelte';
 

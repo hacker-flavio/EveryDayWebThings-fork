@@ -1,4 +1,12 @@
 <!-- src/DailyFunFact.svelte -->
+
+<head>
+  <title>Daily Fun Fact - Everyday Web Things</title>
+  <meta name="description" content="Learn something new and intriguing every day with our 'Daily Fun Fact.' Explore a wide range of fascinating facts and expand your knowledge." />
+  <meta name="keywords" content="daily fun fact, interesting facts, knowledge, trivia, daily facts, facts" />
+</head>
+
+
 <script>
     let factIndex = 0;
   

@@ -1,5 +1,12 @@
 <!-- Calculator.svelte -->
 
+<head>
+  <title>Basic Calculator - Everyday Web Things</title>
+  <meta name="description" content="Perform simple arithmetic calculations with ease using our online basic calculator. Add, subtract, multiply, and divide numbers instantly." />
+  <meta name="keywords" content="basic calculator, online calculator, arithmetic calculator, addition, subtraction, multiplication, division" />
+</head>
+
+
 <script>
   let displayValue = "";
 

@@ -1,4 +1,14 @@
 <!-- src/SquareRootCalculator.svelte -->
+
+
+<head>
+  <title>Square Root Calculator - Everyday Web Things</title>
+  <meta name="description" content="Calculate square roots quickly and easily with our online square root calculator. Solve mathematical problems and find square root values." />
+  <meta name="keywords" content="square root calculator, online calculator, mathematical calculator, square root values" />
+</head>
+
+
+
 <script>
     let inputValue = '';
     let result = '';

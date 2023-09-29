@@ -1,4 +1,14 @@
 <!-- src/PercentageCalculator.svelte -->
+
+
+<head>
+  <title>Percentage Calculator - Everyday Web Things</title>
+  <meta name="description" content="Calculate percentages effortlessly with our online percentage calculator. Solve percentage problems, find discounts, and perform various percentage-related calculations." />
+  <meta name="keywords" content="percentage calculator, online calculator, percentage problems, discount calculator, percentage calculations" />
+</head>
+
+
+
 <script>
     let baseValue = '';
     let percentage = '';

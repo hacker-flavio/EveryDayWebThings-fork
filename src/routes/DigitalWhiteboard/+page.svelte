@@ -1,4 +1,13 @@
 <!-- DigitalWhiteboard.svelte -->
+
+
+<head>
+  <title>Digital Whiteboard - Everyday Web Things</title>
+  <meta name="description" content="Simple online Whiteboard. Draw, write, brainstorm, and share ideas." />
+  <meta name="keywords" content="digital whiteboard, online collaboration, drawing board, brainstorming tool, visual collaboration" />
+</head>
+
+
 <script>
   import { onMount } from 'svelte';
 

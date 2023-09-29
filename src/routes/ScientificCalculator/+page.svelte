@@ -1,4 +1,13 @@
 <!-- src/ScientificCalculator.svelte -->
+
+<head>
+  <title>Scientific Calculator - Everyday Web Things</title>
+  <meta name="description" content="Perform advanced mathematical calculations with our online scientific calculator. Solve complex equations, trigonometry, and more." />
+  <meta name="keywords" content="scientific calculator, online calculator, advanced math, complex equations, trigonometry" />
+</head>
+
+
+
 <script>
   let expression = '';
   let result = '';

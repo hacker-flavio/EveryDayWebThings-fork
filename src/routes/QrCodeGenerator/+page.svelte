@@ -1,4 +1,14 @@
 <!-- src/QrCodeGenerator.svelte -->
+
+
+<head>
+  <title>QR Code Generator - Everyday Web Things</title>
+  <meta name="description" content="Generate QR codes for websites, links, contact information, and more with our online QR code generator. Simplify information sharing and mobile interactions." />
+  <meta name="keywords" content="QR code generator, generate QR codes, QR code creator, information sharing, mobile interactions" />
+</head>
+
+
+
 <script>
   import { onMount } from 'svelte';
 

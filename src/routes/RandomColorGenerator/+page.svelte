@@ -1,4 +1,14 @@
 <!-- RandomColor.svelte -->
+
+
+<head>
+  <title>Random Color Generator - Everyday Web Things</title>
+  <meta name="description" content="Generate random colors and color palettes for your design projects with our online color generator. Explore endless creative possibilities." />
+  <meta name="keywords" content="random color generator, generate colors, color palettes, design tool, creative inspiration" />
+</head>
+
+
+
 <script>
   let randomColor = generateRandomColor();
 

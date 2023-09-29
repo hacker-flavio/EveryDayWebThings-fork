@@ -1,4 +1,12 @@
 <!-- src/JokeOfTheDay.svelte -->
+
+<head>
+  <title>Joke of the Day - Everyday Web Things</title>
+  <meta name="description" content="Brighten your day with our daily dose of humor. Enjoy a new joke every day from our 'Joke of the Day' collection." />
+  <meta name="keywords" content="joke of the day, daily joke, humor, funny jokes, laughter, joke" />
+</head>
+
+
 <script>
     let jokeIndex = 0;
   

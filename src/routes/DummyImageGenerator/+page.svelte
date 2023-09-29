@@ -1,4 +1,14 @@
 <!-- src/routes/PlaceholderImage.svelte -->
+
+
+<head>
+  <title>Dummy Image Generator - Everyday Web Things</title>
+  <meta name="description" content="Generate placeholder images for your web projects with our online dummy image generator. Create custom-sized images for design and development." />
+  <meta name="keywords" content="dummy image generator, placeholder images, random images, image placeholders, web development" />
+</head>
+
+
+
 <script>
   let imageSrc = '';
 

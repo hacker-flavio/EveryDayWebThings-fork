@@ -1,4 +1,14 @@
 <!-- src/Countdown.svelte -->
+
+
+<head>
+  <title>Countdown Timer - Everyday Web Things</title>
+  <meta name="description" content="Count down to important events with our online countdown timer. Set custom timers, track milestones, and anticipate special moments." />
+  <meta name="keywords" content="countdown timer, event countdown, timer application, special occasions, time tracking" />
+</head>
+
+
+
 <script>
     let seconds = 60; // Initial countdown time in seconds
     let isRunning = false;
