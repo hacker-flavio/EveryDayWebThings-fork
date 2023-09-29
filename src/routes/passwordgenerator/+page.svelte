@@ -1,4 +1,8 @@
+<!-- routes/passwordgenerator/+page.svelte -->
+
 <script>
+  import { onMount } from 'svelte';
+
   let password = '';
   let length = 12;
   let includeUppercase = true;
@@ -24,7 +28,22 @@
 
     password = newPassword;
   };
+
+  let page = '/passwordgenerator'; 
+
+  // Function to track page view
+  function trackPageView() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-H2EFXSCDHN', { 'page_path': page });
+  }
+
+  onMount(trackPageView);
 </script>
+
 
 <main>
   <h1> Password Generator</h1>
@@ -104,3 +123,4 @@
     color: #555;
   }
 </style>
+

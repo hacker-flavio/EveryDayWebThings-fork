@@ -123,6 +123,17 @@
     ] 
   };
 
+    // Function to track page view
+    function trackPageView() {
+    let page = '/RandomWordGenerator'; // Set the page path to '/RandomWordGenerator'
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-H2EFXSCDHN', { 'page_path': page });
+  }
+
   function generateRandomWords() {
     if (selectedCategory === 'All') {
       const allWords = categories
@@ -148,8 +159,10 @@
 
   onMount(() => {
     generateRandomWords();
+    trackPageView(); // Call the tracking function when the component is mounted
   });
 </script>
+
 
 <main>
   <h1>Random Word Generator</h1>
@@ -241,5 +254,6 @@
     margin: 5px 0;
   }
 </style>
+
 
 
