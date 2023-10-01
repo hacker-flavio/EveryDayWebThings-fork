@@ -1,5 +1,8 @@
 <!-- src/routes/Translator.svelte -->
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
     let inputText = '';
     let selectedLanguage = '';
     let translatedText = '';

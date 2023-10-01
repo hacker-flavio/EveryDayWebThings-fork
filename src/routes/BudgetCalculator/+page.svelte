@@ -8,6 +8,9 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
   let income = 0;
   let expenses = 0;
   let total = 0;

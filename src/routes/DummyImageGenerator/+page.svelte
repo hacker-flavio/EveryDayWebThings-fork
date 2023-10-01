@@ -10,6 +10,10 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
+
   let imageSrc = '';
 
   // Function to generate a placeholder image

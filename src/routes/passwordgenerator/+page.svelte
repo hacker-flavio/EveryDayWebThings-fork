@@ -9,7 +9,9 @@
 
 
 <script>
+
   import { onMount } from 'svelte';
+  import GoogleAds from '../../components/GoogleAds.svelte';
 
   let password = '';
   let length = 12;

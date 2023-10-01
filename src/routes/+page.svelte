@@ -3,7 +3,14 @@
   <title>Home</title>
   <meta name="description" content="Explore a variety of useful web tools at Everyday Web Things. From generators, calculators, games and more, discover a world of online utilities." />
   <meta name="keywords" content="web tools, online utilities, calculators, generators, games, Everyday Web Things" />
+
+  <script>
+    import GoogleAds from './components/GoogleAds.svelte';
+  </script>
+
 </head>
+
+
 
 
 <main>

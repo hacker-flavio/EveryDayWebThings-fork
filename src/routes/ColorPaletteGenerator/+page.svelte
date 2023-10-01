@@ -1,5 +1,8 @@
 <!-- src/ColorPalette.svelte -->
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
   let colors = ['#FF5733', '#33FF57', '#5733FF'];
   let newColor = '';
 
