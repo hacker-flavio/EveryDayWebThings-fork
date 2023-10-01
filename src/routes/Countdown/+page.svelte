@@ -10,6 +10,9 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
     let seconds = 60; // Initial countdown time in seconds
     let isRunning = false;
     let interval;

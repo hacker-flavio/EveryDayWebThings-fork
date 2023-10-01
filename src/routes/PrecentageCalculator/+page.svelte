@@ -10,6 +10,10 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
+
     let baseValue = '';
     let percentage = '';
     let result = '';

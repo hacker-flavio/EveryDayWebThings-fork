@@ -10,6 +10,9 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
   let randomColor = generateRandomColor();
 
   // Function to generate a random color in hexadecimal format

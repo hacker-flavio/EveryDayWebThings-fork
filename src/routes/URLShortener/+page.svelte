@@ -1,6 +1,9 @@
 <!-- URLShortener.svelte -->
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
   let originalURL = '';
   let shortenedURL = '';
 

@@ -8,6 +8,9 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
     let factIndex = 0;
   
     const funFacts = [

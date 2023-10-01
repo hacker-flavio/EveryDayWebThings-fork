@@ -8,6 +8,9 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
     let jokeIndex = 0;
   
     const jokes = [

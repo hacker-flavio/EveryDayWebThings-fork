@@ -10,6 +10,9 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
     let inputValue = '';
     let result = '';
   

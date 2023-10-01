@@ -1,5 +1,8 @@
 <!-- Weather.svelte -->
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
   let temperature = 0; // Initialize temperature with a default value
   let location = "Unknown"; // Initialize location with a default value
   let locationError = null; // Initialize locationError as null

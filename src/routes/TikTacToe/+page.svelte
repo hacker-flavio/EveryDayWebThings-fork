@@ -10,6 +10,9 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
   let board = Array(9).fill('');
   let xIsNext = true;
   let winner = null;

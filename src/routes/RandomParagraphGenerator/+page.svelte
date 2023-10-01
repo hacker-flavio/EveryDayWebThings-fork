@@ -9,6 +9,9 @@
 
 
 <script>
+
+import GoogleAds from '../../components/GoogleAds.svelte';
+
   import { onMount } from 'svelte';
 
   let randomParagraph = '';
