@@ -1,56 +1,32 @@
+<!-- URLShortener.svelte -->
 
 <script>
- 
- // import URLShortener from '../../components/URLShortener.svelte';
 
+import GoogleAds from '../../components/GoogleAds.svelte';
 
-  let isMaintenance = true; // Set this to false when maintenance is completed
+  let originalURL = '';
+  let shortenedURL = '';
 
-  // Function to toggle maintenance status
-  function toggleMaintenance() {
-    isMaintenance = !isMaintenance;
-  }
+  const generateShortenedURL = () => {
+    // You can implement your URL shortening logic here.
+    // For simplicity, we'll just generate a random string for demonstration purposes.
+    const randomString = Math.random().toString(36).substring(2, 8);
+    shortenedURL = `http://short.url/${randomString}`;
+  };
 </script>
 
-{#if isMaintenance}
-  <div class="maintenance-message">
-    <p>This feature is currently under maintenance and might not work.</p>
-    <button on:click={toggleMaintenance}>Resume Service</button>
-  </div>
-{:else}
-  <!-- Your normal content goes here -->
-{/if}
-
 <style>
-  .maintenance-message {
-    background-color: #ff9999;
-    padding: 16px;
-    text-align: center;
-    border: 1px solid #ff6666;
-    border-radius: 4px;
-  }
-
-  button {
-    background-color: #ff3333;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 8px;
-  }
+  /* Add your CSS styles here */
 </style>
 
-
-
-
-
-
- <!-- Normal content currently disabled  -->
-
-<main>
-  <URLShortener />
-</main>
+<div>
+  <h1>URL Shortener</h1>
+  <input bind:value={originalURL} placeholder="Enter URL" />
+  <button on:click={generateShortenedURL}>Generate Short URL</button>
+  {#if shortenedURL !== ''}
+    <p>Shortened URL: <a href={shortenedURL} target="_blank">{shortenedURL}</a></p>
+  {/if}
+</div>
 
 
 

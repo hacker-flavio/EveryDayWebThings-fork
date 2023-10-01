@@ -16,7 +16,7 @@
     <div class="flex-1 px-2 mx-2">
         <!-- Use your logo URL as the src attribute and set a smaller width -->
         <img src="https://raw.githubusercontent.com/EveryDayWebThings/Master/main/static/favicon.png" alt="Everyday Web Things Logo" class="logo" style="width: 40px; margin-right: 10px;"> <!-- Adjust the width and margin as needed -->
-        <a class="text-lg font-bold" href="/"> everydaywebthings.com </a>
+        <a class="text-lg font-bold" href="/"> everydaywebthings.com Beta </a>
     </div>
 
 

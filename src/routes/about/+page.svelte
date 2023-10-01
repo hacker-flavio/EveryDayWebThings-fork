@@ -1,7 +1,11 @@
-<!-- AboutUs.svelte -->
-<script>
-  // You can define any dynamic data or logic for your About Us page here
-</script>
+
+
+<head>
+  <title>About Us</title>
+  <meta name="description" content="About EverydayWebThings.com" />
+  <meta name="keywords" content="About us" />
+</head>
+
 
 <main class="about-us">
   <section>
@@ -16,13 +20,30 @@
     <ul>
       <li class="team-member">
         <h3>Sam Thibault</h3>
-        <p>Founder and CEO</p>
+        <p>Founder & CEO</p>
       </li>
+
+      <li class="team-member">
+        <h3>Flavio Herrera</h3>
+        <p>Co-Founder & Developer </p>
+      </li>
+
       <li class="team-member">
         <h3>Jacob Macflee</h3>
-        <p>Webmaster and Pr</p>
+        <p>Co-Founder & PR</p>
       </li>
     </ul>
+  </section>
+
+  <!-- Social Media Links Section -->
+  <section class="social-media">
+    <h2>Follow Us</h2>
+    <div class="social-icons">
+      <!-- Add your social media icons or links here -->
+      <a href="https://www.threads.net/search/?q=edwtcom" class="social-icon facebook-icon">Threads</a>
+      <a href="https://twitter.com/EDWTcom" class="social-icon twitter-icon">Twitter</a>
+      <a href="https://www.instagram.com/edwtcom/" class="social-icon instagram-icon">Instagram</a>
+    </div>
   </section>
 
   <section class="buttons">
@@ -34,6 +55,8 @@
     </div>
   </section>
 </main>
+
+
 
 <style>
   /* You can add your custom CSS styles here to style the page */
@@ -126,6 +149,45 @@
 
   .join-button {
     background-color: #ffc107;
+  }
+
+  /* Styles for Social Media Links */
+  .social-media {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icon {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 50%;
+  }
+
+  .facebook-icon {
+    background-color: #1877f2;
+    color: #fff;
+  }
+
+  .twitter-icon {
+    background-color: #1da1f2;
+    color: #fff;
+  }
+
+  .instagram-icon {
+    background-color: #e4405f;
+    color: #fff;
   }
 </style>
 

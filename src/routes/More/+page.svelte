@@ -7,6 +7,12 @@
   </div>
 </main>
 
+<script>
+  import GoogleAds from '../../components/GoogleAds.svelte';
+</script>
+
+
+
 <style>
   /* You can style the page as needed */
   body {

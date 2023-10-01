@@ -23,7 +23,7 @@
     </div>
     <div>
       <p>
-        Copyright &copy; {`${new Date().getFullYear()}`} EveryDayWebThings - All rights reserved
+        Copyright &copy; {`${new Date().getFullYear()}`} EveryDayWebThings - All rights reserved - Public Beta 0.1.1
       </p>
     </div>
   </footer>

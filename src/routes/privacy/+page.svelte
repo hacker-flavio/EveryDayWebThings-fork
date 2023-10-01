@@ -2,7 +2,7 @@
 <!-- PrivacyPolicy.svelte -->
 
 <script>
-  // Add any necessary data or logic here
+import GoogleAds from '../../components/GoogleAds.svelte';
 </script>
 
 <main>
